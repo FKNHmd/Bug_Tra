@@ -51,7 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Click\topselect.cs" />
+     <Compile Include="Assets\Script\Audio\AudioManager.cs" />
+     <Compile Include="Assets\Script\Audio\AudioPlayer.cs" />
+     <Compile Include="Assets\Script\Scene\FadeManager.cs" />
+     <Compile Include="Assets\Script\Scene\SceneInitialize.cs" />
+     <Compile Include="Assets\Script\Scene\SceneSetAndLoad.cs" />
+     <Compile Include="Assets\Script\Utility\SingletonMonoBehaviour.cs" />
+     <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
+ <Reference Include="Assembly-CSharp-firstpass">
+ <HintPath>/Users/kiro/Desktop/Bug_Tra/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
