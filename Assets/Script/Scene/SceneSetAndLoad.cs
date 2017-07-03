@@ -30,7 +30,7 @@ public class SceneSetAndLoad : MonoBehaviour{
         if (Global.NextSceneName == ""){
             // エラーを出してとりあえずMenuシーンをセット
             Debug.LogError("SetNextSneceName：シーンがセットされませんでした。Menuに戻ります。");
-            Global.NextSceneName = "Menu";
+            Global.NextSceneName = "Top";
         }
 
         FadeManager.Instance.LoadLevel(NextScene, FadeTime);
