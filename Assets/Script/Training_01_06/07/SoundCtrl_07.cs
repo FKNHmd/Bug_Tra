@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundCtrl_07 : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class SoundCtrl_07 : MonoBehaviour {
 	public AudioSource m2;
 	public AudioSource m3;
 	public GameObject Image_Logo;
+
+	public Dropdown d;
 
 	int s;
 	AudioSource m;
@@ -31,15 +34,18 @@ public class SoundCtrl_07 : MonoBehaviour {
 		m.Stop ();
 		saisei_flg = false;
 
-		switch (value){
+		switch (d.value){
 		case 0:
 			m = m1;
+			Debug.Log ("0");
 			break;
 		case 1:
 			m = m2;
+			Debug.Log ("1");
 			break;
 		case 2:
 			m = m3;
+			Debug.Log ("2");
 			break;
 		default:
 			break;

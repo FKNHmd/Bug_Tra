@@ -7063,6 +7063,7 @@ MonoBehaviour:
   m2: {fileID: 1861234105}
   m3: {fileID: 1521747519}
   Image_Logo: {fileID: 142710645}
+  d: {fileID: 157583905}
 --- !u!1 &2087086051
 GameObject:
   m_ObjectHideFlags: 0
