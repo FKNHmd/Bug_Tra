@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,8 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject bullet;
     // 出現させるターゲット
     public GameObject enemy;
-    // スコアテキストのプレハブ
-    public GameObject scoreText;
+    // テキストのオブジェクト
+    public GameObject scoreText,gameTimeObj;
     // スコアの数
     public int scoreNum;
     // タップした座標
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     float createTime;
 
     // 1度だけ呼び出すフラグ
-    bool isSetFlg = true;
+   public bool isSetFlg = true;
 
     // ゲームのUI切り替え(最初にONに設定し、呼び出せるようにする)
     bool isGameFlg = false;
@@ -34,6 +35,9 @@ public class GameManager : MonoBehaviour
     // ゲーム開始までの時間
     int startCount = 3;
     float startTime;
+    // ゲーム中の時間
+    int gameCount = 10;
+    float gameTime;
 
     // エラーメッセージ
     public GameObject errorObject;
@@ -67,30 +71,38 @@ public class GameManager : MonoBehaviour
         {
             case GameState.TITLE:
                 {
-                    // 最初だけ呼び出す
+                    // 最初だけ呼び出す(主に初期化など)
                     if (isSetFlg)
                     {
                         isGameFlg = false;
                         UI_Title.SetActive(true);
                         UI_Game.SetActive(false);
+                        // 最後にフラグを切って処理しないようにする
+                    isSetFlg = false;
                     }
 
-                    // 最後にフラグを切って処理しないようにする
-                    isSetFlg = false;
+                  
                     break;
                 }
             case GameState.GAME:
                 {
-                    // 最初だけ呼び出す
+                    // 最初だけ呼び出す(主に初期化など)
                     if (isSetFlg)
                     {
                         isGameFlg = true;
                         UI_Title.SetActive(false);
                         UI_Game.SetActive(true);
                         startTime = 0;
+                        startCount = 2;
+                        scoreNum = 0;
+                        gameCount = 2;
+                        gameTime = 0;
+
+                        // 最後にフラグを切って処理しないようにする
+                        isSetFlg = false;
                     }
 
-                    if (startTime > startCount)
+                    if (startCount < 1)
                     {
                         // ターゲットを生成
                         createTime += Time.deltaTime;
@@ -101,14 +113,23 @@ public class GameManager : MonoBehaviour
                             createTime = 0;
                         }
                         CameraMove();
-                        // 最後にフラグを切って処理しないようにする
+                        // ゲーム中の時間を表示
+                        gameTime += Time.deltaTime;
+                        gameCount = Mathf.CeilToInt(10 - gameTime);
+                        gameTimeObj.GetComponent<Text>().text = "" + gameCount;
+                        // 終了判定(今はステートをTITLEにしているが、後でリザルトにする)
+                        if(gameCount < 1)
+                        {
+                            isSetFlg = true;
+                            GAMESTATE = GameState.TITLE;
+                        }
                     }
                     else
                     {
                         startTime += Time.deltaTime;
+                        startCount = Mathf.CeilToInt(3 - startTime);
+                        scoreText.GetComponent<Text>().text = "" + startCount;
                     }
-
-                    isSetFlg = false;
                     break;
                 }
         }
