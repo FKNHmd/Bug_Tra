@@ -25,7 +25,7 @@ public class SoundCtrl_07 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (saisei_flg == true) {
-			Image_Logo.transform.Rotate (new Vector3(0f,0f,3f));
+			Image_Logo.transform.Rotate (new Vector3(0f,0f,-3f));
 		}
 	}
 
@@ -60,8 +60,8 @@ public class SoundCtrl_07 : MonoBehaviour {
 
 	public void teisi_button()
 	{
-		m.Stop ();
-		saisei_flg = false;
+		//m.Stop ();
+		//saisei_flg = false;
 	}
 
 	public void itiziteisi_button()
@@ -72,10 +72,11 @@ public class SoundCtrl_07 : MonoBehaviour {
 
 	public void valume_button()
 	{
+		m.mute = false;
 	}
 
 	public void mute_button()
 	{
-
+		m.mute = true;
 	}
 }
