@@ -38,11 +38,11 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 		if ((nokori <= 0) && (clear_flg == false)) {
 			string daimei, section, syousai;
 
-			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
+			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan, 1f, 0.08f);
 
 			daimei = "バグを見つけられなくて残念ね。。";
 			section = "・次回からはこんな観点で挑戦してね！";
-			syousai = "ちょっと頑張りが足りないみたいね。";
+			syousai = "ちょっと頑張りが足りないみたい。";
 			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 
 		}
@@ -72,10 +72,10 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 		yield return new WaitForSeconds(7f);
 		ImageCrash.SetActive (false);
 
-		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
+		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan, 1f, 0.08f);
 		daimei = "クリアおめでとう～♪";
 		section = "・今回の不具合は";
-		syousai = "ボタンの速く連打するとアプリがクラッシュしちゃうバグだよ！";
+		syousai = "ボタンを速く連打するとアプリがクラッシュしちゃうバグだよ！\nクラッシュとは、アプリが突然異常終了することだよ。今回は疑似的なクラッシュだけどね！\n開発中のアプリは結構発生するんだけど、とても重大なバグなので本番のQAではリリース前に絶対見つけてね！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 	}
 }

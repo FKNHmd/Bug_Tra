@@ -59,7 +59,7 @@ public class PanelHoukoku_Ctrl_07 : MonoBehaviour {
 
 		daimei = "バグを見つけられなくて残念ね。。";
 		section = "・次回からはこんな観点で挑戦してね！";
-		syousai = "ちょっと頑張りが足りないみたいね。";
+		syousai = "一般的な音楽プレイヤーだと、あのボタンを押すとあの動きをするはずなんだけどな～";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 
@@ -70,7 +70,7 @@ public class PanelHoukoku_Ctrl_07 : MonoBehaviour {
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 		daimei = "クリアおめでとう～♪";
 		section = "・今回の不具合は";
-		syousai = "ボタンの速く連打するとアプリがクラッシュしちゃうバグだよ！";
+		syousai = "停止ボタンを押しても、音楽が止まらないバグだよ！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
 	}
