@@ -72,10 +72,10 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 		yield return new WaitForSeconds(7f);
 		ImageCrash.SetActive (false);
 
-		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
+		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan, 1f, 0.08f);
 		daimei = "クリアおめでとう～♪";
 		section = "・今回の不具合は";
-		syousai = "ボタンを速く連打するとアプリがクラッシュしちゃうバグだよ！\nクラッシュとは、アプリが突然異常終了することだよ。(今回は疑似的なクラッシュだよ。)\n開発中のアプリは結構発生するんだけど、とても重大なバグなので本番のQAではリリース前に絶対見つけてね！";
+		syousai = "ボタンを速く連打するとアプリがクラッシュしちゃうバグだよ！\nクラッシュとは、アプリが突然異常終了することだよ。今回は疑似的なクラッシュだけどね！\n開発中のアプリは結構発生するんだけど、とても重大なバグなので本番のQAではリリース前に絶対見つけてね！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 	}
 }
