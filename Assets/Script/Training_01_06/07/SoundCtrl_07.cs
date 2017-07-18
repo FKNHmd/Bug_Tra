@@ -14,17 +14,16 @@ public class SoundCtrl_07 : MonoBehaviour {
 
 	int s;
 	AudioSource m;
-	bool saisei_flg;
+	//bool saisei_flg;
 
 	// Use this for initialization
 	void Start () {
 		m = m1;
-		saisei_flg = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (saisei_flg == true) {
+		if (m.isPlaying) {
 			Image_Logo.transform.Rotate (new Vector3(0f,0f,-3f));
 		}
 	}
@@ -32,7 +31,6 @@ public class SoundCtrl_07 : MonoBehaviour {
 	public void change_sound(int value)
 	{
 		m.Stop ();
-		saisei_flg = false;
 
 		switch (d.value){
 		case 0:
@@ -55,19 +53,16 @@ public class SoundCtrl_07 : MonoBehaviour {
 	public void play_button()
 	{
 		m.Play ();
-		saisei_flg = true;
 	}
 
 	public void teisi_button()
 	{
 		//m.Stop ();
-		//saisei_flg = false;
 	}
 
 	public void itiziteisi_button()
 	{
 		m.Pause ();
-		saisei_flg = false;
 	}
 
 	public void valume_button()
