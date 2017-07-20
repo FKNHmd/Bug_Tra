@@ -25,6 +25,7 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		FadeInOut.SetActive (true);
 	}
 	
 	// Update is called once per frame
