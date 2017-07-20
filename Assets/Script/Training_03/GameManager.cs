@@ -12,9 +12,12 @@ public class GameManager : MonoBehaviour
     // 出現させるターゲット
     public GameObject enemy;
     // テキストのオブジェクト
-    public GameObject scoreText,gameTimeObj;
+    public GameObject scoreText, gameTimeObj;
     // スコアの数
     public int scoreNum;
+    // スコアを格納
+    [SerializeField]
+    List<int> scoreRank = new List<int>();
     // タップした座標
     public Vector3 mousePosition;
     Vector3 angle = new Vector3(0, 0, 0);
@@ -27,11 +30,15 @@ public class GameManager : MonoBehaviour
     float createTime;
 
     // 1度だけ呼び出すフラグ
-   public bool isSetFlg = true;
+    bool isSetFlg = true;
+    // バグが発生したかを判断
+    public bool isBagSET = false;
+    // 発生したバグの内容
+    public string bagText;
 
     // ゲームのUI切り替え(最初にONに設定し、呼び出せるようにする)
     bool isGameFlg = false;
-    public GameObject UI_Title,UI_Game;
+    public GameObject UI_Title, UI_Game, UI_Result;
     // ゲーム開始までの時間
     int startCount = 3;
     float startTime;
@@ -41,11 +48,14 @@ public class GameManager : MonoBehaviour
 
     // エラーメッセージ
     public GameObject errorObject;
+    // 敵が破壊された際のエフェクト
+    public GameObject boxEffect;
 
     public enum GameState
     {
         TITLE,
         GAME,
+        RESULT,
     }
     public GameState GAMESTATE;
 
@@ -61,12 +71,12 @@ public class GameManager : MonoBehaviour
     {
         //Time.timeScale = 0.1f;
         StateManager();
-       
     }
 
     // ゲームとタイトルの切り替えを管理
     void StateManager()
     {
+
         switch (GAMESTATE)
         {
             case GameState.TITLE:
@@ -74,14 +84,12 @@ public class GameManager : MonoBehaviour
                     // 最初だけ呼び出す(主に初期化など)
                     if (isSetFlg)
                     {
-                        isGameFlg = false;
                         UI_Title.SetActive(true);
                         UI_Game.SetActive(false);
+                        UI_Result.SetActive(false);
                         // 最後にフラグを切って処理しないようにする
-                    isSetFlg = false;
+                        isSetFlg = false;
                     }
-
-                  
                     break;
                 }
             case GameState.GAME:
@@ -89,14 +97,25 @@ public class GameManager : MonoBehaviour
                     // 最初だけ呼び出す(主に初期化など)
                     if (isSetFlg)
                     {
-                        isGameFlg = true;
+                        // ターゲットがゲーム上に存在する場合は消す
+                        List<GameObject> enemys = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
+                        if (enemys.Count > 0)
+                        {
+                            for (int i = 0; i < enemys.Count; i++)
+                            {
+                                Destroy(enemys[i]);
+                            }
+                            enemys.Clear();
+                        }
                         UI_Title.SetActive(false);
                         UI_Game.SetActive(true);
+                        UI_Result.SetActive(false);
                         startTime = 0;
                         startCount = 2;
                         scoreNum = 0;
                         gameCount = 2;
                         gameTime = 0;
+                        isBagSET = false;
 
                         // 最後にフラグを切って処理しないようにする
                         isSetFlg = false;
@@ -110,18 +129,25 @@ public class GameManager : MonoBehaviour
                         {
                             GameObject createObj = Instantiate(enemy);
                             enemy.transform.position = new Vector3(Random.Range(-40, 40), 10, Random.Range(-40, 40));
+                            enemy.transform.eulerAngles = new Vector3(0, Random.Range(-40, 40), 0);
                             createTime = 0;
+
+                            // ひとまずランダムでバグを発生させる------------------------------------------------------------------------------
+                            if(Random.Range(0,3) == 2)
+                            {
+                                isBagSET = true;
+                            }
                         }
                         CameraMove();
                         // ゲーム中の時間を表示
                         gameTime += Time.deltaTime;
                         gameCount = Mathf.CeilToInt(10 - gameTime);
                         gameTimeObj.GetComponent<Text>().text = "" + gameCount;
-                        // 終了判定(今はステートをTITLEにしているが、後でリザルトにする)
-                        if(gameCount < 1)
+                        // 終了判定
+                        if (gameCount < 1)
                         {
                             isSetFlg = true;
-                            GAMESTATE = GameState.TITLE;
+                            GAMESTATE = GameState.RESULT;
                         }
                     }
                     else
@@ -129,6 +155,46 @@ public class GameManager : MonoBehaviour
                         startTime += Time.deltaTime;
                         startCount = Mathf.CeilToInt(3 - startTime);
                         scoreText.GetComponent<Text>().text = "" + startCount;
+                    }
+                    break;
+                }
+            case GameState.RESULT:
+                {
+                    // 最初だけ呼び出す(主に初期化など)
+                    if (isSetFlg)
+                    {
+                        isGameFlg = false;
+                        UI_Title.SetActive(false);
+                        UI_Game.SetActive(false);
+                        UI_Result.SetActive(true);
+                        // 現在のスコアを反映
+                        GameObject.Find("NowScore").GetComponent<Text>().text = "SCORE:" + scoreNum;
+                        // スコアを保存して降順にする
+                        scoreRank.Add(scoreNum);
+                        scoreRank.Sort();   //昇順
+                        scoreRank.Reverse();//格納してる順番を逆にする 
+                                            // ランキングに反映
+                        Transform[] rankText = GameObject.Find("ScoreRank").GetComponentsInChildren<Transform>();
+
+                        for (int i = 0; i < 3; i++)
+                        {
+                            if (scoreRank.Count < i + 1)
+                            {
+                                rankText[i + 1].GetComponent<Text>().text = (i + 1) + "番:----";
+                            }
+                            else
+                            {
+                                rankText[i + 1].GetComponent<Text>().text = (i + 1) + "番:" + scoreRank[i];
+                            }
+                        }
+                        // 最後にフラグを切って処理しないようにする
+                        isSetFlg = false;
+                    }
+                    // ひとまずランダムでバグを発生させる------------------------------------------------------------------------------
+                    if (isBagSET)
+                    {
+                        scoreNum += 1;
+                        GameObject.Find("NowScore").GetComponent<Text>().text = "SCORE:" + scoreNum;
                     }
                     break;
                 }
@@ -186,11 +252,10 @@ public class GameManager : MonoBehaviour
                 //if (hit.transform.tag != "Bullet")
                 //{
                 GameObject createObj = Instantiate(bullet);
-                    createObj.transform.position = mainCamera.ScreenToWorldPoint(mainCamera.transform.position);
-                    createObj.transform.LookAt(hit.point);
-               // }
+                createObj.transform.position = mainCamera.ScreenToWorldPoint(mainCamera.transform.position);
+                createObj.transform.LookAt(hit.point);
+                // }
             }
-
         }
     }
 
@@ -202,10 +267,33 @@ public class GameManager : MonoBehaviour
         isSetFlg = true;
         GAMESTATE = GameState.GAME;
     }
+    // タイトル画面
+    public void TitleMenu()
+    {
+        isSetFlg = true;
+        GAMESTATE = GameState.TITLE;
+    }
     // ベストスコアを表示
     public void BestScore()
     {
-        ErrorMessage();
+        // スコアを保存して降順にする
+        scoreRank.Sort();   //昇順
+        scoreRank.Reverse();//格納してる順番を逆にする 
+                            // ランキングに反映
+        Transform[] rankText = GameObject.Find("ScoreRank").GetComponentsInChildren<Transform>();
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (scoreRank.Count < i + 1)
+            {
+                rankText[i + 1].GetComponent<Text>().text = (i + 1) + "番:----";
+            }
+            else
+            {
+                rankText[i + 1].GetComponent<Text>().text = (i + 1) + "番:" + scoreRank[i];
+            }
+        }
+        //ErrorMessage();
     }
     // ステージセレクトに戻る
     public void StageSelectScene()
@@ -213,13 +301,17 @@ public class GameManager : MonoBehaviour
         ErrorMessage();
     }
     // エラー
-    void ErrorMessage()
+    public void ErrorMessage()
     {
-        errorObject.SetActive(true);
-    }
-    // 閉じる
-    public void ErrorHide()
-    {
-        errorObject.SetActive(false);
+        if (errorObject.activeSelf)
+        {
+            errorObject.SetActive(false);
+
+        }
+        else
+        {
+            errorObject.SetActive(true);
+
+        }
     }
 }

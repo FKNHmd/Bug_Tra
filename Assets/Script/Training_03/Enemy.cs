@@ -16,8 +16,12 @@ public class Enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        Vector3 v = GetComponentInChildren<Rigidbody>().velocity;
+        v = GetComponent<Rigidbody>().velocity;
+        GetComponentInChildren<Rigidbody>().velocity = v;
+
+
+    }
 
     void OnCollisionEnter(Collision coll)
     {
