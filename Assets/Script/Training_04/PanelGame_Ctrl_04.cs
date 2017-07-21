@@ -10,6 +10,7 @@ public class PanelGame_Ctrl_04 : MonoBehaviour {
     public InputField hanei;
     public InputField hanei2;
     public GameCtrl_PanelChange GP;
+    public GameObject panelhoukoku;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,7 @@ public class PanelGame_Ctrl_04 : MonoBehaviour {
 
     public void Houkoku_Button()
 	{
-		GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+        //GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+        panelhoukoku.SetActive(true);
 	}
 }
