@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PanelGame_Ctrl_04 : MonoBehaviour {
     public InputField namae;
-    public InputField address;
+    public InputField namae2;
     public InputField syoukai;
     public InputField hanei;
     public InputField hanei2;
@@ -23,7 +23,7 @@ public class PanelGame_Ctrl_04 : MonoBehaviour {
 	}
     public void nyuryoku_Button()
     {
-        hanei.text = namae.text + "\n" + address.text;
+        hanei.text = namae.text + " " + namae2.text;
         hanei2.text = syoukai.text;
     }
 
