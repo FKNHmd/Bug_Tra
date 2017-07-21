@@ -23,10 +23,11 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 
 	public void GameGamenhe_Button()
 	{
-		GP.change_panel (GameCtrl_PanelChange.panel.Game);
+		//GP.change_panel (GameCtrl_PanelChange.panel.Game);
+		this.gameObject.SetActive (false);
 	}
 
-	public void zannen()
+	public void huseikai()
 	{
 		string daimei, section, syousai;
 
@@ -38,7 +39,7 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 
-	void seikai()
+	public void seikai()
 	{
 		string daimei, section, syousai;
 

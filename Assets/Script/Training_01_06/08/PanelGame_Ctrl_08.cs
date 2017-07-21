@@ -7,6 +7,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 
 	public GameCtrl_PanelChange GP;
 	public PanelHoukoku_Ctrl_08 PHC;
+	public GameObject PanelHoukoku;
 	public Text TextOkane;
 	public Text TextHosi5, TextHosi4, TextHosi3;
 
@@ -55,7 +56,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		hyouzi ();
 
 		if (okane <= 0) {
-			PHC.zannen ();
+			PHC.huseikai ();
 		}
 	}
 
@@ -101,7 +102,8 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		
 	public void Houkoku_Button()
 	{
-		GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+		//GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+		PanelHoukoku.SetActive (true);
 	}
 
 	void OnApplicationPause (bool pauseStatus)
