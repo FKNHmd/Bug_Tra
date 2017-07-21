@@ -1426,7 +1426,6 @@ GameObject:
   - component: {fileID: 614361249}
   - component: {fileID: 614361253}
   - component: {fileID: 614361252}
-  - component: {fileID: 614361251}
   - component: {fileID: 614361250}
   m_Layer: 5
   m_Name: Panel_Houkoku
@@ -1463,31 +1462,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 614361248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a2c07ba575406940b78afd1b50ff781, type: 3}
+  m_Script: {fileID: 11500000, guid: 6029a979300a374428ba3820ae419f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GP: {fileID: 849489694}
   PCC: {fileID: 686407831}
---- !u!114 &614361251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 614361248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8075dcf1543b5e4e8d9ee85656668b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GP: {fileID: 849489694}
-  PHC: {fileID: 0}
-  TextOkane: {fileID: 0}
-  TextHosi5: {fileID: 0}
-  TextHosi4: {fileID: 0}
-  TextHosi3: {fileID: 0}
-  ImageHosi5: {fileID: 0}
-  ImageHosi4: {fileID: 0}
-  ImageHosi3: {fileID: 0}
 --- !u!114 &614361252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2353,7 +2332,6 @@ GameObject:
   - component: {fileID: 849489695}
   - component: {fileID: 849489694}
   - component: {fileID: 849489693}
-  - component: {fileID: 849489697}
   m_Layer: 0
   m_Name: GameCtrl
   m_TagString: Untagged
@@ -2369,7 +2347,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 849489692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 380a8c25e7aeda34882bd4341b24a90d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fef82b35ac192a4f99fa8d34d6075a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GP: {fileID: 849489694}
@@ -2415,31 +2393,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &849489697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 849489692}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f24693ac28d2dd4aa05407a42109d66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PanelCrossChan: {fileID: 686407830}
-  PanelGame: {fileID: 1579111010}
-  PanelHoukoku: {fileID: 614361248}
-  FadeInOut: {fileID: 1770345091}
-  PanelOld: {fileID: 0}
-  PanelNew: {fileID: 0}
-  alpha: 0
-  fos: 0
-  fis: 0
-  PanelOld: {fileID: 0}
-  PanelNew: {fileID: 0}
-  alpha: 0
-  fos: 0
-  fis: 0
 --- !u!1 &883073188
 GameObject:
   m_ObjectHideFlags: 0
@@ -4188,7 +4141,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1579111010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8075dcf1543b5e4e8d9ee85656668b2, type: 3}
+  m_Script: {fileID: 11500000, guid: d33ac70ffda47864198acbb0ebe03bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GP: {fileID: 849489694}
