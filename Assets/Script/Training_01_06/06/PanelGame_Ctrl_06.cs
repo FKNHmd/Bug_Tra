@@ -38,7 +38,7 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 		if ((nokori <= 0) && (clear_flg == false)) {
 			string daimei, section, syousai;
 
-			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan, 1f, 0.08f);
+			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan, 1f, 0.12f);
 
 			daimei = "バグを見つけられなくて残念ね。。";
 			section = "・次回からはこんな観点で挑戦してね！";

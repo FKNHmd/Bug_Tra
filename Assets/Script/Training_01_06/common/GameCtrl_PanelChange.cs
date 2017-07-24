@@ -64,8 +64,8 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 
 	public void change_panel(panel p)
 	{
-		fos = 0.08f;
-		fis = 0.08f;
+		fos = 0.12f;
+		fis = 0.12f;
 		change_panel_common (p);
 	}
 
