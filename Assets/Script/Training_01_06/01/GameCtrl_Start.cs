@@ -8,8 +8,15 @@ public class GameCtrl_Start : MonoBehaviour {
 	public GameCtrl_PanelChange GP;
 	public PanelCrossChan_Ctrl PCC;
 
+	//int old_orientation;
+	ScreenOrientation old_orientation;
+
 	// Use this for initialization
 	void Start () {
+		old_orientation = Screen.orientation;
+
+		Screen.orientation = ScreenOrientation.Portrait;
+
 		string daimei, section, syousai;
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
@@ -18,6 +25,11 @@ public class GameCtrl_Start : MonoBehaviour {
 		section = "・今回のゲームは";
 		syousai = "キーボードのボタンをTapするとホタルが光るよ！\nキーボードの種類にも注意してね！\n不具合を見つけたら”不具合報告ボタン”をTapして\nバグを教えてね♪";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);
+	}
+
+	void OnDisable ()
+	{
+		Screen.orientation = old_orientation;
 	}
 
 	// Update is called once per frame
