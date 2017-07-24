@@ -16,7 +16,8 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 	public GameObject PanelHoukoku;
 	public GameObject FadeInOut;
 
-	GameObject PanelOld = null;
+	//GameObject PanelOld = null;
+	bool panelold_flg = false;
 	GameObject PanelNew = null;
 	float alpha = 0f;
 
@@ -30,12 +31,15 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (PanelOld != null) {
+		//if (PanelOld != null) {
+		if (panelold_flg == true) {
 			alpha = alpha + fos;
 			if (alpha >= 1f) {
-				PanelOld.SetActive (false);
-				PanelOld = null;
-				Debug.Log ("hoge");
+				//PanelOld.SetActive (false);
+				oldpanel_noactive ();
+//				PanelOld = null;
+				panelold_flg = false;
+//				Debug.Log ("hoge");
 			}
 			FadeInOut.GetComponent<Image> ().color = new Color (0, 0, 0, alpha);
 		} else if (PanelNew != null) {
@@ -43,7 +47,7 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 			if (alpha <= 0f) {
 				PanelNew.SetActive (true);
 				PanelNew = null;
-				Debug.Log ("moge");
+//				Debug.Log ("moge");
 			}
 			FadeInOut.GetComponent<Image> ().color = new Color (0, 0, 0, alpha);
 //			PanelNew.SetActive (true);
@@ -70,25 +74,31 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 		alpha = 0f;
 		if (PanelCrossChan.activeSelf == true) {
 			//PanelCrossChan.SetActive (false);
-			PanelOld = PanelCrossChan;
+//			PanelOld = PanelCrossChan;
+			panelold_flg = true;
 		} else if (PanelGame.activeSelf == true) {
 			//PanelGame.SetActive (false);
-			PanelOld = PanelGame;
+//			PanelOld = PanelGame;
+			panelold_flg = true;
 		} else if (PanelHoukoku.activeSelf == true) {
 			//PanelHoukoku.SetActive (false);
-			PanelOld = PanelHoukoku;
+//			PanelOld = PanelHoukoku;
+			panelold_flg = true;
 		} else {
 			alpha = 1f;
 			FadeInOut.GetComponent<Image> ().color = new Color (0, 0, 0, alpha);
-			PanelOld = null;
+//			PanelOld = null;
+			panelold_flg = false;
 		}
 
 		/* FadeOutなし */
 		if (fos == 1f) {
-			PanelOld.SetActive (false);
+			//PanelOld.SetActive (false);
+			oldpanel_noactive();
 			alpha = 1f;
 			FadeInOut.GetComponent<Image> ().color = new Color (0, 0, 0, alpha);
-			PanelOld = null;
+//			PanelOld = null;
+			panelold_flg = false;
 		}
 
 		switch (p) {
@@ -108,5 +118,12 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 			Debug.Log ("change_panel error");
 			break;
 		}
+	}
+
+	void oldpanel_noactive()
+	{
+		PanelCrossChan.SetActive (false);
+		PanelGame.SetActive (false);
+		PanelHoukoku.SetActive (false);
 	}
 }
