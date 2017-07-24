@@ -890,6 +890,7 @@ GameObject:
   - component: {fileID: 402038792}
   - component: {fileID: 402038793}
   - component: {fileID: 402038794}
+  - component: {fileID: 402038795}
   m_Layer: 0
   m_Name: GameCtrl
   m_TagString: Untagged
@@ -951,6 +952,17 @@ MonoBehaviour:
   PanelGame: {fileID: 1574431170}
   PanelHoukoku: {fileID: 1638925978}
   FadeInOut: {fileID: 1677874524}
+--- !u!114 &402038795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 402038790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e09219162268844ca43ed10d81e08a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &417255453
 GameObject:
   m_ObjectHideFlags: 0

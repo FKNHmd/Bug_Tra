@@ -1106,6 +1106,7 @@ GameObject:
   - component: {fileID: 540324176}
   - component: {fileID: 540324178}
   - component: {fileID: 540324177}
+  - component: {fileID: 540324180}
   m_Layer: 0
   m_Name: GameCtrl
   m_TagString: Untagged
@@ -1167,6 +1168,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &540324180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 540324175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e09219162268844ca43ed10d81e08a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &591746794
 GameObject:
   m_ObjectHideFlags: 0
@@ -4608,6 +4620,7 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &1782261215
 Transform:
   m_ObjectHideFlags: 0
