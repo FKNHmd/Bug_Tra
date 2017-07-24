@@ -26,7 +26,7 @@ public class PanelHoukoku_Ctrl_04 : MonoBehaviour {
 
         daimei = "クリアおめでとう～♪";
         section = "・今回の不具合は";
-        syousai = "特定のボタンがタップに反応しない不具合だよ！\nどんな所に不具合があるかわからないから、見逃さない様に細かいところまで注意しなきゃだね！";
+        syousai = "特定の文字数以上入力した際に、改行されないでUI崩れがおきてしまう不具合だよ！\nいつもと違う違和感を感じることが出来たらサイコーだね！\nその為にはゲームを沢山プレイして、仕様を把握しておくことが大切だょ♪";
         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
     }
 
@@ -36,9 +36,9 @@ public class PanelHoukoku_Ctrl_04 : MonoBehaviour {
 
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
 
-        daimei = "バグを見つけられなくて残念ね。。";
+        daimei = "バグを見つけられなくて残念ね･･･。";
         section = "・次回からはこんな観点で挑戦してね！";
-        syousai = "キーボードをいろいろ変えて、細かいところもチェックしてみて！";
+        syousai = "「入力欄」や「入力ボタン」を押したあと等に、注目してみてっ！文字列等には様々な不具合がおおいので注意して見てみてね！";
         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
     }
 	public void GameGamenhe_Button()
