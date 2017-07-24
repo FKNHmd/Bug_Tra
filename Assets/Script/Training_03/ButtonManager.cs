@@ -8,7 +8,7 @@ public class ButtonManager : MonoBehaviour
     // 表示を操作するオブジェクトを格納
     public GameObject hideObject, activeObject;
 
-    GameManager _GameMar;
+    GameManager_03 _GameMar;
 
     // Use this for initialization
     void Start()
@@ -32,7 +32,7 @@ public class ButtonManager : MonoBehaviour
     public void BestScore()
     {
         activeObject.SetActive(true);
-        _GameMar = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _GameMar = GameObject.Find("GameManager").GetComponent<GameManager_03>();
         _GameMar.BestScore();
         hideObject.SetActive(false);
     }
@@ -55,7 +55,7 @@ public class ButtonManager : MonoBehaviour
     // バグボタン
     public void BugCheck()
     {
-        _GameMar = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _GameMar = GameObject.Find("GameManager").GetComponent<GameManager_03>();
         if (hideObject.activeSelf)
         {
             _GameMar.isBugCheck = false;

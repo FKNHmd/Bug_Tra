@@ -109,15 +109,17 @@
     <Compile Include="Assets\Script\Training_01_06\08\GameCtrl_Start_08.cs" />
     <Compile Include="Assets\Script\Training_01_06\08\PanelGame_Ctrl_08.cs" />
     <Compile Include="Assets\Script\Training_01_06\08\PanelHoukoku_Ctrl_08.cs" />
+    <Compile Include="Assets\Script\Training_01_06\common\GameCtrl_FixOrientation.cs" />
     <Compile Include="Assets\Script\Training_01_06\common\GameCtrl_PanelChange.cs" />
     <Compile Include="Assets\Script\Training_01_06\common\PanelCrossChan_Ctrl.cs" />
     <Compile Include="Assets\Script\Training_03\Bullet.cs" />
     <Compile Include="Assets\Script\Training_03\ButtonManager.cs" />
     <Compile Include="Assets\Script\Training_03\Enemy.cs" />
-    <Compile Include="Assets\Script\Training_03\GameManager.cs" />
+    <Compile Include="Assets\Script\Training_03\GameManager_03.cs" />
     <Compile Include="Assets\Script\Training_04\GameCtrl_Start_04.cs" />
     <Compile Include="Assets\Script\Training_04\PanelGame_Ctrl_04.cs" />
     <Compile Include="Assets\Script\Training_04\PanelHoukoku_Ctrl_04.cs" />
+    <Compile Include="Assets\Script\Training_05\Rote.cs" />
     <Compile Include="Assets\Script\Utility\SingletonMonoBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>

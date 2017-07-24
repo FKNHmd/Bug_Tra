@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour {
 
     // 参照
     Rigidbody _rigid;
-    GameManager _gameMar;
+    GameManager_03 _gameMar;
 
     // 生存時間
     float lifeTime;
@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _rigid = GetComponent<Rigidbody>();
-        _gameMar = GameObject.Find("GameManager").GetComponent<GameManager>();
+        _gameMar = GameObject.Find("GameManager").GetComponent<GameManager_03>();
     }
 	
 	// Update is called once per frame
