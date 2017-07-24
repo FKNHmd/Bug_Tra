@@ -32,7 +32,10 @@ public class GameManager : MonoBehaviour
     // 1度だけ呼び出すフラグ
     bool isSetFlg = true;
     // バグが発生したかを判断
-    public bool isBagSET = false;
+    public bool isBugSET = false;
+    // バグ報告ボタンを押下され、バグを探しているかを判断
+    public bool isBugCheck = false;
+
     // 発生したバグの内容
     public string bagText;
 
@@ -50,6 +53,9 @@ public class GameManager : MonoBehaviour
     public GameObject errorObject;
     // 敵が破壊された際のエフェクト
     public GameObject boxEffect;
+
+    // ゲームクリアした際に表示するメッセージ
+    public GameObject gameClaer;
 
     public enum GameState
     {
@@ -71,6 +77,7 @@ public class GameManager : MonoBehaviour
     {
         //Time.timeScale = 0.1f;
         StateManager();
+        BugCheck();
     }
 
     // ゲームとタイトルの切り替えを管理
@@ -84,6 +91,8 @@ public class GameManager : MonoBehaviour
                     // 最初だけ呼び出す(主に初期化など)
                     if (isSetFlg)
                     {
+                        mainCamera.transform.position =
+                            GameObject.Find("TitleBack").transform.position;
                         UI_Title.SetActive(true);
                         UI_Game.SetActive(false);
                         UI_Result.SetActive(false);
@@ -97,6 +106,8 @@ public class GameManager : MonoBehaviour
                     // 最初だけ呼び出す(主に初期化など)
                     if (isSetFlg)
                     {
+                        mainCamera.transform.position = new Vector3(0, 5, 0);
+                        mainCamera.transform.eulerAngles = Vector3.zero;
                         // ターゲットがゲーム上に存在する場合は消す
                         List<GameObject> enemys = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
                         if (enemys.Count > 0)
@@ -115,7 +126,7 @@ public class GameManager : MonoBehaviour
                         scoreNum = 0;
                         gameCount = 2;
                         gameTime = 0;
-                        isBagSET = false;
+                        isBugSET = false;
 
                         // 最後にフラグを切って処理しないようにする
                         isSetFlg = false;
@@ -133,15 +144,15 @@ public class GameManager : MonoBehaviour
                             createTime = 0;
 
                             // ひとまずランダムでバグを発生させる------------------------------------------------------------------------------
-                            if(Random.Range(0,3) == 2)
+                            if (scoreNum > 1000)
                             {
-                                isBagSET = true;
+                                isBugSET = true;
                             }
                         }
                         CameraMove();
                         // ゲーム中の時間を表示
                         gameTime += Time.deltaTime;
-                        gameCount = Mathf.CeilToInt(10 - gameTime);
+                        gameCount = Mathf.CeilToInt(20 - gameTime);
                         gameTimeObj.GetComponent<Text>().text = "" + gameCount;
                         // 終了判定
                         if (gameCount < 1)
@@ -191,7 +202,7 @@ public class GameManager : MonoBehaviour
                         isSetFlg = false;
                     }
                     // ひとまずランダムでバグを発生させる------------------------------------------------------------------------------
-                    if (isBagSET)
+                    if (isBugSET && !isBugCheck)
                     {
                         scoreNum += 1;
                         GameObject.Find("NowScore").GetComponent<Text>().text = "SCORE:" + scoreNum;
@@ -200,41 +211,44 @@ public class GameManager : MonoBehaviour
                 }
         }
     }
-
     // カメラの回転と玉の発射
     void CameraMove()
     {
-        /// クリック(タップ)した際に初期化とカメラの初期座標を取得
-        /// クリック中はカメラを回転させる
-        /// マウスを離した時間が一定以内(fireCount)なら弾を発射(離した箇所場所に弾が飛ぶ)
-        /// タップした際にカメラが地味に動くので、fireCountの時間を超えたら動くようにする
-        if (Input.GetMouseButtonDown(0))
+        // バグチェック中は機能させない
+        if (!isBugCheck)
         {
-            // 初期化
-            clickTime = 0;
-            // クリック開始時にカメラの角度を保持(Z軸には回転させないため).
-            angle = mainCamera.transform.localEulerAngles;
-            mousePosition = Input.mousePosition;
-        }
-        if (Input.GetMouseButton(0))
-        {
-            clickTime += Time.deltaTime;
-            if (clickTime > fireCount)
+            /// クリック(タップ)した際に初期化とカメラの初期座標を取得
+            /// クリック中はカメラを回転させる
+            /// マウスを離した時間が一定以内(fireCount)なら弾を発射(離した箇所場所に弾が飛ぶ)
+            /// タップした際にカメラが地味に動くので、fireCountの時間を超えたら動くようにする
+            if (Input.GetMouseButtonDown(0))
             {
-                // マウスの移動量分カメラを回転させる(横回転のみなのでカメラの角度Y軸を更新)
-                angle.y -= (Input.mousePosition.x - mousePosition.x) * 0.1f;
-                mainCamera.gameObject.transform.localEulerAngles = angle;
-                mousePosition = Input.mousePosition;
-            }
-            else
-            {
+                // 初期化
+                clickTime = 0;
+                // クリック開始時にカメラの角度を保持(Z軸には回転させないため).
                 angle = mainCamera.transform.localEulerAngles;
                 mousePosition = Input.mousePosition;
             }
-        }
-        if (clickTime < fireCount)
-        {
-            Fire();
+            if (Input.GetMouseButton(0))
+            {
+                clickTime += Time.deltaTime;
+                if (clickTime > fireCount)
+                {
+                    // マウスの移動量分カメラを回転させる(横回転のみなのでカメラの角度Y軸を更新)
+                    angle.y -= (Input.mousePosition.x - mousePosition.x) * 0.1f;
+                    mainCamera.gameObject.transform.localEulerAngles = angle;
+                    mousePosition = Input.mousePosition;
+                }
+                else
+                {
+                    angle = mainCamera.transform.localEulerAngles;
+                    mousePosition = Input.mousePosition;
+                }
+            }
+            if (clickTime < fireCount)
+            {
+                Fire();
+            }
         }
     }
     // 弾の発射処理
@@ -255,6 +269,31 @@ public class GameManager : MonoBehaviour
                 createObj.transform.position = mainCamera.ScreenToWorldPoint(mainCamera.transform.position);
                 createObj.transform.LookAt(hit.point);
                 // }
+            }
+        }
+    }
+
+    // バグを見つけた際の処理
+    void BugCheck()
+    {
+        if (isBugCheck)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                Ray ray = GameObject.Find("UICamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+
+                // レイを飛ばして当たれば判定
+                if (hit.collider != null)
+                {
+                    // 当たったのがバグの画像、かつバグがセット中であればゲームクリアー
+                    if (hit.collider.name == "BugImage" &&
+                        isBugSET)
+                    {
+                        // ゲームクリアー
+                        gameClaer.SetActive(true);
+                    }
+                }
             }
         }
     }

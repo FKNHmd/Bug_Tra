@@ -52,22 +52,21 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    // バグを見つけた際
-    public void BagCheck()
+    // バグボタン
+    public void BugCheck()
     {
         _GameMar = GameObject.Find("GameManager").GetComponent<GameManager>();
-        Time.timeScale = 0;
-        // 半透明の画像を表示
-
-        if (_GameMar.isBagSET)
+        if (hideObject.activeSelf)
         {
-            // バグが発生した際に見えないボタンを押されたらクリアにする
-
+            _GameMar.isBugCheck = false;
+            hideObject.SetActive(false);
+            Time.timeScale = 1;
         }
         else
         {
-            // 違ったらゲームオーバー
-
+            _GameMar.isBugCheck = true;   
+            hideObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }
