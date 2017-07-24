@@ -56,6 +56,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		hyouzi ();
 
 		if (okane <= 0) {
+			image_char_false ();
 			PHC.huseikai ();
 		}
 	}
@@ -103,6 +104,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	public void Houkoku_Button()
 	{
 		//GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+		image_char_false ();
 		PanelHoukoku.SetActive (true);
 	}
 

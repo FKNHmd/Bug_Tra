@@ -35,7 +35,7 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 
 		daimei = "バグを見つけられなくて残念ね。。";
 		section = "・次回からはこんな観点で挑戦してね！";
-		syousai = "欲しくないキャラが出た時に思わずしちゃいそうな操作を考えてみて！";
+		syousai = "欲しいキャラが出なかった時に思わずしちゃいそうな操作を考えてみて！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 
@@ -46,7 +46,9 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 		daimei = "クリアおめでとう～♪";
 		section = "・今回の不具合は";
-		syousai = "ガチャをひいて、結果がわかった直後にサスペンド。レジュームすると、コインが減ってない状態でまたガチャがひけてしまうバグだよ！\n";
+		syousai = "ガチャをひいて、結果がわかった後にサスペンド/レジューム(サスレジ)すると、コインが減ってない状態でまたガチャがひけてしまうバグだよ！\n"
+				+ "今回のバグはユーザーが得する不具合だけど、本番のQAではコインだけ減ってキャラを取得できないといったユーザーが損するといったこともないか確認してね！"
+				+ "また、ガチャ結果がわかった瞬間にネットワーク切断やブラウザバック等で問題発生することもあるから注意だよ！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 	}
 }
