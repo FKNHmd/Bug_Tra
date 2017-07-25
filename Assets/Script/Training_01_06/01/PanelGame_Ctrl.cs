@@ -9,6 +9,7 @@ public class PanelGame_Ctrl : MonoBehaviour {
 	public GameObject ImageOn;
 	public GameObject ImageOff;
 	public GameCtrl_PanelChange GP;
+	public GameObject PanelHoukoku;
 
 	bool on_flg;
 	float on_byou;
@@ -76,6 +77,7 @@ public class PanelGame_Ctrl : MonoBehaviour {
 		
 	public void Houkoku_Button()
 	{
-		GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+		//GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+		PanelHoukoku.SetActive(true);
 	}
 }
