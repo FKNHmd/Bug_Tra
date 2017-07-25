@@ -1020,6 +1020,7 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &417255455
 Transform:
   m_ObjectHideFlags: 0
@@ -1050,7 +1051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &472132921
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2530,7 +2531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1574431171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2618,7 +2619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1638925979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3249,6 +3250,7 @@ SpriteRenderer:
   m_Size: {x: 4.09, y: 3.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!1 &2090031149
 GameObject:
   m_ObjectHideFlags: 0
