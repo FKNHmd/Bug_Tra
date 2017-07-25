@@ -26,9 +26,6 @@ public class Rote : MonoBehaviour {
     private void OnDisable()
     {
         // スマホの縦画面のみを許可
-        Screen.autorotateToPortrait = true;
-        Screen.autorotateToLandscapeLeft = false;
-        Screen.autorotateToLandscapeRight = false;
-        Screen.autorotateToPortraitUpsideDown = false;
+        Screen.orientation = ScreenOrientation.Portrait;
     }
 }
