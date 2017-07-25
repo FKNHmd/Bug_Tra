@@ -24,8 +24,9 @@ public class GameManager_05 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        BugCheck();
+
+    }
     // バグを見つけた際の処理
     void BugCheck()
     {

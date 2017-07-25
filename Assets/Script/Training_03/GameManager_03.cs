@@ -342,6 +342,7 @@ public class GameManager_03 : MonoBehaviour
     // ステージセレクトに戻る
     public void StageSelectScene()
     {
+        Time.timeScale = 1;
         _SceneMar.LoadLevel("Game_Select", 0.5f);
     }
     // エラー
