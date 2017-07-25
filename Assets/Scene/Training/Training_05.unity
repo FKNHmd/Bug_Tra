@@ -2990,7 +2990,6 @@ GameObject:
   - component: {fileID: 1440294209}
   - component: {fileID: 1440294208}
   - component: {fileID: 1440294207}
-  - component: {fileID: 1440294206}
   m_Layer: 5
   m_Name: Button_Start
   m_TagString: Untagged
@@ -3018,20 +3017,6 @@ RectTransform:
   m_AnchoredPosition: {x: -54, y: -245}
   m_SizeDelta: {x: 160, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1440294206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114876566584039684, guid: 7a1c6c841893ffc40b469d98d801d000,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1440294204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62dfda12d924f9439ee281b94af2b6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideObject: {fileID: 1066849561}
-  activeObject: {fileID: 0}
 --- !u!114 &1440294207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3072,7 +3057,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1440294206}
+      - m_Target: {fileID: 1648709393}
         m_MethodName: StopButton
         m_Mode: 1
         m_Arguments:
@@ -3500,6 +3485,7 @@ MonoBehaviour:
   isBugCheck: 0
   gameClaer: {fileID: 1549873584}
   bugUI: {fileID: 756557457}
+  stopUI: {fileID: 1066849561}
 --- !u!1 &1670314558
 GameObject:
   m_ObjectHideFlags: 0
@@ -3589,7 +3575,6 @@ GameObject:
   - component: {fileID: 1697005829}
   - component: {fileID: 1697005828}
   - component: {fileID: 1697005827}
-  - component: {fileID: 1697005830}
   m_Layer: 5
   m_Name: StopButton
   m_TagString: Untagged
@@ -3654,7 +3639,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1697005830}
+      - m_Target: {fileID: 1648709393}
         m_MethodName: StopButton
         m_Mode: 1
         m_Arguments:
@@ -3700,19 +3685,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1697005825}
---- !u!114 &1697005830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1697005825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f62dfda12d924f9439ee281b94af2b6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideObject: {fileID: 1066849561}
-  activeObject: {fileID: 0}
 --- !u!1 &1770455987
 GameObject:
   m_ObjectHideFlags: 0
@@ -3754,7 +3726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -673.6067}
+  m_AnchoredPosition: {x: 0, y: -39.00647}
   m_SizeDelta: {x: -99.375, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770455989

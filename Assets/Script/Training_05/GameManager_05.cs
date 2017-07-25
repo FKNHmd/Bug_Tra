@@ -2,31 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager_05 : MonoBehaviour {
+public class GameManager_05 : MonoBehaviour
+{
 
-   public bool isBugCheck = false;
+    public bool isBugCheck = false;
 
-    public GameObject gameClaer,bugUI;
+    public GameObject gameClaer, bugUI, stopUI;
 
     // Use this for initialization
-    void Start () {
-        // 自動回転可能にする
-        Screen.orientation = ScreenOrientation.AutoRotation;
-        //スマホの左側が下になります
-        Screen.autorotateToLandscapeLeft = true;
-        //スマホの右側が下になります
-        Screen.autorotateToLandscapeRight = true;
-        //スマホの下が下になります
-        Screen.autorotateToPortrait = true;
-        //スマホの上が上になります
-        Screen.autorotateToPortraitUpsideDown = false;
+    void Start()
+    {
+       
     }
-	
-	// Update is called once per frame
-	void Update () {
-        BugCheck();
 
+    // Update is called once per frame
+    void Update()
+    {
+        BugCheck();
     }
+
     // バグを見つけた際の処理
     void BugCheck()
     {
@@ -56,7 +50,36 @@ public class GameManager_05 : MonoBehaviour {
         // スマホの縦画面のみを許可
         Screen.orientation = ScreenOrientation.Portrait;
     }
-
+    // 一時停止
+    public void StopButton()
+    {
+        if (stopUI.activeSelf)
+        {
+            stopUI.SetActive(false);
+            Time.timeScale = 1;
+            MenuRota();
+        }
+        else
+        {
+            stopUI.SetActive(true);
+            Time.timeScale = 0;
+            // 縦画面に戻す
+            Screen.orientation = ScreenOrientation.Portrait;
+        }
+    }
+    void MenuRota()
+    {
+        // 自動回転可能にする
+        Screen.orientation = ScreenOrientation.AutoRotation;
+        //スマホの左側が下になります
+        Screen.autorotateToLandscapeLeft = true;
+        //スマホの右側が下になります
+        Screen.autorotateToLandscapeRight = true;
+        //スマホの下が下になります
+        Screen.autorotateToPortrait = true;
+        //スマホの上が上になります
+        Screen.autorotateToPortraitUpsideDown = false;
+    }
     // バグボタン
     public void BugCheckButton()
     {
