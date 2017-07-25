@@ -57,6 +57,9 @@ public class GameManager_03 : MonoBehaviour
     // ゲームクリアした際に表示するメッセージ
     public GameObject gameClaer;
 
+    // 参照スクリプト
+    FadeManager _SceneMar;
+
     public enum GameState
     {
         TITLE,
@@ -70,6 +73,7 @@ public class GameManager_03 : MonoBehaviour
     void Start()
     {
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        _SceneMar = GameObject.Find("SceneManager").GetComponent<FadeManager>();
     }
 
     // Update is called once per frame
@@ -338,7 +342,7 @@ public class GameManager_03 : MonoBehaviour
     // ステージセレクトに戻る
     public void StageSelectScene()
     {
-        ErrorMessage();
+        _SceneMar.LoadLevel("Game_Select", 0.5f);
     }
     // エラー
     public void ErrorMessage()
