@@ -112,6 +112,11 @@
     <Compile Include="Assets\Script\Training_01_06\common\GameCtrl_FixOrientation.cs" />
     <Compile Include="Assets\Script\Training_01_06\common\GameCtrl_PanelChange.cs" />
     <Compile Include="Assets\Script\Training_01_06\common\PanelCrossChan_Ctrl.cs" />
+    <Compile Include="Assets\Script\Training_02\GameCtrl_Start_02.cs" />
+    <Compile Include="Assets\Script\Training_02\PanelGame_Ctrl_02.cs" />
+    <Compile Include="Assets\Script\Training_02\PanelHoukoku_Ctrl_02.cs" />
+    <Compile Include="Assets\Script\Training_02\Popup.cs" />
+    <Compile Include="Assets\Script\Training_02\SetPopupElement_02.cs" />
     <Compile Include="Assets\Script\Training_03\Bullet.cs" />
     <Compile Include="Assets\Script\Training_03\ButtonManager.cs" />
     <Compile Include="Assets\Script\Training_03\Enemy.cs" />
