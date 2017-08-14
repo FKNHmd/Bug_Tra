@@ -8,8 +8,6 @@ public class ButtonManager : MonoBehaviour
     // 表示を操作するオブジェクトを格納
     public GameObject hideObject, activeObject;
 
-    GameManager_03 _GameMar;
-
     // Use this for initialization
     void Start()
     {
@@ -26,13 +24,16 @@ public class ButtonManager : MonoBehaviour
     public void HideSwitch()
     {
         hideObject.SetActive(false);
-        activeObject.SetActive(true);
+        if (activeObject)
+        {
+            activeObject.SetActive(true);
+        }
     }
     // ベストスコアの表示
     public void BestScore()
     {
         activeObject.SetActive(true);
-        _GameMar = GameObject.Find("GameManager").GetComponent<GameManager_03>();
+        GameManager_03 _GameMar = GameObject.Find("GameManager").GetComponent<GameManager_03>();
         _GameMar.BestScore();
         hideObject.SetActive(false);
     }
@@ -55,7 +56,7 @@ public class ButtonManager : MonoBehaviour
     // バグボタン
     public void BugCheck()
     {
-        _GameMar = GameObject.Find("GameManager").GetComponent<GameManager_03>();
+        GameManager_03 _GameMar = GameObject.Find("GameManager").GetComponent<GameManager_03>();
         if (hideObject.activeSelf)
         {
             _GameMar.isBugCheck = false;
@@ -68,5 +69,13 @@ public class ButtonManager : MonoBehaviour
             hideObject.SetActive(true);
             Time.timeScale = 0;
         }
+    }
+
+    // ステージセレクトに戻る
+    public void StageSelectScene()
+    {
+        Time.timeScale = 1;
+        FadeManager _SceneMar = GameObject.Find("SceneManager").GetComponent<FadeManager>();
+        _SceneMar.LoadLevel("Game_Select", 0.5f);
     }
 }

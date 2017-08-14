@@ -106,6 +106,7 @@ public class Bullet : MonoBehaviour {
                 else
                 {
                     _gameMar.scoreNum += 150;
+                    _gameMar.scoreText.GetComponent<Text>().text = "SCORE:" + _gameMar.scoreNum;
                     Instantiate(_gameMar.boxEffect, enemyObj.transform.position,Quaternion.Euler(new Vector3(-90,0,0)));
                     Destroy(enemyObj);
                 }

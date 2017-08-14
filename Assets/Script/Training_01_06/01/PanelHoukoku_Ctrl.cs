@@ -60,6 +60,6 @@ public class PanelHoukoku_Ctrl : MonoBehaviour {
 
 	public void GameGamenhe_Button()
 	{
-		GP.change_panel (GameCtrl_PanelChange.panel.Game);
+		GP.change_panel (GameCtrl_PanelChange.panel.Game, 1f, 1f);
 	}
 }

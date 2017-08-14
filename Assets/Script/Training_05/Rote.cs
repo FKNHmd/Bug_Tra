@@ -6,6 +6,8 @@ public class Rote : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        // 自動回転可能にする
+        Screen.orientation = ScreenOrientation.AutoRotation;
         //スマホの左側が下になります
         Screen.autorotateToLandscapeLeft = true;
         //スマホの右側が下になります
@@ -19,5 +21,11 @@ public class Rote : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
        
+    }
+
+    private void OnDisable()
+    {
+        // スマホの縦画面のみを許可
+        Screen.orientation = ScreenOrientation.Portrait;
     }
 }
