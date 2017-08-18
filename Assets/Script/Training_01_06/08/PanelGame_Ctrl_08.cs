@@ -12,6 +12,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	public Text TextHosi5, TextHosi4, TextHosi3;
 	public GameObject Gacha;
 	public GameObject ImageHosi5, ImageHosi4, ImageHosi3;
+	public GameCtrl_ClearCheck_08 GCC;
 
 	int okane;
 	int hosi5char_kazu, hosi4char_kazu, hosi3char_kazu;
@@ -25,6 +26,10 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	}
+
+	void Awake () {
+		GCC.set_clearflg (false);
 	}
 		
 	void OnEnable () {
@@ -128,6 +133,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		if (pauseStatus) {
 			image_char_false ();
 			gacha_hyouzi_hihyouzi (1f);
+			GCC.set_clearflg (true);
 			//Debug.Log("applicationWillResignActive or onPause");
 		} else {
 			//Debug.Log("applicationDidBecomeActive or onResume");
