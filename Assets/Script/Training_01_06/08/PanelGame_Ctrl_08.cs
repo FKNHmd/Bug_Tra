@@ -10,11 +10,14 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	public GameObject PanelHoukoku;
 	public Text TextOkane;
 	public Text TextHosi5, TextHosi4, TextHosi3;
-
+	public GameObject Gacha;
 	public GameObject ImageHosi5, ImageHosi4, ImageHosi3;
 
 	int okane;
 	int hosi5char_kazu, hosi4char_kazu, hosi3char_kazu;
+
+
+	Color gachacolor;
 
 	// Use this for initialization
 	void Start () {
@@ -44,6 +47,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		int rand;
 
 
+
 		rand = Random.Range (1, 10);
 
 		if (rand == 1) {
@@ -59,6 +63,9 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 			image_char_false ();
 			PHC.huseikai ();
 		}
+
+		gachacolor = Gacha.GetComponent<Image>().color;
+		Gacha.GetComponent<Image>().color = new Color (gachacolor.r, gachacolor.g, gachacolor.b, 0f);
 	}
 
 	void gacha_kekka_hyouzi (int hosi)
@@ -84,6 +91,9 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		image_char_false ();
 		okane -= 100;
 		hyouzi ();
+
+		gachacolor = Gacha.GetComponent<Image>().color;
+		Gacha.GetComponent<Image>().color = new Color (gachacolor.r, gachacolor.g, gachacolor.b, 1f);
 	}
 
 	void hyouzi ()
