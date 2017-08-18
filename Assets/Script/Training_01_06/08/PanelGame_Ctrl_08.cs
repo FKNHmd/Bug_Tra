@@ -62,10 +62,10 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		if (okane <= 0) {
 			image_char_false ();
 			PHC.huseikai ();
+			return;
 		}
 
-		gachacolor = Gacha.GetComponent<Image>().color;
-		Gacha.GetComponent<Image>().color = new Color (gachacolor.r, gachacolor.g, gachacolor.b, 0f);
+		gacha_hyouzi_hihyouzi (0f);
 	}
 
 	void gacha_kekka_hyouzi (int hosi)
@@ -92,8 +92,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		okane -= 100;
 		hyouzi ();
 
-		gachacolor = Gacha.GetComponent<Image>().color;
-		Gacha.GetComponent<Image>().color = new Color (gachacolor.r, gachacolor.g, gachacolor.b, 1f);
+		gacha_hyouzi_hihyouzi (1f);
 	}
 
 	void hyouzi ()
@@ -102,6 +101,12 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		TextHosi5.text = "×" + hosi5char_kazu;
 		TextHosi4.text = "×" + hosi4char_kazu;
 		TextHosi3.text = "×" + hosi3char_kazu;
+	}
+
+	void gacha_hyouzi_hihyouzi(float f)
+	{
+		gachacolor = Gacha.GetComponent<Image>().color;
+		Gacha.GetComponent<Image>().color = new Color (gachacolor.r, gachacolor.g, gachacolor.b, f);
 	}
 
 	void image_char_false()
@@ -122,6 +127,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	{
 		if (pauseStatus) {
 			image_char_false ();
+			gacha_hyouzi_hihyouzi (1f);
 			//Debug.Log("applicationWillResignActive or onPause");
 		} else {
 			//Debug.Log("applicationDidBecomeActive or onResume");
