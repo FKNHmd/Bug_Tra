@@ -7,6 +7,8 @@ public class GameCtrl_Start_08 : MonoBehaviour {
 
 	public GameCtrl_PanelChange GP;
 	public PanelCrossChan_Ctrl PCC;
+	public GameCtrl_ClearCheck_08 GCC;
+	public GameObject ButtonSeikai;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +29,8 @@ public class GameCtrl_Start_08 : MonoBehaviour {
 
 	public void Start_Button()
 	{
+		GCC.set_clearflg (false);
+		ButtonSeikai.SetActive (false);
 		GP.change_panel (GameCtrl_PanelChange.panel.Game);
 	}
 }

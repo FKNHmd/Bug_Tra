@@ -1728,6 +1728,7 @@ MonoBehaviour:
   GP: {fileID: 849489694}
   PCC: {fileID: 686407831}
   GCC: {fileID: 849489698}
+  ButtonSeikai: {fileID: 751019110}
 --- !u!114 &614361252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2662,6 +2663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GP: {fileID: 849489694}
   PCC: {fileID: 686407831}
+  GCC: {fileID: 849489698}
+  ButtonSeikai: {fileID: 751019110}
 --- !u!114 &849489694
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	int okane;
 	int hosi5char_kazu, hosi4char_kazu, hosi3char_kazu;
 
+	const int SYOKIOKANE = 1000;
+
 
 	Color gachacolor;
 
@@ -29,11 +31,11 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	}
 
 	void Awake () {
-		GCC.set_clearflg (false);
+		//GCC.set_clearflg (false);
 	}
 		
 	void OnEnable () {
-		okane = 1000;
+		okane = SYOKIOKANE;
 		//TextOkane.text = "€" + okane;
 
 		hosi5char_kazu = 0;
@@ -114,11 +116,16 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		Gacha.GetComponent<Image>().color = new Color (gachacolor.r, gachacolor.g, gachacolor.b, f);
 	}
 
-	void image_char_false()
+	bool image_char_false()
 	{
-		ImageHosi5.SetActive(false);
-		ImageHosi4.SetActive(false);
-		ImageHosi3.SetActive(false);
+		bool ret = false;
+		if ((ImageHosi3.activeSelf) || (ImageHosi4.activeSelf) || (ImageHosi5.activeSelf)) {
+			ImageHosi5.SetActive(false);
+			ImageHosi4.SetActive(false);
+			ImageHosi3.SetActive(false);
+			ret = true;
+		}
+		return ret;
 	}
 		
 	public void Houkoku_Button()
@@ -131,9 +138,10 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	void OnApplicationPause (bool pauseStatus)
 	{
 		if (pauseStatus) {
-			image_char_false ();
 			gacha_hyouzi_hihyouzi (1f);
-			GCC.set_clearflg (true);
+			if (image_char_false () == true) {
+				GCC.set_clearflg (true);
+			}
 			//Debug.Log("applicationWillResignActive or onPause");
 		} else {
 			//Debug.Log("applicationDidBecomeActive or onResume");

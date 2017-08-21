@@ -8,6 +8,7 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 	public GameCtrl_PanelChange GP;
 	public PanelCrossChan_Ctrl PCC;
 	public GameCtrl_ClearCheck_08 GCC;
+	public GameObject ButtonSeikai;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,9 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 	}
 
 	void OnEnable () {
+		if (GCC.get_clearflg () == true) {
+			ButtonSeikai.SetActive (true);
+		}
 	}
 
 	public void GameGamenhe_Button()
@@ -44,14 +48,13 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 	{
 		string daimei, section, syousai;
 
-		if (GCC.get_clearflg() == true) {
-			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
-			daimei = "クリアおめでとう～♪";
-			section = "・今回の不具合は";
-			syousai = "ガチャをひいて、結果がわかった後にサスペンド/レジューム(サスレジ)すると、コインが減ってない状態でまたガチャがひけてしまうバグだよ！\n"
+		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
+		daimei = "クリアおめでとう～♪";
+		section = "・今回の不具合は";
+		syousai = "ガチャをひいて、結果がわかった後にサスペンド/レジューム(サスレジ)すると、コインが減ってない状態でまたガチャがひけてしまうバグだよ！\n"
 			+ "今回のバグはユーザーが得する不具合だけど、本番のQAではコインだけ減ってキャラを取得できないといったユーザーが損するといったこともないか確認してね！"
 			+ "また、ガチャ結果がわかった瞬間にネットワーク切断やブラウザバック等で問題発生することもあるから注意だよ！";
-			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
-		}
+		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
+
 	}
 }
