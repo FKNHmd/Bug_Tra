@@ -23,6 +23,18 @@ public class Popup : MonoBehaviour
         close.scaleEndAsObservable.Subscribe (_ => state = State.Close);
     }
 
+    public void Hide(int i)
+    {
+        if (i == 1)
+        {
+            gameObject.SetActive(true);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void Open ()
     {
         open.Play ();
