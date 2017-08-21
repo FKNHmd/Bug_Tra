@@ -1044,7 +1044,6 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &417255455
 Transform:
   m_ObjectHideFlags: 0
@@ -2129,7 +2128,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bug\n\u5831\u544A"
+  m_Text: 
 --- !u!222 &1268194681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3420,7 +3419,6 @@ SpriteRenderer:
   m_Size: {x: 4.09, y: 3.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &2090031149
 GameObject:
   m_ObjectHideFlags: 0
