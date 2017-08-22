@@ -175,7 +175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Bug\n\u5831\u544A"
+  m_Text: 
 --- !u!222 &58749452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3457,7 +3457,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9c81e2105088f8346bd7082d1a775cee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bef9befa2dc742e4bb9209de951b1543, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
