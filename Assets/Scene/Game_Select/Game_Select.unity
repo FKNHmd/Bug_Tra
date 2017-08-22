@@ -1111,6 +1111,7 @@ SpriteRenderer:
   m_Size: {x: 10.36, y: 7.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &954399897
 Transform:
   m_ObjectHideFlags: 0
@@ -1641,6 +1642,7 @@ SpriteRenderer:
   m_Size: {x: 4.93, y: 3.27}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &1159108880
 Transform:
   m_ObjectHideFlags: 0
@@ -2110,17 +2112,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1602270098}
-        m_MethodName: SetAndLoadNextScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1142781925}
         m_MethodName: PlayOneShot
         m_Mode: 2
@@ -2891,6 +2882,7 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &2094745333
 Transform:
   m_ObjectHideFlags: 0
