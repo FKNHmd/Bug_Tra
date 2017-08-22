@@ -56,6 +56,7 @@ public class GameManager_03 : MonoBehaviour
 
     // ゲームクリアした際に表示するメッセージ
     public GameObject gameClaer;
+	public PanelCrossChan_Ctrl PCC;
 
     // 参照スクリプト
     FadeManager _SceneMar;
@@ -295,8 +296,13 @@ public class GameManager_03 : MonoBehaviour
                     if (hit.collider.name == "BugImage" &&
                         isBugSET)
                     {
+						string daimei, section, syousai;
                         // ゲームクリアー
                         gameClaer.SetActive(true);
+						daimei = "クリアおめでとう～♪";
+						section = "・今回の不具合は";
+						syousai = "スコアが1000を超えた場合、スコアが増え続けるバグだよ！\n";
+						PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
                     }
                 }
             }
