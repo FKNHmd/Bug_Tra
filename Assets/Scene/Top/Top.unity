@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a46fbc8abca843b3a095e3f7b6ea63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeColor: {r: 0.9381339, g: 1, b: 0.5514706, a: 1}
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!4 &1943299541
 Transform:
   m_ObjectHideFlags: 0
