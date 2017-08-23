@@ -16,6 +16,9 @@ public class PanelCrossChan_Ctrl : MonoBehaviour {
 	public GameObject ButtonGame;
 	public GameObject ButtonSelect;
 
+	public AudioSource m2;
+	public AudioSource m3;
+
 	public enum crosschan_gazou {
 		Normal,
 		Niko,
@@ -52,9 +55,11 @@ public class PanelCrossChan_Ctrl : MonoBehaviour {
 			break;
 		case crosschan_gazou.Niko:
 			ImageCrossChan2.SetActive (true);
+			m2.Play ();
 			break;
 		case crosschan_gazou.Syobon:
 			ImageCrossChan3.SetActive (true);
+			m3.Play ();
 			break;
 		default:
 			Debug.Log("set_crosschan erroe");

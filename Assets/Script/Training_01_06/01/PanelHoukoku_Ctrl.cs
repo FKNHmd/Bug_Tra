@@ -8,8 +8,7 @@ public class PanelHoukoku_Ctrl : MonoBehaviour {
 	public InputField DummyInput;
 	public GameCtrl_PanelChange GP;
 	public PanelCrossChan_Ctrl PCC;
-	public AudioSource m3;
-	public AudioSource m2;
+
 
 	// Use this for initialization
 	void Start () {
@@ -36,7 +35,7 @@ public class PanelHoukoku_Ctrl : MonoBehaviour {
 		if (DummyInput.text == "q") {
 			Debug.Log ("Seikai");
 			string daimei, section, syousai;
-			m3.Play ();
+		
 
 			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
@@ -49,7 +48,7 @@ public class PanelHoukoku_Ctrl : MonoBehaviour {
 		} else {
 			Debug.Log ("Matigai");
 			string daimei, section, syousai;
-			m2.Play ();
+
 			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
 			daimei = "バグを見つけられなくて残念ね。。";
