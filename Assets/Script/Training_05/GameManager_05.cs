@@ -8,6 +8,8 @@ public class GameManager_05 : MonoBehaviour
     public bool isBugCheck = false;
 
     public GameObject gameClaer, bugUI, stopUI;
+    public PanelCrossChan_Ctrl PCC;
+
 
     // Use this for initialization
     void Start()
@@ -38,8 +40,15 @@ public class GameManager_05 : MonoBehaviour
                     if (hit.collider.name == "BugImage")
                     {
                         // ゲームクリアー
+                        Time.timeScale = 1;
                         gameClaer.SetActive(true);
                         Screen.orientation = ScreenOrientation.Portrait;
+                        string daimei, section, syousai;
+                        daimei = "クリアおめでとう～♪";
+                        section = "・今回の不具合は";
+                        syousai = "スコアが1000を超えた場合、スコアが増え続けるバグだよ！\n";
+                        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
+
                     }
                 }
             }
