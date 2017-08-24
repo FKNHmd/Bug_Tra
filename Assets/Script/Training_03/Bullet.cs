@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour {
     // 参照
     Rigidbody _rigid;
     GameManager_03 _gameMar;
+    SoundManager_Tr03 _SoundMar;
 
     // 生存時間
     float lifeTime;
@@ -24,10 +25,12 @@ public class Bullet : MonoBehaviour {
 	void Start () {
         _rigid = GetComponent<Rigidbody>();
         _gameMar = GameObject.Find("GameManager").GetComponent<GameManager_03>();
+        _SoundMar = GameObject.Find("SoundManager").GetComponent<SoundManager_Tr03>();
+
     }
-	
-	// Update is called once per frame
-	void FixedUpdate() {
+
+    // Update is called once per frame
+    void FixedUpdate() {
         //TestRay();
         Vector3 v = _rigid.velocity;
         v += transform.forward * (Time.deltaTime * 100);
@@ -46,6 +49,7 @@ public class Bullet : MonoBehaviour {
         {
             if (coll.gameObject.tag == "Enemy")
             {
+                _SoundMar.SEOnPlay(1);
                 enemyObj = coll.transform.gameObject;
                 Vector3 pos = enemyObj.transform.position;
                 Vector3 size = enemyObj.transform.localScale;

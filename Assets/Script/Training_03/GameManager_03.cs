@@ -60,6 +60,7 @@ public class GameManager_03 : MonoBehaviour
 
     // 参照スクリプト
     FadeManager _SceneMar;
+    SoundManager_Tr03 _SoundMar;
 
     public enum GameState
     {
@@ -75,6 +76,7 @@ public class GameManager_03 : MonoBehaviour
     {
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         _SceneMar = GameObject.Find("SceneManager").GetComponent<FadeManager>();
+        _SoundMar = GameObject.Find("SoundManager").GetComponent<SoundManager_Tr03>();
     }
 
     // Update is called once per frame
@@ -268,6 +270,7 @@ public class GameManager_03 : MonoBehaviour
             // レイを飛ばして当たれば判定
             if (Physics.Raycast(ray, out hit) && hit.transform != null)
             {
+                _SoundMar.SEOnPlay(0);
                 // エディタ上でRaycastの判定外に設定
                 //if (hit.transform.tag != "Bullet")
                 //{
@@ -296,7 +299,9 @@ public class GameManager_03 : MonoBehaviour
                     if (hit.collider.name == "BugImage" &&
                         isBugSET)
                     {
-						string daimei, section, syousai;
+                        isBugCheck = false;
+                        Time.timeScale = 1;
+                        string daimei, section, syousai;
                         // ゲームクリアー
                         gameClaer.SetActive(true);
 						daimei = "クリアおめでとう～♪";
