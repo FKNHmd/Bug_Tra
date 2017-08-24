@@ -6,6 +6,7 @@ public class GameManager_05 : MonoBehaviour
 {
 
     public bool isBugCheck = false;
+    bool isRota = true;
 
     public GameObject gameClaer, bugUI, stopUI;
     public PanelCrossChan_Ctrl PCC;
@@ -41,6 +42,7 @@ public class GameManager_05 : MonoBehaviour
                     {
                         // ゲームクリアー
                         Time.timeScale = 1;
+                        isRota = false;
                         gameClaer.SetActive(true);
                         Screen.orientation = ScreenOrientation.Portrait;
                         string daimei, section, syousai;
@@ -52,6 +54,10 @@ public class GameManager_05 : MonoBehaviour
                     }
                 }
             }
+        }
+        if (isRota)
+        {
+        MenuRota();
         }
     }
     private void OnDisable()
