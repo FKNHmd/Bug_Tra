@@ -14,6 +14,8 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	public GameObject ImageHosi5, ImageHosi4, ImageHosi3;
 	public GameCtrl_ClearCheck_08 GCC;
 
+    public GameObject[] anim;
+
 	int okane;
 	int hosi5char_kazu, hosi4char_kazu, hosi3char_kazu;
 
@@ -49,31 +51,58 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		hyouzi ();
 	}
 
-	public void gacha_hiku()
+	public void Gacha_hiku()
 	{
-		int rand;
+		//int rand;
 
+        GetComponent<Animator>().SetBool("IsAnim", true);
 
+		//rand = Random.Range (1, 10);
 
-		rand = Random.Range (1, 10);
+		//if (rand == 1) {
+		//	gacha_kekka_hyouzi (5);
+		//} else if ((1 < rand) && (rand <= 4)) {
+		//	gacha_kekka_hyouzi (4);
+		//} else if ((4 < rand) && (rand <= 10)) {
+		//	gacha_kekka_hyouzi (3);
+		//}
+		//hyouzi ();
 
-		if (rand == 1) {
-			gacha_kekka_hyouzi (5);
-		} else if ((1 < rand) && (rand <= 4)) {
-			gacha_kekka_hyouzi (4);
-		} else if ((4 < rand) && (rand <= 10)) {
-			gacha_kekka_hyouzi (3);
-		}
-		hyouzi ();
-
-		if (okane <= 0) {
-			image_char_false ();
-			PHC.huseikai ();
-			return;
-		}
-
-		gacha_hyouzi_hihyouzi (0f);
+		//if (okane <= 0) {
+		//	image_char_false ();
+		//	PHC.huseikai ();
+		//	return;
+		//}
+       
+		//gacha_hyouzi_hihyouzi (0f);
 	}
+
+    public void CharaGacha()
+    {
+        int rand;
+        rand = Random.Range(1, 10);
+
+        if (rand == 1)
+        {
+            gacha_kekka_hyouzi(5);
+        }
+        else if ((1 < rand) && (rand <= 4))
+        {
+            gacha_kekka_hyouzi(4);
+        }
+        else if ((4 < rand) && (rand <= 10))
+        {
+            gacha_kekka_hyouzi(3);
+        }
+        hyouzi();
+
+        if (okane <= 0)
+        {
+            image_char_false();
+            PHC.huseikai();
+            return;
+        }
+    }
 
 	void gacha_kekka_hyouzi (int hosi)
 	{
@@ -84,9 +113,10 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		} else if (hosi == 3) {
 			ImageHosi3.SetActive(true);
 		}
-	}
+        GetComponent<Animator>().SetBool("IsAnim", false);
+    }
 
-	public void gacha_char_tap (int hosi)
+    public void gacha_char_tap (int hosi)
 	{
 		if (hosi == 5) {
 			hosi5char_kazu++;

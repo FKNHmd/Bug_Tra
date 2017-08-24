@@ -214,8 +214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115.333336, y: -36}
-  m_SizeDelta: {x: 230.66667, y: 72}
+  m_AnchoredPosition: {x: 115.33333, y: -36}
+  m_SizeDelta: {x: 230.66666, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60241665
 MonoBehaviour:
@@ -1096,8 +1096,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 576.6667, y: -36}
-  m_SizeDelta: {x: 230.66667, y: 72}
+  m_AnchoredPosition: {x: 576.6666, y: -36}
+  m_SizeDelta: {x: 230.66666, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393119161
 MonoBehaviour:
@@ -2359,7 +2359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &686407831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,6 +2679,7 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &802240884
 Transform:
   m_ObjectHideFlags: 0
@@ -2769,7 +2770,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1579111012}
-        m_MethodName: gacha_hiku
+        m_MethodName: Gacha_hiku
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4894,6 +4895,8 @@ GameObject:
   - component: {fileID: 1579111014}
   - component: {fileID: 1579111013}
   - component: {fileID: 1579111012}
+  - component: {fileID: 1579111016}
+  - component: {fileID: 1579111015}
   m_Layer: 5
   m_Name: Panel_Game
   m_TagString: Untagged
@@ -4944,6 +4947,12 @@ MonoBehaviour:
   ImageHosi4: {fileID: 664194764}
   ImageHosi3: {fileID: 1374255767}
   GCC: {fileID: 849489698}
+  anim:
+  - {fileID: 1876184187}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1579111013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4977,6 +4986,37 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579111010}
+--- !u!95 &1579111015
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1579111010}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 12e7584e3c3ee2a4bb1e615d3d6a8d94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &1579111016
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1579111010}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1583670518
 GameObject:
   m_ObjectHideFlags: 0
@@ -5457,7 +5497,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 346, y: -36}
-  m_SizeDelta: {x: 230.66667, y: 72}
+  m_SizeDelta: {x: 230.66666, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1971421901
 MonoBehaviour:
