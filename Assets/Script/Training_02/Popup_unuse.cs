@@ -2,7 +2,7 @@
 using System.Collections;
 using UniRx;
 
-public class Popup : MonoBehaviour
+public class Popup_unuse : MonoBehaviour
 {
     public enum State
     {

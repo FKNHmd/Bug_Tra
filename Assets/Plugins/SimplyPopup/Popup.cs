@@ -15,6 +15,10 @@ public class Popup : MonoBehaviour
 
     public TweenScale open, close;
 
+	public GameObject popup_haikei;
+
+	static int opennum = 0;
+
     void Start ()
     {
         open.Setup (gameObject);
@@ -38,11 +42,19 @@ public class Popup : MonoBehaviour
     public void Open ()
     {
         open.Play ();
+		opennum++;
+		Debug.Log (opennum);
     }
 
     public void Close ()
     {
         close.Play ();
+		opennum--;
+		Debug.Log (opennum);
+
+		if (opennum <= 0) {
+			popup_haikei.SetActive (false);
+		}
     }
 
     public void Toggle ()
@@ -57,4 +69,14 @@ public class Popup : MonoBehaviour
             break;
         }
     }
+
+	public void opennum_reset()
+	{
+		opennum = 0;
+	}
+
+	public int get_opennum()
+	{
+		return opennum;
+	}
 }
