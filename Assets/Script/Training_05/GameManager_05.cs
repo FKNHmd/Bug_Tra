@@ -46,7 +46,7 @@ public class GameManager_05 : MonoBehaviour
                         string daimei, section, syousai;
                         daimei = "クリアおめでとう～♪";
                         section = "・今回の不具合は";
-                        syousai = "スコアが1000を超えた場合、スコアが増え続けるバグだよ！\n";
+                        syousai = "画面を回転したら黒い画像が現れる不具合だよ！\n消し忘れかな？";
                         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
                     }
