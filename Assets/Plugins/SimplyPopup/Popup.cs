@@ -19,6 +19,9 @@ public class Popup : MonoBehaviour
 
 	static int opennum = 0;
 
+	/* ボタン連打防止 */
+	bool open_flg = false;
+
     void Start ()
     {
         open.Setup (gameObject);
@@ -41,13 +44,17 @@ public class Popup : MonoBehaviour
 
     public void Open ()
     {
-        open.Play ();
-		opennum++;
-		Debug.Log (opennum);
+		if (open_flg == false) {
+			open_flg = true;
+			open.Play ();
+			opennum++;
+			Debug.Log (opennum);
+		}
     }
 
     public void Close ()
     {
+		open_flg = false;
         close.Play ();
 		opennum--;
 		Debug.Log (opennum);
