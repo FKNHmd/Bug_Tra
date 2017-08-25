@@ -137,10 +137,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
   m_Children:
-  - {fileID: 1088278901}
   - {fileID: 1418653539}
   - {fileID: 491076916}
   - {fileID: 302907137}
+  - {fileID: 1088278901}
   m_Father: {fileID: 118944995}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -242,7 +242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 348.49997, y: -245.25925}
+  m_AnchoredPosition: {x: 348.49997, y: -245.25928}
   m_SizeDelta: {x: 456, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22178326
@@ -1889,7 +1889,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7164717}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2497,7 +2497,7 @@ RectTransform:
   m_Children:
   - {fileID: 1406560986}
   m_Father: {fileID: 7164717}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4190,7 +4190,7 @@ RectTransform:
   m_Children:
   - {fileID: 202888587}
   m_Father: {fileID: 7164717}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -4280,7 +4280,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9c81e2105088f8346bd7082d1a775cee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bef9befa2dc742e4bb9209de951b1543, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5761,7 +5761,7 @@ RectTransform:
   - {fileID: 1243322883}
   - {fileID: 800871890}
   m_Father: {fileID: 7164717}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7979,6 +7979,7 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &1702098269
 Transform:
   m_ObjectHideFlags: 0
