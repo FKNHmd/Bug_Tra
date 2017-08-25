@@ -113,6 +113,10 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		} else if (hosi == 3) {
 			ImageHosi3.SetActive(true);
 		}
+    }
+
+    public void FlgOFF()
+    {
         GetComponent<Animator>().SetBool("IsAnim", false);
     }
 
