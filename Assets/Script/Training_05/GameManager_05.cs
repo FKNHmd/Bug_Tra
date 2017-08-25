@@ -41,7 +41,6 @@ public class GameManager_05 : MonoBehaviour
                     if (hit.collider.name == "BugImage")
                     {
                         // ゲームクリアー
-                        Time.timeScale = 1;
                         isRota = false;
                         gameClaer.SetActive(true);
                         Screen.orientation = ScreenOrientation.Portrait;
@@ -77,7 +76,6 @@ public class GameManager_05 : MonoBehaviour
         else
         {
             stopUI.SetActive(true);
-            Time.timeScale = 0;
             // 縦画面に戻す
             Screen.orientation = ScreenOrientation.Portrait;
         }
@@ -102,13 +100,11 @@ public class GameManager_05 : MonoBehaviour
         {
             isBugCheck = false;
             bugUI.SetActive(false);
-            Time.timeScale = 1;
         }
         else
         {
             isBugCheck = true;
             bugUI.SetActive(true);
-            Time.timeScale = 0;
         }
     }
 }
