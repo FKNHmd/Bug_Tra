@@ -49,8 +49,9 @@ public class PanelHoukoku_Ctrl : MonoBehaviour {
 		} else {
 			Debug.Log ("Matigai");
 			string daimei, section, syousai;
+            GameObject.Find("Audio Source _BGM").GetComponent<AudioSource>().Stop();
 
-			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
+            GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
 			daimei = "バグを見つけられなくて残念ね。。";
 			section = "・次回からはこんな観点で挑戦してね！";
