@@ -21,7 +21,7 @@ public class PanelHoukoku_Ctrl_04 : MonoBehaviour {
     public void seikai()
     {
         string daimei, section, syousai;
-
+        GameObject.Find("Audio Source").GetComponent<AudioSource>().Stop();
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
 
         daimei = "クリアおめでとう～♪";
@@ -33,7 +33,7 @@ public class PanelHoukoku_Ctrl_04 : MonoBehaviour {
     public void fuseikai()
     {
         string daimei, section, syousai;
-
+        GameObject.Find("Audio Source").GetComponent<AudioSource>().Stop();
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
 
         daimei = "バグを見つけられなくて残念ね･･･。";
