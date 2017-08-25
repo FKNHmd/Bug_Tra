@@ -2081,7 +2081,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 0fcb3d7fd62332b4caa4f254846af9a3,
+          m_ObjectArgument: {fileID: 8300000, guid: 1a4fd9d8b925adf46b47a6c5e360be4b,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
@@ -5010,6 +5010,7 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &1782261215
 Transform:
   m_ObjectHideFlags: 0

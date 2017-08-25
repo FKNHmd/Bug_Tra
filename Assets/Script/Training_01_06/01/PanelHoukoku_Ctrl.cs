@@ -35,7 +35,8 @@ public class PanelHoukoku_Ctrl : MonoBehaviour {
 		if (DummyInput.text == "q") {
 			Debug.Log ("Seikai");
 			string daimei, section, syousai;
-		
+
+            GameObject.Find("Audio Source _BGM").GetComponent<AudioSource>().Stop();
 
 			GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
