@@ -55,7 +55,7 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 		Debug.Log (deltatime);
 		oldtime = newtime;
 
-		if (deltatime < 0.13f) {
+		if (deltatime < 0.07f) {
 			clear_flg = true;
 			StartCoroutine (crash_gizi ());
 		}
