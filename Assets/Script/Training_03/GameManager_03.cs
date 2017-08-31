@@ -80,7 +80,7 @@ public class GameManager_03 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //Time.timeScale = 0.1f;
         StateManager();
