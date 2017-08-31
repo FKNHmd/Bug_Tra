@@ -58,6 +58,9 @@ public class Bullet : MonoBehaviour {
                 if (size.x > 1)
                 {
                     _gameMar.scoreNum += 100;
+					if (_gameMar.scoreNum > 1000) {
+						_gameMar.isBugSET = true;
+					}
                     _gameMar.scoreText.GetComponent<Text>().text = "SCORE:" + _gameMar.scoreNum;
                     parentObj.transform.position = enemyObj.transform.position;
                     enemyObj.GetComponent<Collider>().enabled = false;
@@ -110,6 +113,9 @@ public class Bullet : MonoBehaviour {
                 else
                 {
                     _gameMar.scoreNum += 150;
+					if (_gameMar.scoreNum > 1000) {
+						_gameMar.isBugSET = true;
+					}
                     _gameMar.scoreText.GetComponent<Text>().text = "SCORE:" + _gameMar.scoreNum;
                     Instantiate(_gameMar.boxEffect, enemyObj.transform.position,Quaternion.Euler(new Vector3(-90,0,0)));
                     Destroy(enemyObj);

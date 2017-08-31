@@ -150,12 +150,6 @@ public class GameManager_03 : MonoBehaviour
                             enemy.transform.position = new Vector3(Random.Range(-40, 40), 10, Random.Range(-40, 40));
                             enemy.transform.eulerAngles = new Vector3(0, Random.Range(-40, 40), 0);
                             createTime = 0;
-
-                            // ひとまずランダムでバグを発生させる------------------------------------------------------------------------------
-                            if (scoreNum > 1000)
-                            {
-                                isBugSET = true;
-                            }
                         }
                         CameraMove();
                         // ゲーム中の時間を表示
