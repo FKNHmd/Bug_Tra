@@ -30,7 +30,7 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
 
 		if (PUP.get_opennum () >= 2) {
 			daimei = "クリアおめでとう～♪";
-			section = "・今回の不具合は";
+			section = "　・今回の不具合は";
 			syousai = "ポップアップが重なって表示されるバグだよ！\n普段は重ならないように制御される部分だけど、たまに制御出来てなくて起きる事があるから注意してね！";
 			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 		} else {

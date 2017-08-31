@@ -46,7 +46,7 @@ public class GameManager_05 : MonoBehaviour
                         Screen.orientation = ScreenOrientation.Portrait;
                         string daimei, section, syousai;
                         daimei = "クリアおめでとう～♪";
-                        section = "・今回の不具合は";
+                        section = "　・今回の不具合は";
                         syousai = "画面を回転したら黒い画像が現れる不具合だよ！\n消し忘れかな？";
                         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 

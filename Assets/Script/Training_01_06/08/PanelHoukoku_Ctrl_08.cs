@@ -50,7 +50,7 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 		daimei = "クリアおめでとう～♪";
-		section = "・今回の不具合は";
+		section = "　・今回の不具合は";
 		syousai = "ガチャをひいて、結果がわかった後にサスペンド/レジューム(サスレジ)すると、コインが減ってない状態でまたガチャがひけてしまうバグだよ！\n"
 			+ "今回のバグはユーザーが得する不具合だけど、本番のQAではコインだけ減ってキャラを取得できないといったユーザーが損するといったこともないか確認してね！"
 			+ "サスレジ以外にネットワーク切断やブラウザバック等で問題発生することもあるから注意だよ！";

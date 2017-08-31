@@ -69,8 +69,8 @@ public class PanelHoukoku_Ctrl_07 : MonoBehaviour {
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 		daimei = "クリアおめでとう～♪";
-		section = "・今回の不具合は";
-		syousai = "停止ボタンを押しても、音楽が止まらないバグだよ！";
+		section = "　・今回の不具合は";
+		syousai = "停止ボタンを押しても、音楽が止まらないバグだよ！簡単すぎたかな！？";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
 	}

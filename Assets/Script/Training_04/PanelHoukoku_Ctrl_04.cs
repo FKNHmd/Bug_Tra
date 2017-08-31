@@ -25,7 +25,7 @@ public class PanelHoukoku_Ctrl_04 : MonoBehaviour {
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
 
         daimei = "クリアおめでとう～♪";
-        section = "・今回の不具合は";
+        section = "　・今回の不具合は";
         syousai = "特定の文字数以上入力した際に、改行されないでUI崩れがおきてしまう不具合だよ！\nいつもと違う違和感を感じることが出来たらサイコーだね！\nその為にはゲームを沢山プレイして、仕様を把握しておくことが大切だょ♪";
         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
     }

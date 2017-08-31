@@ -15,7 +15,7 @@ public class GameCtrl_Start_07 : MonoBehaviour {
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
 		daimei = "ゲームの仕様を説明するね♪";
-		section = "・今回のゲームは";
+		section = "　・今回のゲームは";
 		syousai = "音楽プレイヤーのゲームだよ！\nいろいろなボタンを押してバグを見つけてね！\n不具合を見つけたら「Bug報告」ボタンをタップしてバグを教えてね♪";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}

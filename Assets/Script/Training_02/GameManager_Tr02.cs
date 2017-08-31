@@ -51,7 +51,7 @@ public class GameManager_Tr02 : MonoBehaviour
             GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
 
             daimei = "クリアおめでとう～♪";
-            section = "・今回の不具合は";
+            section = "　・今回の不具合は";
             syousai = "バナーを同時押しするとダイアログが出てくる不具合だよ！\nどんな所に不具合があるかわからないから、見逃さない様に細かいところまで注意しなくちゃだね！";
             PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
         }
