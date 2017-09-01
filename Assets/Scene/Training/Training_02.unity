@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 128560103}
   - component: {fileID: 128560102}
   - component: {fileID: 128560101}
+  - component: {fileID: 128560105}
   m_Layer: 5
   m_Name: Button_ToSelect
   m_TagString: Untagged
@@ -376,6 +377,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 128560105}
+        m_MethodName: NoButtonActivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &128560102
@@ -430,6 +442,18 @@ RectTransform:
   m_AnchoredPosition: {x: -54.000015, y: -310.99997}
   m_SizeDelta: {x: 160, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &128560105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 128560100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2c9057e1087d14ea77355df1fb0c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bt: {fileID: 128560101}
 --- !u!1 &172426628
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +607,7 @@ GameObject:
   - component: {fileID: 190559127}
   - component: {fileID: 190559126}
   - component: {fileID: 190559125}
+  - component: {fileID: 190559128}
   m_Layer: 5
   m_Name: Button_Start
   m_TagString: Untagged
@@ -671,6 +696,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 190559128}
+        m_MethodName: NoButtonActivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &190559126
@@ -706,6 +742,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 190559123}
+--- !u!114 &190559128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 190559123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2c9057e1087d14ea77355df1fb0c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bt: {fileID: 190559125}
 --- !u!1 &201035591
 GameObject:
   m_ObjectHideFlags: 0
@@ -6096,6 +6144,7 @@ GameObject:
   - component: {fileID: 2047566411}
   - component: {fileID: 2047566410}
   - component: {fileID: 2047566409}
+  - component: {fileID: 2047566412}
   m_Layer: 5
   m_Name: Button_Modoru
   m_TagString: Untagged
@@ -6183,6 +6232,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2047566412}
+        m_MethodName: NoButtonActivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2047566410
@@ -6218,6 +6278,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2047566407}
+--- !u!114 &2047566412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047566407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2c9057e1087d14ea77355df1fb0c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bt: {fileID: 2047566409}
 --- !u!1 &2051480371
 GameObject:
   m_ObjectHideFlags: 0
