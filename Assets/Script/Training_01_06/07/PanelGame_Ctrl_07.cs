@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PanelGame_Ctrl_07 : MonoBehaviour {
 
-	public GameCtrl_PanelChange GP;
+	//public GameCtrl_PanelChange GP;
+	public GameObject PH;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class PanelGame_Ctrl_07 : MonoBehaviour {
 		
 	public void Houkoku_Button()
 	{
-		GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+		//GP.change_panel (GameCtrl_PanelChange.panel.Houkoku);
+		PH.SetActive(true);
 	}
 }
