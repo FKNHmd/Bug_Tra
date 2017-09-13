@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 1491030896}
   - component: {fileID: 1491030894}
   - component: {fileID: 1491030898}
+  - component: {fileID: 1491030895}
   m_Layer: 0
   m_Name: AP1
   m_TagString: Untagged
@@ -819,6 +820,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextScene: Game_Select
   FadeTime: 0.3
+--- !u!114 &1491030895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491030893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0db1a89f42a63240a9c23668748f23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1491030896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,8 +897,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1491030894}
-        m_MethodName: SetAndLoadNextScene
+      - m_Target: {fileID: 1491030895}
+        m_MethodName: StartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
