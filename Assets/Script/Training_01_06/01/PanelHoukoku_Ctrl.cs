@@ -44,6 +44,9 @@ public class PanelHoukoku_Ctrl : MonoBehaviour {
 			section = "　・今回の不具合は";
 			syousai = "特定のボタンがタップに反応しない不具合だよ！\nどんな所に不具合があるかわからないから、見逃さない様に細かいところまで注意しなくちゃだね！";
 			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
+
+			/* セレクト画面でClear表示 */
+			PlayerPrefs.SetInt ("ClearStat1", 1);
 		} else if (DummyInput.text == "") {
 			/* 空白は何もしない */
 		} else {

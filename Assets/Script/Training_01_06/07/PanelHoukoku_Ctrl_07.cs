@@ -49,5 +49,7 @@ public class PanelHoukoku_Ctrl_07 : MonoBehaviour {
 		syousai = "停止ボタンを押しても、音楽が止まらないバグだよ！簡単すぎたかな！？";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
+		/* セレクト画面でClear表示 */
+		PlayerPrefs.SetInt ("ClearStat7", 1);
 	}
 }

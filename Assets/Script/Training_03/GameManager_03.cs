@@ -302,6 +302,9 @@ public class GameManager_03 : MonoBehaviour
 						section = "　・今回の不具合は";
 						syousai = "スコアが1000を超えた場合、スコアが増え続けるバグだよ！\n";
 						PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
+
+						/* セレクト画面でClear表示 */
+						PlayerPrefs.SetInt ("ClearStat3", 1);
                     }
                 }
             }

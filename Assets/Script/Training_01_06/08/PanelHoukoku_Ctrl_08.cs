@@ -56,5 +56,7 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 			+ "サスレジ以外にネットワーク切断やブラウザバック等で問題発生することもあるから注意だよ！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
+		/* セレクト画面でClear表示 */
+		PlayerPrefs.SetInt ("ClearStat8", 1);
 	}
 }

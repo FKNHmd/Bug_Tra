@@ -50,6 +50,8 @@ public class GameManager_05 : MonoBehaviour
                         syousai = "画面を回転したら黒い画像が現れる不具合だよ！\n消し忘れかな？";
                         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
+						/* セレクト画面でClear表示 */
+						PlayerPrefs.SetInt ("ClearStat5", 1);
                     }
                 }
             }

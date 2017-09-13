@@ -51,6 +51,9 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
 		section = "・次回からはこんな観点で挑戦してね！";
 		syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりして見てね！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+
+		/* セレクト画面でClear表示 */
+		PlayerPrefs.SetInt ("ClearStat2", 1);
 	}
 
 	public void GameGamenhe_Button()
