@@ -41,7 +41,7 @@ public class GameManager_03 : MonoBehaviour
 
     // ゲームのUI切り替え(最初にONに設定し、呼び出せるようにする)
     bool isGameFlg = false;
-    public GameObject UI_Title, UI_Game, UI_Result,UI_Bug;
+    public GameObject UI_Title, UI_Game, UI_Result, UI_Bug;
     // ゲーム開始までの時間
     int startCount = 3;
     float startTime;
@@ -56,7 +56,7 @@ public class GameManager_03 : MonoBehaviour
 
     // ゲームクリアした際に表示するメッセージ
     public GameObject gameClaer;
-	public PanelCrossChan_Ctrl PCC;
+    public PanelCrossChan_Ctrl PCC;
     public GameCtrl_PanelChange GP;
 
 
@@ -311,13 +311,13 @@ public class GameManager_03 : MonoBehaviour
     //                    // ゲームクリアー
     //                    GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
     //                   //gameClaer.SetActive(true);
-				//		daimei = "クリアおめでとう～♪";
-				//		section = "　・今回の不具合は";
-				//		syousai = "スコアが1000を超えた場合、スコアが増え続けるバグだよ！\n";
-				//		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
+    //		daimei = "クリアおめでとう～♪";
+    //		section = "　・今回の不具合は";
+    //		syousai = "スコアが1000を超えた場合、スコアが増え続けるバグだよ！\n";
+    //		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
-				//		/* セレクト画面でClear表示 */
-				//		PlayerPrefs.SetInt ("ClearStat3", 1);
+    //		/* セレクト画面でClear表示 */
+    //		PlayerPrefs.SetInt ("ClearStat3", 1);
     //                }
     //                else
     //                {
@@ -342,7 +342,7 @@ public class GameManager_03 : MonoBehaviour
 
     // ボタンの管理
 
-        public void Seikai()
+    public void Seikai()
     {
         if (isBugSET)
         {
@@ -367,24 +367,20 @@ public class GameManager_03 : MonoBehaviour
     }
     public void Huseikai()
     {
-        
-            isBugCheck = false;
-            Time.timeScale = 1;
-            string daimei, section, syousai;
-            // ゲーム失敗
-            GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
-            //gameClaer.SetActive(true);
-            daimei = "バグを見つけられなくて残念ね。。";
-            section = "・次回からはこんな観点で挑戦してね！";
-            syousai = "箱にたくさん弾を当ててスコアを稼いでみて！\nゲーム中、右上に出てくるヒントも参考にしてみてね！";
-            PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 
-            /* セレクト画面でClear表示 */
-            PlayerPrefs.SetInt("ClearStat3", 1);
-        
+        isBugCheck = false;
+        Time.timeScale = 1;
+        string daimei, section, syousai;
+        // ゲーム失敗
+        GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
+        //gameClaer.SetActive(true);
+        daimei = "バグを見つけられなくて残念ね。。";
+        section = "・次回からはこんな観点で挑戦してね！";
+        syousai = "箱にたくさん弾を当ててスコアを稼いでみて！\nゲーム中、右上に出てくるヒントも参考にしてみてね！";
+        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
     }
-        // ゲーム開始処理
-        public void GameStart()
+    // ゲーム開始処理
+    public void GameStart()
     {
         isSetFlg = true;
         GAMESTATE = GameState.GAME;
