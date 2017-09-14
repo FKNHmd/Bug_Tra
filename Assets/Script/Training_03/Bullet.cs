@@ -58,7 +58,7 @@ public class Bullet : MonoBehaviour {
                 if (size.x > 1)
                 {
                     _gameMar.scoreNum += 100;
-					if (_gameMar.scoreNum > 1000) {
+					if (_gameMar.scoreNum > 499) {
 						_gameMar.isBugSET = true;
 					}
                     _gameMar.scoreText.GetComponent<Text>().text = "SCORE:" + _gameMar.scoreNum;
@@ -113,7 +113,7 @@ public class Bullet : MonoBehaviour {
                 else
                 {
                     _gameMar.scoreNum += 150;
-					if (_gameMar.scoreNum > 1000) {
+					if (_gameMar.scoreNum > 499) {
 						_gameMar.isBugSET = true;
 					}
                     _gameMar.scoreText.GetComponent<Text>().text = "SCORE:" + _gameMar.scoreNum;

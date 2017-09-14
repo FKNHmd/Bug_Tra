@@ -16,6 +16,9 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 	public GameObject PanelHoukoku;
 	public GameObject FadeInOut;
 
+    public GameObject[] hideObjs;
+    bool isHideFlg = false;
+
 	//GameObject PanelOld = null;
 	bool panelold_flg = false;
 	GameObject PanelNew = null;
@@ -39,14 +42,28 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 				oldpanel_noactive ();
 //				PanelOld = null;
 				panelold_flg = false;
-//				Debug.Log ("hoge");
-			}
+                //				Debug.Log ("hoge");
+                if (hideObjs != null && isHideFlg == true)
+                {
+                    for (int i = 0; i < hideObjs.Length; i++)
+                    {
+                        hideObjs[i].SetActive(true);
+                    }
+                }
+            }
 			FadeInOut.GetComponent<Image> ().color = new Color (0, 0, 0, alpha);
 		} else if (PanelNew != null) {
 			alpha = alpha - fis;
 			if (alpha <= 0f) {
 				PanelNew.SetActive (true);
-				PanelNew = null;
+                if (hideObjs != null && isHideFlg == false)
+                {
+                    for (int i = 0; i < hideObjs.Length; i++)
+                    {
+                        hideObjs[i].SetActive(false);
+                    }
+                }
+                PanelNew = null;
 //				Debug.Log ("moge");
 			}
 			FadeInOut.GetComponent<Image> ().color = new Color (0, 0, 0, alpha);
@@ -105,11 +122,29 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 		case panel.Crosschan:
 			//PanelCrossChan.SetActive (true);
 			PanelNew = PanelCrossChan;
+                // 中身があれば実行(背景を表示)
+                if(hideObjs != null)
+                {
+                    isHideFlg = true;
+                    //for(int i = 0; i < hideObjs.Length; i++)
+                    //{
+                    //    hideObjs[i].SetActive(true);
+                    //}
+                }
 			break;
 		case panel.Game:
 			//PanelGame.SetActive (true);
 			PanelNew = PanelGame;
-			break;
+                // 中身があれば実行(背景を表示)
+                if (hideObjs != null)
+                {
+                    isHideFlg = false;
+                    //for (int i = 0; i < hideObjs.Length; i++)
+                    //{
+                    //    hideObjs[i].SetActive(false);
+                    //}
+                }
+                break;
 		case panel.Houkoku:
 			//PanelHoukoku.SetActive (true);
 			PanelNew = PanelHoukoku;
