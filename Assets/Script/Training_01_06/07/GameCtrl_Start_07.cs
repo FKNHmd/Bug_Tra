@@ -14,9 +14,9 @@ public class GameCtrl_Start_07 : MonoBehaviour {
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
-		daimei = "ゲームの仕様を説明するね♪";
-		section = "　・今回のゲームは";
-		syousai = "音楽プレイヤーのゲームだよ！\nいろいろなボタンを押してバグを見つけてね！\n不具合を見つけたら「Bug報告」ボタンをタップしてバグを教えてね♪";
+		daimei = "・今回の仕様を説明するね♪";
+		section = "";
+		syousai = "音楽プレイヤーで音楽が聴けるよ！\n下記の機能があるけど、ある機能だけバグがあるから見つけてね！\n\u3000音楽選択\n\u3000再生\n\u3000停止\n\u3000一時停止\n\u3000ミュート\n\u3000ミュート解除";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 

@@ -41,7 +41,7 @@ public class PanelHoukoku_Ctrl_04 : MonoBehaviour {
 
         daimei = "バグを見つけられなくて残念ね･･･。";
         section = "・次回からはこんな観点で挑戦してね！";
-        syousai = "「入力欄」や「入力ボタン」を押したあと等に、注目してみてっ！文字列等には様々な不具合がおおいので注意して見てみてね！";
+		syousai = "「入力欄」や「入力ボタン」を押した後に、注目してみてっ！文字列には様々な不具合が多いので注意して見てみてね！\nゲーム中、右上に出てくるヒントも要チェック！\n";
         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
     }
 	public void GameGamenhe_Button()

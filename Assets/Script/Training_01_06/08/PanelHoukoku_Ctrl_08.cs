@@ -40,7 +40,7 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour {
 
 		daimei = "バグを見つけられなくて残念ね。。";
 		section = "・次回からはこんな観点で挑戦してね！";
-		syousai = "欲しいキャラが出なかった時に思わずしちゃいそうな操作を考えてみて！";
+		syousai = "欲しいキャラが出なかった時に、「今のガチャの結果なかったことに出来ないかな？」と思わずしちゃいそうな操作を考えてみてね！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 

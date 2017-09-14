@@ -42,7 +42,7 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 
 			daimei = "バグを見つけられなくて残念ね。。";
 			section = "・次回からはこんな観点で挑戦してね！";
-			syousai = "ちょっと頑張りが足りないみたい。";
+			syousai = "ちょっと頑張りが足りないみたい。頑張って連打してみて！それでもバグが発生しなかったら、人差し指と中指で交互にボタンタップするといいかもだよ！";
 			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 
 		}

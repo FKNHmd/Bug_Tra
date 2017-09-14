@@ -35,7 +35,7 @@ public class PanelHoukoku_Ctrl_07 : MonoBehaviour {
 
 		daimei = "バグを見つけられなくて残念ね。。";
 		section = "・次回からはこんな観点で挑戦してね！";
-		syousai = "一般的な音楽プレイヤーだと、あのボタンを押すとあの動きをするはずなんだけどな～";
+		syousai = "音楽にノリノリになりすぎてバグを見つけれなかったのかな！？\n一般的な音楽プレイヤーだと、あのボタンを押すとあの動きをするはずなんだけどな～";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 
@@ -46,7 +46,7 @@ public class PanelHoukoku_Ctrl_07 : MonoBehaviour {
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 		daimei = "クリアおめでとう～♪";
 		section = "　・今回の不具合は";
-		syousai = "停止ボタンを押しても、音楽が止まらないバグだよ！簡単すぎたかな！？";
+		syousai = "停止ボタンを押しても、音楽が止まらないバグだよ！\n基本動作が動いて当たり前と思っちゃダメだょ。\n動いて当たり前と思って確認を怠ると、後でひどい目にあっちゃうからね！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
 		/* セレクト画面でClear表示 */

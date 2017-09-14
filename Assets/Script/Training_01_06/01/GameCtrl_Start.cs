@@ -14,9 +14,9 @@ public class GameCtrl_Start : MonoBehaviour {
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
-		daimei = "ゲームの仕様を説明するね♪";
-		section = "　・今回のゲームは";
-		syousai = "キーボードのボタンをタップするとホタルが光るよ！\nキーボードの種類にも注意してね！\n不具合を見つけたら「Bug報告」ボタンをタップしてバグを教えてね♪";
+		daimei = "今回の仕様を説明するね♪";
+		section = "";
+		syousai = "キーボードで文字を入力するとホタルが光るよ！\n「ひらがな」「記号」「アルファベット」どんなキーボードの文字でも光るけど、ある特定の文字だけ光らないバグがあるからどの文字か見つけてね！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 

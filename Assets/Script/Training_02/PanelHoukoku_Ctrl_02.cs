@@ -49,7 +49,7 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
 
 		daimei = "バグを見つけられなくて残念ね。。";
 		section = "・次回からはこんな観点で挑戦してね！";
-		syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりして見てね！";
+		syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりしてみてね！\nゲーム中、右上に出てくるヒントが出てくるよ！\n";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 
 		/* セレクト画面でClear表示 */

@@ -16,9 +16,9 @@ public class GameCtrl_Start_08 : MonoBehaviour {
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
-		daimei = "ゲームの仕様を説明するね♪";
-		section = "　・今回のゲームは";
-		syousai = "ガチャのゲームだよ！\nいろいろな操作をしてバグを見つけてね！\n不具合を見つけたら「Bug報告」ボタンをタップしてバグを教えてね♪";
+		daimei = "・今回の仕様を説明するね♪";
+		section = "";
+		syousai = "コイン100を消費してガチャをまわせるよ！超絶レアの☆５のキャラをゲットしよう！\n今回のバグは画面上のチェックだけじゃなくて、端末全体でいろいろな操作をして見つけてね！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 

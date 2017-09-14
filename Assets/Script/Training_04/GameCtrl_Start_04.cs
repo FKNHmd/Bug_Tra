@@ -14,9 +14,9 @@ public class GameCtrl_Start_04 : MonoBehaviour {
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
-		daimei = "ゲームの仕様を説明するね♪";
-		section = "　・今回のゲームは";
-		syousai = "各項目に必要な情報を入力し\n全ての項目の入力が済んだら最後に\n「入力」ボタンを押してね！\n不具合を見つけたら「Bug報告」ボタンをタップして、バグが起きている箇所をタップして教えてね♪";
+		daimei = "・今回の仕様を説明するね♪";
+		section = "";
+		syousai = "画面上部の入力フォームに必要事項を記載して入力ボタンを押してね！そうすると画面下部の表示エリアに入力した内容が反映されるよ！\nあることをすると表示エリアの表示がおかしくなるから、そのバグを見つけて教えてね！\n";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}
 
