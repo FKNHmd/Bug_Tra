@@ -5010,6 +5010,7 @@ MonoBehaviour:
   PanelGame: {fileID: 196749551}
   PanelHoukoku: {fileID: 7164716}
   FadeInOut: {fileID: 1435085265}
+  hideObjs: []
 --- !u!114 &1492043833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5114,7 +5115,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9589\u3058\u308B"
+  m_Text: "\u30B9\u30BF\u30FC\u30C8"
 --- !u!222 &1508316204
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6863,7 +6864,6 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &1702098269
 Transform:
   m_ObjectHideFlags: 0

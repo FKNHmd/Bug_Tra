@@ -4916,6 +4916,7 @@ MonoBehaviour:
   PanelGame: {fileID: 544887868}
   PanelHoukoku: {fileID: 922634531}
   FadeInOut: {fileID: 201035591}
+  hideObjs: []
 --- !u!114 &1366706509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6806,7 +6807,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u9589\u3058\u308B"
+  m_Text: "\u30B9\u30BF\u30FC\u30C8"
 --- !u!222 &2105866206
 CanvasRenderer:
   m_ObjectHideFlags: 0
