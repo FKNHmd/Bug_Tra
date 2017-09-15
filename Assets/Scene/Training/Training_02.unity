@@ -832,6 +832,7 @@ GameObject:
   - component: {fileID: 230080847}
   - component: {fileID: 230080849}
   - component: {fileID: 230080848}
+  - component: {fileID: 230080850}
   m_Layer: 5
   m_Name: PopupTitle
   m_TagString: Untagged
@@ -878,7 +879,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -896,6 +897,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230080846}
+--- !u!114 &230080850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 230080846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &265265478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1489,7 @@ GameObject:
   - component: {fileID: 315440472}
   - component: {fileID: 315440474}
   - component: {fileID: 315440473}
+  - component: {fileID: 315440475}
   m_Layer: 5
   m_Name: PopupTitle
   m_TagString: Untagged
@@ -1538,6 +1554,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 315440471}
+--- !u!114 &315440475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 315440471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &373080185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1657,6 +1687,7 @@ GameObject:
   - component: {fileID: 394390730}
   - component: {fileID: 394390732}
   - component: {fileID: 394390731}
+  - component: {fileID: 394390733}
   m_Layer: 5
   m_Name: PopupDescription
   m_TagString: Untagged
@@ -1703,7 +1734,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1713,14 +1744,28 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\u5168\u56FD\u306E\u30AA\u30FC\u30CA\u30FC\u3068\u30EC\u30FC\u30B9\u3092\u884C\u3046\u300C\u30D0\u30C8\u30EB\u300D\u306B\u52A0\u3048\u3001\u30A4\u30D9\u30F3\u30C8\u6642\u306B\u306F\u3001\u4ED6\u306E\u30E6\u30FC\u30B6\u30FC\u3068\u5354\u529B\u3057\u3066\u30DC\u30B9\u30EC\u30FC\u30B9\u306B\u6311\u3080\u306A\u3069\u3001\u591A\u5F69\u306A\u30BD\u30FC\u30B7\u30E3\u30EB\u8981\u7D20\u304C\u7279\u5FB4\u3067\u3059\u3002\r\n\r\u3055\u3089\u306B\u3001\u30C6\u30EC\u30D3\u3067\u304A\u306A\u3058\u307F\u306E\u7AF6\u99AC\u8A55\u8AD6\u5BB6\u30FB\u4E95\u5D0E\u8129\u4E94\u90CE\u3055\u3093\u304C\u30B2\u30FC\u30E0\u4E2D\u306B\u767B\u5834\u3057\u3001\u540D\u99AC\u306E\u89E3\u8AAC\u3092\u3057\u3066\u304F\u308C\u307E\u3059\u3002\r\n\u7AF6\u99AC\u3092\u611B\u3057\u3066\u3084\u307E\u306A\u3044\u65B9\u306F\u3082\u3061\u308D\u3093\u3001\u521D\u5FC3\u8005\u306E\u65B9\u3067\u3082\u6C17\u8EFD\u306B\u697D\u3057\u3080\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002"
+    m_LineSpacing: 1.2
+  m_Text: "\u5168\u56FD\u306E\u30AA\u30FC\u30CA\u30FC\u3068\u30EC\u30FC\u30B9\u3092\u884C\u3046\u300C\u30D0\u30C8\u30EB\u300D\u306B\u52A0\u3048\u3001\u30A4\u30D9\u30F3\u30C8\u6642\u306B\u306F\u3001\u4ED6\u306E\u30E6\u30FC\u30B6\u30FC\u3068\u5354\u529B\u3057\u3066\u30DC\u30B9\u30EC\u30FC\u30B9\u306B\u6311\u3080\u306A\u3069\u3001\u591A\u5F69\u306A\u30BD\u30FC\u30B7\u30E3\u30EB\u8981\u7D20\u304C\u7279\u5FB4\u3067\u3059\u3002\r\n\u7AF6\u99AC\u3092\u611B\u3057\u3066\u3084\u307E\u306A\u3044\u65B9\u306F\u3082\u3061\u308D\u3093\u3001\u521D\u5FC3\u8005\u306E\u65B9\u3067\u3082\u6C17\u8EFD\u306B\u697D\u3057\u3080\u3053\u3068\u304C\u3067\u304D\u307E\u3059\u3002"
 --- !u!222 &394390732
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394390729}
+--- !u!114 &394390733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394390729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &451642653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +1776,7 @@ GameObject:
   - component: {fileID: 451642654}
   - component: {fileID: 451642656}
   - component: {fileID: 451642655}
+  - component: {fileID: 451642657}
   m_Layer: 5
   m_Name: PopupTitle
   m_TagString: Untagged
@@ -1777,7 +1823,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1795,6 +1841,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451642653}
+--- !u!114 &451642657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451642653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &465355776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,6 +2631,7 @@ GameObject:
   - component: {fileID: 688772487}
   - component: {fileID: 688772489}
   - component: {fileID: 688772488}
+  - component: {fileID: 688772490}
   m_Layer: 5
   m_Name: PopupDescription
   m_TagString: Untagged
@@ -2617,7 +2678,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2627,14 +2688,28 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\u69D8\u3005\u306A\u7279\u5FB4\u3092\u6301\u3064\u3010\u30D1\u30FC\u30C6\u30A3\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u3011\u3092\u7DE8\u6210\u3057\u3001\u6B66\u5177\u306E\u88C5\u5099\u3092\u884C\u3044\u3001\u30D1\u30FC\u30C6\u30A3\u3092\u5F37\u5316\u3057\u3088\u3046\uFF01\r\n\u3055\u3089\u306B\u3001\u5236\u4F5C\u3057\u305F\u30A2\u30A4\u30C6\u30E0\u3084\u7FD2\u5F97\u3057\u305F\u30B9\u30AD\u30EB\u3092\u81EA\u7531\u306B\u7D44\u307F\u5408\u308F\u305B\u308B\u3053\u3068\u304C\u51FA\u6765\u308B\u3010\u30B3\u30F3\u30D3\u30CD\u30FC\u30B7\u30E7\u30F3\u3011\u3067\u6226\u6CC1\u3092\u4E00\u5909\u3055\u305B\u308B\u7B49\u3001\u5965\u6DF1\u3044\u6226\u95D8\u3092\u697D\u3057\u3081\u308B\u305E\uFF01\r\n\u6226\u95D8\u3067\u624B\u306B\u5165\u308C\u305F\u7D20\u6750\u306A\u3069\u3092\u52A0\u5DE5\u3057\u3001\u69D8\u3005\u306A\u6B66\u5177\u3084\u30A2\u30A4\u30C6\u30E0\u3001\u306F\u3066\u306F\u6599\u7406\u307E\u3067\u3092\u3082\u5275\u308A\u3060\u3059\u3010\u751F\u7523\u3011\u306A\u3069\u3001\u3084\u308A\u8FBC\u3080\u307B\u3069\u306B\u697D\u3057\u307F\u304C\u5897\u3057\u3066\u3044\u304F\u3088\u3046\u306A\u6A5F\u80FD\u304C\u76DB\u308A\u3060\u304F\u3055\u3093\uFF01"
+    m_LineSpacing: 1.2
+  m_Text: "\u69D8\u3005\u306A\u7279\u5FB4\u3092\u6301\u3064\u3010\u30D1\u30FC\u30C6\u30A3\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u3011\u3092\u7DE8\u6210\u3057\u3001\u6B66\u5177\u306E\u88C5\u5099\u3092\u884C\u3044\u3001\u30D1\u30FC\u30C6\u30A3\u3092\u5F37\u5316\u3057\u3088\u3046\uFF01\r\n\u6226\u95D8\u3067\u624B\u306B\u5165\u308C\u305F\u7D20\u6750\u306A\u3069\u3092\u52A0\u5DE5\u3057\u3001\u69D8\u3005\u306A\u6B66\u5177\u3084\u30A2\u30A4\u30C6\u30E0\u3001\u306F\u3066\u306F\u6599\u7406\u307E\u3067\u3092\u3082\u5275\u308A\u3060\u3059\u3010\u751F\u7523\u3011\u306A\u3069\u3001\u3084\u308A\u8FBC\u3080\u307B\u3069\u306B\u697D\u3057\u307F\u304C\u5897\u3057\u3066\u3044\u304F\u3088\u3046\u306A\u6A5F\u80FD\u304C\u76DB\u308A\u3060\u304F\u3055\u3093\uFF01"
 --- !u!222 &688772489
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 688772486}
+--- !u!114 &688772490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 688772486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &716368924
 GameObject:
   m_ObjectHideFlags: 0
@@ -5375,6 +5450,7 @@ GameObject:
   - component: {fileID: 1384759839}
   - component: {fileID: 1384759841}
   - component: {fileID: 1384759840}
+  - component: {fileID: 1384759842}
   m_Layer: 5
   m_Name: PopupDescription
   m_TagString: Untagged
@@ -5421,7 +5497,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -5431,14 +5507,28 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "TV\u30A2\u30CB\u30E1\u300C\u304A\u305D\u677E\u3055\u3093\u300D\u521D\u306E\u30AB\u30FC\u30C9\u30B2\u30FC\u30E0\u304C\u767B\u5834\uFF016\u3064\u5B50\u3092\u96C6\u3081\u3066\u5F7C\u3089\u306E\u7D46\u3092\u6DF1\u3081\u3088\u3046\uFF01\n\u767B\u5834\u3059\u308B\u30AB\u30FC\u30C9\u306F350\u679A\u4EE5\u4E0A\uFF01\u30B2\u30FC\u30E0\u30AA\u30EA\u30B8\u30CA\u30EB\u8863\u88C5\u306E\u30AB\u30FC\u30C9\u3082\u3082\u3061\u308D\u3093\u767B\u5834\u3059\u308B\u305E\uFF01\n\u3042\u306A\u305F\u3060\u3051\u306E\u6700\u5F37\u30CB\u30FC\u30C8\u30C1\u30FC\u30E0\u3092\u4F5C\u308C\u308B\uFF01\u63A8\u3057\u677E\u3060\u3051\u306E\u30C1\u30FC\u30E0\u3084\u3001\u304A\u63C3\u3044\u8863\u88C5\u306E6\u3064\u5B50\u30C1\u30FC\u30E0\u306A\u3069\u3001\u3044\u308D\u3044\u308D\u306A\u30C1\u30FC\u30E0\u3092\u9078\u629C\u3057\u3088\u3046\uFF01\n\uFF16\u3064\u5B50\u306E\u7D46\u3092\u6DF1\u3081\u3088\u3046\uFF01\u30B7\u30CA\u30EA\u30AA\u306F\u3059\u3079\u3066\u30B2\u30FC\u30E0\u30AA\u30EA\u30B8\u30CA\u30EB\uFF01\uFF16\u3064\u5B50\u540C\u5E02\u306E\u77E5\u3089\u308C\u3056\u308B\u65E5\u5E38\u3092\u697D\u3057\u3082\u3046\uFF01"
+    m_LineSpacing: 1.2
+  m_Text: "TV\u30A2\u30CB\u30E1\u300C\u304A\u305D\u677E\u3055\u3093\u300D\u521D\u306E\u30AB\u30FC\u30C9\u30B2\u30FC\u30E0\u304C\u767B\u5834\uFF016\u3064\u5B50\u3092\u96C6\u3081\u3066\u5F7C\u3089\u306E\u7D46\u3092\u6DF1\u3081\u3088\u3046\uFF01\r\n\u767B\u5834\u3059\u308B\u30AB\u30FC\u30C9\u306F350\u679A\u4EE5\u4E0A\uFF01\u30B2\u30FC\u30E0\u30AA\u30EA\u30B8\u30CA\u30EB\u8863\u88C5\u306E\u30AB\u30FC\u30C9\u3082\u3082\u3061\u308D\u3093\u767B\u5834\u3059\u308B\u305E\uFF01\r\n\uFF16\u3064\u5B50\u306E\u7D46\u3092\u6DF1\u3081\u3088\u3046\uFF01\u30B7\u30CA\u30EA\u30AA\u306F\u3059\u3079\u3066\u30B2\u30FC\u30E0\u30AA\u30EA\u30B8\u30CA\u30EB\uFF01\uFF16\u3064\u5B50\u540C\u58EB\u306E\u77E5\u3089\u308C\u3056\u308B\u65E5\u5E38\u3092\u697D\u3057\u3082\u3046\uFF01"
 --- !u!222 &1384759841
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1384759838}
+--- !u!114 &1384759842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1384759838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1416035640
 GameObject:
   m_ObjectHideFlags: 0
@@ -6846,6 +6936,7 @@ GameObject:
   - component: {fileID: 2051547339}
   - component: {fileID: 2051547341}
   - component: {fileID: 2051547340}
+  - component: {fileID: 2051547342}
   m_Layer: 5
   m_Name: PopupTitle
   m_TagString: Untagged
@@ -6892,7 +6983,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -6910,6 +7001,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2051547338}
+--- !u!114 &2051547342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2051547338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2096412002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6920,6 +7025,7 @@ GameObject:
   - component: {fileID: 2096412003}
   - component: {fileID: 2096412005}
   - component: {fileID: 2096412004}
+  - component: {fileID: 2096412006}
   m_Layer: 5
   m_Name: PopupDescription
   m_TagString: Untagged
@@ -6966,7 +7072,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -6976,14 +7082,28 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "\u9031\u520A\u5C11\u5E74\u30B8\u30E3\u30F3\u30D7\u306B\u3066\u9023\u8F09\u4E2D\u3001\u30A2\u30CB\u30E1\u3082\u5927\u597D\u8A55\u306E\u300C\u30CF\u30A4\u30AD\u30E5\u30FC!!\u300D\u304C\u80B2\u6210\u30D0\u30EC\u30FC\u30DC\u30FC\u30EB\u30B7\u30DF\u30E5\u30EC\u30FC\u30B7\u30E7\u30F3\u30B2\u30FC\u30E0\u3067\u30B9\u30DE\u30FC\u30C8\u30D5\u30A9\u30F3\u306B\u521D\u767B\u5834\uFF01\r\n\u30B2\u30FC\u30E0\u5185\u3067\u767B\u5834\u3059\u308B\u500B\u6027\u8C4A\u304B\u306A\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u3092\u96C6\u3081\u3066\u81EA\u5206\u3060\u3051\u306E\u30C1\u30FC\u30E0\u3092\u7D50\u6210!!\u597D\u304D\u306A\u30AD\u30E3\u30E9\u3092\u80B2\u3066\u3066\u3001\u4EF2\u9593\u3068\u306E\u300C\u7D46\u300D\u3068\u300C\u7D44\u307F\u5408\u308F\u305B\u300D\u3067\u52DD\u8CA0!!\u30EA\u30FC\u30B0\u6226\u3067\u306E\u512A\u52DD\u3092\u76EE\u6307\u305B!!"
+    m_LineSpacing: 1.2
+  m_Text: "\u9031\u520A\u5C11\u5E74\u30B8\u30E3\u30F3\u30D7\u306B\u3066\u9023\u8F09\u4E2D\u3001\u30A2\u30CB\u30E1\u3082\u5927\u597D\u8A55\u306E\u300C\u30CF\u30A4\u30AD\u30E5\u30FC!!\u300D\u304C\u80B2\u6210\u30D0\u30EC\u30FC\u30DC\u30FC\u30EB\u30B7\u30DF\u30E5\u30EC\u30FC\u30B7\u30E7\u30F3\u30B2\u30FC\u30E0\u3067\u30B9\u30DE\u30FC\u30C8\u30D5\u30A9\u30F3\u306B\u521D\u767B\u5834\uFF01\n\r\u30B2\u30FC\u30E0\u5185\u3067\u767B\u5834\u3059\u308B\u500B\u6027\u8C4A\u304B\u306A\u30AD\u30E3\u30E9\u30AF\u30BF\u30FC\u3092\u96C6\u3081\u3066\u81EA\u5206\u3060\u3051\u306E\u30C1\u30FC\u30E0\u3092\u7D50\u6210!!\u597D\u304D\u306A\u30AD\u30E3\u30E9\u3092\u80B2\u3066\u3066\u3001\u4EF2\u9593\u3068\u306E\u300C\u7D46\u300D\u3068\u300C\u7D44\u307F\u5408\u308F\u305B\u300D\u3067\u52DD\u8CA0!!\u30EA\u30FC\u30B0\u6226\u3067\u306E\u512A\u52DD\u3092\u76EE\u6307\u305B!!"
 --- !u!222 &2096412005
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2096412002}
+--- !u!114 &2096412006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096412002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2105866203
 GameObject:
   m_ObjectHideFlags: 0
