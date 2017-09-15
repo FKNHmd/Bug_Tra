@@ -5,23 +5,39 @@ using UnityEngine;
 public class PanelPage_SusumuModoru : MonoBehaviour {
 
 	int page;
-	GameObject[] gobj = new GameObject[10];
+	int endpage;
+	GameObject[] gobj = new GameObject[20];
 
 	// Use this for initialization
 	void Start () {
+		syokika ();
+	}
+
+	void OnEnable () {
+		page = 1;
+		if (gobj [0] != null) {
+			page_activate (page);
+		}
+	}
+
+	void syokika () {
 		string str;
 		page = 1;
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 20; i++) {
 			str = "PanelPage" + (i + 1);
 			gobj[i] = GameObject.Find (str);
+			if (gobj [i] == null) {
+				endpage = i;
+				break;
+			}
 		}
 		page_activate (page);
 	}
 
 	void page_activate (int n)
 	{
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < endpage; i++) {
 			if (i == (n - 1)) {
 				gobj[i].SetActive (true);
 			} else {
@@ -33,8 +49,8 @@ public class PanelPage_SusumuModoru : MonoBehaviour {
 	public void susumu ()
 	{
 		page++;
-		if (page >= 10) {
-			page = 10;
+		if (page >= endpage) {
+			page = endpage;
 		}
 		page_activate (page);
 	}
