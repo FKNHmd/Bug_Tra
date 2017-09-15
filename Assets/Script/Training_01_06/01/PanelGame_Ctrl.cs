@@ -15,6 +15,8 @@ public class PanelGame_Ctrl : MonoBehaviour {
 	float on_byou;
 	float oldtime, newtime, deltatime;
 
+	HintMgr_01 hm01;
+
 	// Use this for initialization
 	void Start () {
 
@@ -41,6 +43,8 @@ public class PanelGame_Ctrl : MonoBehaviour {
 
 		on_flg = false;
 		on_byou = 0f;
+
+		hm01 = GameObject.Find ("HintMgr").GetComponent<HintMgr_01> ();
 	}
 
 	IEnumerator ActInput()
@@ -64,12 +68,16 @@ public class PanelGame_Ctrl : MonoBehaviour {
 	public void InputChange()
 	{
 		if (DummyInput.text == "q") {
-
+			/* ヒント用処理 */
+			hm01.CountUpNyuuryoku_q ();
 		} else if (DummyInput.text == "") {
 			/* 空白は何もしない */
 		} else {
 			image_on ();
 			on_flg = true;
+
+			/* ヒント用処理 */
+			hm01.CountUpNyuuryokusuu ();
 		}
 
 		DummyInput.text = "";
