@@ -1547,8 +1547,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.000015, y: -311.8}
-  m_SizeDelta: {x: 160, y: 46}
+  m_AnchoredPosition: {x: -51, y: -311.4}
+  m_SizeDelta: {x: 376, y: 45.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157192155
 MonoBehaviour:
@@ -4419,7 +4419,6 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &535655813
 Transform:
   m_ObjectHideFlags: 0
@@ -4841,7 +4840,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u30B9\u30C6\u30FC\u30B8\n\u30BB\u30EC\u30AF\u30C8"
+  m_Text: "\u30B9\u30C6\u30FC\u30B8\u30BB\u30EC\u30AF\u30C8"
 --- !u!222 &641623921
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5264,7 +5263,6 @@ SpriteRenderer:
   m_Size: {x: 4.09, y: 3.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &756557457
 GameObject:
   m_ObjectHideFlags: 0
@@ -8619,7 +8617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1447322028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8919,7 +8917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1528006124
 RectTransform:
   m_ObjectHideFlags: 0
