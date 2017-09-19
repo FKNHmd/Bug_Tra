@@ -14,13 +14,19 @@ public class PanelGame_Ctrl : MonoBehaviour {
 	bool on_flg;
 	float on_byou;
 	float oldtime, newtime, deltatime;
+    int nyuuryokusuu;
+    float lasthint_byou;
+    bool lasthint_flg;
+    int nyuuryoku_q;
 
-	HintMgr_01 hm01;
+    //HintMgr_01 hm01;
+
+    HintManager _HintMar;
 
 	// Use this for initialization
 	void Start () {
-
-	}
+        _HintMar = GameObject.Find("HintObject").GetComponent<HintManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,7 +40,18 @@ public class PanelGame_Ctrl : MonoBehaviour {
 				image_off ();
 			}
 		}
-	}
+
+        if (lasthint_flg == true)
+        {
+            lasthint_byou += Time.deltaTime;
+            if (lasthint_byou > 15f)
+            {
+                string naiyou = "あれ？ある文字を入力した時に\n蛍が光っていないよ？";
+                _HintMar.HintParent(naiyou, 5);
+                lasthint_flg = false;
+            }
+        }
+    }
 		
 	void OnEnable () {
 		ImageOff.SetActive (true);
@@ -44,8 +61,9 @@ public class PanelGame_Ctrl : MonoBehaviour {
 		on_flg = false;
 		on_byou = 0f;
 
-		hm01 = GameObject.Find ("HintMgr").GetComponent<HintMgr_01> ();
-	}
+        //hm01 = GameObject.Find ("HintMgr").GetComponent<HintMgr_01> ();
+
+    }
 
 	IEnumerator ActInput()
 	{
@@ -67,18 +85,43 @@ public class PanelGame_Ctrl : MonoBehaviour {
 
 	public void InputChange()
 	{
-		if (DummyInput.text == "q") {
-			/* ヒント用処理 */
-			hm01.CountUpNyuuryoku_q ();
-		} else if (DummyInput.text == "") {
-			/* 空白は何もしない */
-		} else {
-			image_on ();
-			on_flg = true;
+        if (DummyInput.text == "q")
+        {
+            nyuuryoku_q++;
+            /* ヒント用処理 */
+            //hm01.CountUpNyuuryoku_q ();
+            if (nyuuryoku_q == 3 && !lasthint_flg)
+            {
+                string naiyou = "あれ？ある文字を入力した時に\n蛍が光っていないよ？";
+                _HintMar.HintParent(naiyou, 5);
+                // 3回の時に発生するので数を増やしておく
+                nyuuryoku_q++;
+                lasthint_flg = true;
+            }
+        }
+        else if (DummyInput.text == "")
+        {
+            /* 空白は何もしない */
+        }
+        else
+        {
+            nyuuryokusuu++;
+            image_on();
+            on_flg = true;
 
-			/* ヒント用処理 */
-			hm01.CountUpNyuuryokusuu ();
-		}
+            /* ヒント用処理 */
+            //hm01.CountUpNyuuryokusuu ();
+            if (nyuuryokusuu == 10)
+            {
+                string naiyou = "「ひらがな」「記号」「アルファベット」\nいろいろな文字を入力してみよう！";
+                _HintMar.HintParent(naiyou, 5);
+            }
+            if (nyuuryokusuu == 20)
+            {
+                string naiyou = "「アルファベット」を\n重点的に調べてみよう！";
+                _HintMar.HintParent(naiyou, 5);
+            }
+        }
 
 		DummyInput.text = "";
 	}
