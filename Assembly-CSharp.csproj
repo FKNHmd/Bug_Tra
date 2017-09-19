@@ -50,6 +50,7 @@
      <Compile Include="Assets\Script\Audio\AudioPlayer.cs" />
      <Compile Include="Assets\Script\ButtonAnim.cs" />
      <Compile Include="Assets\Script\Global.cs" />
+     <Compile Include="Assets\Script\HintManager.cs" />
      <Compile Include="Assets\Script\Scene\FadeManager.cs" />
      <Compile Include="Assets\Script\Scene\SceneInitialize.cs" />
      <Compile Include="Assets\Script\Scene\SceneSetAndLoad.cs" />
