@@ -11,16 +11,38 @@ public class GameManager_Tr02 : MonoBehaviour
     public List<GameObject> popUp;
     List<bool> isActivePopUp;
     bool isSetBug = false;
+    bool lasthint_flg = false;
+    float lasthint_byou;
+
+    // ポップアップをタップされた回数
+    int tapCount = 0;
+    [SerializeField]
+    List<string> popUpName = new List<string>();
+ public   HintManager _HintMar;
 
     // Use this for initialization
     void Start()
     {
-
+        //_HintMar = GameObject.Find("HintObject").GetComponent<HintManager>();
+        string naiyou = "ゲームのロゴをタップして\nポップアップを表示しよう！";
+        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
+        naiyou = "ポップアップの画面右上にある\n「×」ボタンを押してポップアップを消そう！";
+        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (lasthint_flg)
+        {
+            lasthint_byou += Time.deltaTime;
+            if (lasthint_byou > 15f)
+            {
+                string naiyou = "画面右上の「バグ報告」ボタンを押して\nどの文字で蛍が光らないか教えよう！";
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                lasthint_byou = 0;
+            }
+        }
         popUp = new List<GameObject>(GameObject.FindGameObjectsWithTag("PopUp"));
         for (int i = 0; i < popUp.Count; i++)
         {
@@ -41,7 +63,7 @@ public class GameManager_Tr02 : MonoBehaviour
     {
         if (isSetBug)
         {
-            for(int i = 0; i < popUp.Count; i++)
+            for (int i = 0; i < popUp.Count; i++)
             {
                 popUp[i].SetActive(false);
             }
@@ -70,6 +92,21 @@ public class GameManager_Tr02 : MonoBehaviour
             section = "・次回からはこんな観点で挑戦してね！";
             syousai = "キーボードをいろいろ変えて、細かいところもチェックしてみて！";
             PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+        }
+    }
+
+    public void PopUpTapCount(string name)
+    {
+        if (!popUpName.Contains(name))
+        {
+            tapCount++;
+            popUpName.Add(name);
+            if (tapCount == 4)
+            {
+                string naiyou = "ロゴを「連続タップ」「フリック」「スワイプ」\nその他いろんな操作をしてみよう！";
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
+                lasthint_flg = true;
+            }
         }
     }
 }

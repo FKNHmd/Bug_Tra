@@ -26,6 +26,8 @@ public class PanelGame_Ctrl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _HintMar = GameObject.Find("HintObject").GetComponent<HintManager>();
+        string naiyou = "キーボードで文字を\n入力すると蛍が光るよ！";
+        _HintMar.HintParent(naiyou, 5,HintManager.FaceState.Egao);
     }
 	
 	// Update is called once per frame
@@ -46,9 +48,9 @@ public class PanelGame_Ctrl : MonoBehaviour {
             lasthint_byou += Time.deltaTime;
             if (lasthint_byou > 15f)
             {
-                string naiyou = "あれ？ある文字を入力した時に\n蛍が光っていないよ？";
-                _HintMar.HintParent(naiyou, 5);
-                lasthint_flg = false;
+                string naiyou = "画面右上の「バグ報告」ボタンを押して\nどの文字で蛍が光らないか教えよう！";
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                lasthint_byou = 0;
             }
         }
     }
@@ -93,7 +95,7 @@ public class PanelGame_Ctrl : MonoBehaviour {
             if (nyuuryoku_q == 3 && !lasthint_flg)
             {
                 string naiyou = "あれ？ある文字を入力した時に\n蛍が光っていないよ？";
-                _HintMar.HintParent(naiyou, 5);
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Syobon);
                 // 3回の時に発生するので数を増やしておく
                 nyuuryoku_q++;
                 lasthint_flg = true;
@@ -114,12 +116,12 @@ public class PanelGame_Ctrl : MonoBehaviour {
             if (nyuuryokusuu == 10)
             {
                 string naiyou = "「ひらがな」「記号」「アルファベット」\nいろいろな文字を入力してみよう！";
-                _HintMar.HintParent(naiyou, 5);
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
             }
             if (nyuuryokusuu == 20)
             {
                 string naiyou = "「アルファベット」を\n重点的に調べてみよう！";
-                _HintMar.HintParent(naiyou, 5);
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
             }
         }
 

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class HintManager : MonoBehaviour
 {
-
+    // クロスちゃんの画像を変える
+    public GameObject[] crossTyan;
     // 時間
     public float timeCount = 0;
     float hintSETTime = 0;
@@ -34,6 +35,15 @@ public class HintManager : MonoBehaviour
         Child,
     }
     public State HintState;
+
+    public enum FaceState
+    {
+        Egao,
+        ManmenEgao,
+        Syobon,
+        Gakkari,
+    }
+    public FaceState FACESTATE;
 
     // Use this for initialization
     void Start()
@@ -89,7 +99,7 @@ public class HintManager : MonoBehaviour
     }
 
     // テキストの内容を変更し、表示時間を指定する
-    public void HintParent(string hintNaiyou, float hintTime)
+    public void HintParent(string hintNaiyou, float hintTime,FaceState crossFace)
     {
         isActiveHint = false;
         // オブジェクトを生成
@@ -97,7 +107,7 @@ public class HintManager : MonoBehaviour
         createHint.SetActive(true);
         createHint.transform.parent = transform;
         createHint.transform.localPosition = Vector3.zero;
-        createHint.GetComponent<HintManager>().Hint(hintNaiyou, hintTime);
+        createHint.GetComponent<HintManager>().Hint(hintNaiyou, hintTime, crossFace);
 
         //// 順番の要素が空なら入れる
         //if (hintObjects[createCount] == null)
@@ -151,12 +161,41 @@ public class HintManager : MonoBehaviour
             createCount = 0;
         }
     }
-    public void Hint(string hintNaiyou, float hintTime)
+    public void Hint(string hintNaiyou, float hintTime,FaceState crossFace)
     {
         // アニメーションを起動
         isHideFlg = true;
         textObject.text = "" + hintNaiyou;
         hintSETTime = hintTime;
+
+        for(int i = 0; i < crossTyan.Length; i++)
+        {
+            crossTyan[i].SetActive(false);
+        }
+
+        switch (crossFace)
+        {
+            case FaceState.Egao:
+                {
+                    crossTyan[0].SetActive(true);
+                    break;
+                }
+            case FaceState.ManmenEgao:
+                {
+                    crossTyan[1].SetActive(true);
+                    break;
+                }
+            case FaceState.Syobon:
+                {
+                    crossTyan[2].SetActive(true);
+                    break;
+                }
+            case FaceState.Gakkari:
+                {
+                    crossTyan[3].SetActive(true);
+                    break;
+                }
+        }
     }
 
     public void ObjectDes()

@@ -35,6 +35,9 @@ public class GameManager_03 : MonoBehaviour
     public bool isBugSET = false;
     // バグ報告ボタンを押下され、バグを探しているかを判断
     public bool isBugCheck = false;
+    bool isPopUp = false;
+   public bool lasthint_flg;
+    float lasthint_byou;
 
     // 発生したバグの内容
     public string bagText;
@@ -58,6 +61,7 @@ public class GameManager_03 : MonoBehaviour
     public GameObject gameClaer;
     public PanelCrossChan_Ctrl PCC;
     public GameCtrl_PanelChange GP;
+    public HintManager _HintMar;
 
 
     // 参照スクリプト
@@ -119,6 +123,9 @@ public class GameManager_03 : MonoBehaviour
                     // 最初だけ呼び出す(主に初期化など)
                     if (isSetFlg)
                     {
+                        isPopUp = false;
+                        string naiyou = "左右にスワイプして\n青い箱を見つけよう！";
+                        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                         gameTimeObj.GetComponent<Text>().text = "20";
                         mainCamera.transform.position = new Vector3(0, 5, 0);
                         mainCamera.transform.eulerAngles = Vector3.zero;
@@ -160,6 +167,12 @@ public class GameManager_03 : MonoBehaviour
                         CameraMove();
                         // ゲーム中の時間を表示
                         gameTime += Time.deltaTime;
+                        if (gameTime > 7 && !isPopUp)
+                        {
+                            isPopUp = true;
+                            string naiyou = "画面をタップして弾を発射！\n青い箱に弾を当ててたくさんスコアを稼ごう！";
+                            _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                        }
                         gameCount = Mathf.CeilToInt(20 - gameTime);
                         gameTimeObj.GetComponent<Text>().text = "" + gameCount;
                         // 終了判定
@@ -182,6 +195,7 @@ public class GameManager_03 : MonoBehaviour
                     // 最初だけ呼び出す(主に初期化など)
                     if (isSetFlg)
                     {
+
                         isGameFlg = false;
                         UI_Title.SetActive(false);
                         UI_Game.SetActive(false);
@@ -208,6 +222,17 @@ public class GameManager_03 : MonoBehaviour
                         }
                         // 最後にフラグを切って処理しないようにする
                         isSetFlg = false;
+                    }
+                    if (lasthint_flg)
+                    {
+                        lasthint_byou += Time.deltaTime;
+                        if (lasthint_byou > 2f)
+                        {
+                            string naiyou = "画面右上の「バグ報告」ボタンを押して\nどの文字で蛍が光らないか教えよう！";
+                            _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                            lasthint_byou = 0;
+                        }
+                        lasthint_flg = false;
                     }
                     // ひとまずランダムでバグを発生させる------------------------------------------------------------------------------
                     if (isBugSET && !isBugCheck)

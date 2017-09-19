@@ -60,7 +60,8 @@ public class Bullet : MonoBehaviour {
                     _gameMar.scoreNum += 100;
 					if (_gameMar.scoreNum > 499) {
 						_gameMar.isBugSET = true;
-					}
+                        _gameMar.lasthint_flg = true;
+                    }
                     _gameMar.scoreText.GetComponent<Text>().text = "SCORE:" + _gameMar.scoreNum;
                     parentObj.transform.position = enemyObj.transform.position;
                     enemyObj.GetComponent<Collider>().enabled = false;
