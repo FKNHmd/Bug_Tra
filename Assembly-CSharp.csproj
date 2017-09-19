@@ -48,14 +48,21 @@
   <ItemGroup>
      <Compile Include="Assets\Script\Audio\AudioManager.cs" />
      <Compile Include="Assets\Script\Audio\AudioPlayer.cs" />
+     <Compile Include="Assets\Script\ButtonAnim.cs" />
      <Compile Include="Assets\Script\Global.cs" />
      <Compile Include="Assets\Script\Scene\FadeManager.cs" />
      <Compile Include="Assets\Script\Scene\SceneInitialize.cs" />
      <Compile Include="Assets\Script\Scene\SceneSetAndLoad.cs" />
+     <Compile Include="Assets\Script\Select\Panelbutton_StageClearCheck.cs" />
+     <Compile Include="Assets\Script\Select\Tutorial\TutorialMgr_Flg.cs" />
      <Compile Include="Assets\Script\SetPopupElement.cs" />
+     <Compile Include="Assets\Script\Top\Panel_Syokika_Button.cs" />
      <Compile Include="Assets\Script\Training_01_06\01\GameCtrl_Start.cs" />
+     <Compile Include="Assets\Script\Training_01_06\01\Hikari_Destroy.cs" />
+     <Compile Include="Assets\Script\Training_01_06\01\HintMgr_01.cs" />
      <Compile Include="Assets\Script\Training_01_06\01\PanelGame_Ctrl.cs" />
      <Compile Include="Assets\Script\Training_01_06\01\PanelHoukoku_Ctrl.cs" />
+     <Compile Include="Assets\Script\Training_01_06\01\Performance.cs" />
      <Compile Include="Assets\Script\Training_01_06\06\GameCtrl_Start_06.cs" />
      <Compile Include="Assets\Script\Training_01_06\06\PanelGame_Ctrl_06.cs" />
      <Compile Include="Assets\Script\Training_01_06\07\GameCtrl_Start_07.cs" />
@@ -66,6 +73,7 @@
      <Compile Include="Assets\Script\Training_01_06\08\GameCtrl_Start_08.cs" />
      <Compile Include="Assets\Script\Training_01_06\08\PanelGame_Ctrl_08.cs" />
      <Compile Include="Assets\Script\Training_01_06\08\PanelHoukoku_Ctrl_08.cs" />
+     <Compile Include="Assets\Script\Training_01_06\common\Button_RendaMukou.cs" />
      <Compile Include="Assets\Script\Training_01_06\common\GameCtrl_FixOrientation.cs" />
      <Compile Include="Assets\Script\Training_01_06\common\GameCtrl_PanelChange.cs" />
      <Compile Include="Assets\Script\Training_01_06\common\PanelCrossChan_Ctrl.cs" />
@@ -73,7 +81,7 @@
      <Compile Include="Assets\Script\Training_02\GameManager_Tr02.cs" />
      <Compile Include="Assets\Script\Training_02\PanelGame_Ctrl_02.cs" />
      <Compile Include="Assets\Script\Training_02\PanelHoukoku_Ctrl_02.cs" />
-     <Compile Include="Assets\Script\Training_02\Popup.cs" />
+     <Compile Include="Assets\Script\Training_02\Popup_unuse.cs" />
      <Compile Include="Assets\Script\Training_02\SetPopupElement_02.cs" />
      <Compile Include="Assets\Script\Training_03\Bullet.cs" />
      <Compile Include="Assets\Script\Training_03\ButtonManager.cs" />
@@ -81,11 +89,16 @@
      <Compile Include="Assets\Script\Training_03\GameCtrl_CanvasCtrl_03.cs" />
      <Compile Include="Assets\Script\Training_03\GameCtrl_Start_03.cs" />
      <Compile Include="Assets\Script\Training_03\GameManager_03.cs" />
+     <Compile Include="Assets\Script\Training_03\SoundManager_Tr03.cs" />
      <Compile Include="Assets\Script\Training_04\GameCtrl_Start_04.cs" />
      <Compile Include="Assets\Script\Training_04\PanelGame_Ctrl_04.cs" />
      <Compile Include="Assets\Script\Training_04\PanelHoukoku_Ctrl_04.cs" />
+     <Compile Include="Assets\Script\Training_05\GameCtrl_CanvasCtrl_05.cs" />
+     <Compile Include="Assets\Script\Training_05\GameCtrl_Start_05.cs" />
      <Compile Include="Assets\Script\Training_05\GameManager_05.cs" />
      <Compile Include="Assets\Script\Training_05\Rote.cs" />
+     <Compile Include="Assets\Script\TutorialAsobikataCommon\AsobikataMgr_OpenClose.cs" />
+     <Compile Include="Assets\Script\TutorialAsobikataCommon\PanelPage_SusumuModoru.cs" />
      <Compile Include="Assets\Script\Utility\SingletonMonoBehaviour.cs" />
      <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
  <Reference Include="UnityEngine.UI">
