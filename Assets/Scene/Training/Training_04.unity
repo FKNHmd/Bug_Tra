@@ -467,13 +467,13 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 45
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -1099,8 +1099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380, y: -259}
-  m_SizeDelta: {x: 155, y: 121}
+  m_AnchoredPosition: {x: 367, y: -297}
+  m_SizeDelta: {x: 134, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &351538887
 MonoBehaviour:
@@ -8635,8 +8635,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -246, y: -145}
-  m_SizeDelta: {x: 116, y: 79}
+  m_AnchoredPosition: {x: -253, y: -149.25}
+  m_SizeDelta: {x: 123, y: 87.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625719970
 MonoBehaviour:
@@ -9505,6 +9505,7 @@ SpriteRenderer:
   m_Size: {x: 12.42, y: 22.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &1782261215
 Transform:
   m_ObjectHideFlags: 0
