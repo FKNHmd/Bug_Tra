@@ -82,7 +82,7 @@ public class GameManager_05 : MonoBehaviour
                         gameClaer.SetActive(true);
                         Screen.orientation = ScreenOrientation.Portrait;
                         string daimei, section, syousai;
-                        daimei = "バグを見つけられなくて残念ね。。";
+                        daimei = "残念だったね。。";
                         section = "・次回からはこんな観点で挑戦してね！";
                         syousai = "端末を横に回転してみると…?";
                         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
@@ -121,7 +121,7 @@ public class GameManager_05 : MonoBehaviour
         gameClaer.SetActive(true);
         Screen.orientation = ScreenOrientation.Portrait;
         string daimei, section, syousai;
-        daimei = "バグを見つけられなくて残念ね。。";
+        daimei = "残念だったね。。";
         section = "・次回からはこんな観点で挑戦してね！";
         syousai = "端末を横に回転してみると…?";
         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);

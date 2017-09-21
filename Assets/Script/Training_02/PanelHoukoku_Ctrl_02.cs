@@ -34,7 +34,7 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
 			syousai = "ポップアップが重なって表示されるバグだよ！\n普段は重ならないように制御される部分だけど、たまに制御出来てなくて起きる事があるから注意してね！";
 			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 		} else {
-			daimei = "バグを見つけられなくて残念ね。。";
+			daimei = "残念だったね。。";
 			section = "・次回からはこんな観点で挑戦してね！";
 			syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりして見てね！";
 			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
@@ -47,7 +47,7 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
-		daimei = "バグを見つけられなくて残念ね。。";
+		daimei = "残念だったね。。";
 		section = "・次回からはこんな観点で挑戦してね！";
 		syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりしてみてね！\nゲーム中、右上に出てくるヒントが出てくるよ！\n";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
