@@ -59,12 +59,13 @@ public class HintManager : MonoBehaviour
             case State.Parent:
                 {
                     // デバッグ用の処理*************************************************
-                    //if (Input.GetKeyDown(KeyCode.A)){
+                    //if (Input.GetKeyDown(KeyCode.A))
+                    //{
                     //    isCreate = true;
                     //}
                     //if (isCreate)
                     //{
-                    //    HintParent("テスト", 2);
+                    //    HintParent("テスト", 2,FaceState.Syobon);
                     //    isCreate = false;
                     //}
 
