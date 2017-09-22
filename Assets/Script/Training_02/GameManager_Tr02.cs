@@ -26,9 +26,7 @@ public class GameManager_Tr02 : MonoBehaviour
         //_HintMar = GameObject.Find("HintObject").GetComponent<HintManager>();
         string naiyou = "ゲームのロゴをタップして\nポップアップを表示しよう！";
         _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
-        naiyou = "ポップアップの画面右上にある\n「×」ボタンを押してポップアップを消そう！";
-        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
-    }
+          }
 
     // Update is called once per frame
     void Update()
@@ -38,7 +36,7 @@ public class GameManager_Tr02 : MonoBehaviour
             lasthint_byou += Time.deltaTime;
             if (lasthint_byou > 15f)
             {
-                string naiyou = "画面右上の「バグ報告」ボタンを押して\nどの文字で蛍が光らないか教えよう！";
+                string naiyou = "画面右上の「バグ報告」ボタンを押して、\n変な表示になっているところを教えよう！";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                 lasthint_byou = 0;
             }
@@ -99,6 +97,11 @@ public class GameManager_Tr02 : MonoBehaviour
     {
         if (!popUpName.Contains(name))
         {
+            if(tapCount == 0)
+            {
+                string naiyou = "ポップアップの画面右上にある\n「×」ボタンを押してポップアップを消そう！";
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
+            }
             tapCount++;
             popUpName.Add(name);
             if (tapCount == 4)

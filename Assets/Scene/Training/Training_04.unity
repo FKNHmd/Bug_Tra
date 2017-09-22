@@ -1162,6 +1162,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1519140794687208, guid: e1f88db82f44ae04b9d6cb803ae98c68, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1f88db82f44ae04b9d6cb803ae98c68, type: 2}
   m_IsPrefabParent: 0
@@ -5845,7 +5849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1047388890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5864,7 +5868,7 @@ MonoBehaviour:
   hanei2: {fileID: 2058348038}
   GP: {fileID: 540324178}
   panelhoukoku: {fileID: 722200467}
-  _HintMar: {fileID: 0}
+  _HintMar: {fileID: 1694377311}
   lasthint_flg: 0
 --- !u!114 &1047388891
 MonoBehaviour:

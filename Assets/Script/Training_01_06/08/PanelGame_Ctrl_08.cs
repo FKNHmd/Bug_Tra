@@ -56,7 +56,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		//int rand;
 
         GetComponent<Animator>().SetBool("IsAnim", true);
-
+        Debug.Log("Gacha");
 		//rand = Random.Range (1, 10);
 
 		//if (rand == 1) {

@@ -231,8 +231,9 @@ public class GameManager_03 : MonoBehaviour
                             string naiyou = "画面右上の「バグ報告」ボタンを押して\nどの文字で蛍が光らないか教えよう！";
                             _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                             lasthint_byou = 0;
+                            lasthint_flg = false;
                         }
-                        lasthint_flg = false;
+                        
                     }
                     // ひとまずランダムでバグを発生させる------------------------------------------------------------------------------
                     if (isBugSET && !isBugCheck)
