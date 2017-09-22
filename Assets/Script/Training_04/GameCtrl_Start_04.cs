@@ -7,9 +7,10 @@ public class GameCtrl_Start_04 : MonoBehaviour {
 
 	public GameCtrl_PanelChange GP;
 	public PanelCrossChan_Ctrl PCC;
+   public HintManager _HintMar;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		string daimei, section, syousai;
 
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
@@ -28,5 +29,7 @@ public class GameCtrl_Start_04 : MonoBehaviour {
 	public void Start_Button()
 	{
 		GP.change_panel (GameCtrl_PanelChange.panel.Game);
-	}
+        string naiyou = "名前と自己紹介を書いて\n入力ボタンをタップしよう！";
+        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
+    }
 }
