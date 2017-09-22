@@ -54,10 +54,10 @@
      <Compile Include="Assets\Script\Scene\FadeManager.cs" />
      <Compile Include="Assets\Script\Scene\SceneInitialize.cs" />
      <Compile Include="Assets\Script\Scene\SceneSetAndLoad.cs" />
+     <Compile Include="Assets\Script\Select\Panel_Syokika_Button.cs" />
      <Compile Include="Assets\Script\Select\Panelbutton_StageClearCheck.cs" />
      <Compile Include="Assets\Script\Select\Tutorial\TutorialMgr_Flg.cs" />
      <Compile Include="Assets\Script\SetPopupElement.cs" />
-     <Compile Include="Assets\Script\Top\Panel_Syokika_Button.cs" />
      <Compile Include="Assets\Script\Training_01_06\01\GameCtrl_Start.cs" />
      <Compile Include="Assets\Script\Training_01_06\01\Hikari_Destroy.cs" />
      <Compile Include="Assets\Script\Training_01_06\01\HintMgr_01.cs" />
