@@ -16,7 +16,12 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 
     public GameObject[] anim;
 
-	int okane;
+    float hintTime = 0;
+    bool hintFlg = false;
+
+    public HintManager _HintMar;
+
+    int okane;
 	int hosi5char_kazu, hosi4char_kazu, hosi3char_kazu;
 
 	const int SYOKIOKANE = 1000;
