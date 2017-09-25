@@ -105,9 +105,10 @@ public class HintManager : MonoBehaviour
         isActiveHint = false;
         // オブジェクトを生成
         GameObject createHint = Instantiate(hintPanel);
+        createHint.transform.SetParent(transform, false);
         createHint.SetActive(true);
-        createHint.transform.parent = transform;
-        createHint.transform.localPosition = Vector3.zero;
+        //createHint.transform.parent = transform;
+        createHint.transform.localPosition = hintPanel.transform.localPosition;
         createHint.GetComponent<HintManager>().Hint(hintNaiyou, hintTime, crossFace);
 
         //// 順番の要素が空なら入れる
@@ -132,7 +133,7 @@ public class HintManager : MonoBehaviour
                 // 位置を調整
                 createHint.transform.localPosition = new Vector3(
                    0,
-                   num * (-100),
+                   (num * (-50)) + hintPanel.transform.localPosition.y,
                   0);
                 hintObjects[num] = createHint;
                 createCount = 0;
@@ -147,7 +148,7 @@ public class HintManager : MonoBehaviour
                 {
                     createHint.transform.localPosition = new Vector3(
                          0,
-                         createCount * (-100),
+                         (createCount * (-50)) + hintPanel.transform.localPosition.y,
                         0);
                     hintObjects[createCount] = createHint;
                     createCount++;
@@ -161,6 +162,8 @@ public class HintManager : MonoBehaviour
         {
             createCount = 0;
         }
+        Debug.Log(createHint.transform.localPosition.y);
+
     }
     public void Hint(string hintNaiyou, float hintTime,FaceState crossFace)
     {
