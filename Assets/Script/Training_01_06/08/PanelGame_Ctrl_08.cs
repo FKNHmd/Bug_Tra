@@ -17,7 +17,10 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
     public GameObject[] anim;
 
     float hintTime = 0;
+    int hintCount = 0;
     bool hintFlg = false;
+    bool createBug = false;
+    int count = 0;
 
     public HintManager _HintMar;
 
@@ -31,11 +34,46 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
+        string naiyou = "ガチャをタップしてまわしてみよう！";
+        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (!hintFlg)
+        {
+            hintTime += Time.deltaTime;
+            if (hintTime > 60)
+            {
+                string naiyou = "画面上だけではなく、\n端末全体でいろいろな操作をしてみよう！";
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                hintTime = 0;
+                hintFlg = true;
+            }
+        }
+        if (createBug)
+        {
+            hintTime += Time.deltaTime;
+            if (hintTime > 15)
+            {
+                string naiyou = "";
+                if (hintCount != 0)
+                {
+                    naiyou = "画面上だけではなく、\n端末全体でいろいろな操作をしてみよう！";
+                    _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                }
+                else
+                {
+                    hintCount++;
+                }
+            
+                naiyou = "バグはもう発生しているよ！\nどこか変なところないかな？";
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                hintTime = 0;
+            }
+        }
+    }
 
 	void Awake () {
 		//GCC.set_clearflg (false);
@@ -43,9 +81,13 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		
 	void OnEnable () {
 		okane = SYOKIOKANE;
-		//TextOkane.text = "€" + okane;
-
-		hosi5char_kazu = 0;
+        //TextOkane.text = "€" + okane;
+        count = 0;
+        hintCount = 0;
+        hintTime = 0;
+        hintFlg = false;
+        createBug = false;
+        hosi5char_kazu = 0;
 		hosi4char_kazu = 0;
 		hosi3char_kazu = 0;
 		/*
@@ -57,8 +99,13 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 	}
 
 	public void Gacha_hiku()
-	{
-		//int rand;
+    {
+        if (count < 1)
+        {
+            string naiyou = "排出されたキャラをタップ！\n右上のコインが100減ることを確認しよう！";
+            _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+        }
+        //int rand;
 
         GetComponent<Animator>().SetBool("IsAnim", true);
         Debug.Log("Gacha");
@@ -127,7 +174,13 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 
     public void gacha_char_tap (int hosi)
 	{
-		if (hosi == 5) {
+        if (count < 1)
+        {
+            string naiyou = "いろんな操作をしてバグを見つけよう！";
+            _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+        }
+        count++;
+        if (hosi == 5) {
 			hosi5char_kazu++;
 		} else if (hosi == 4) {
 			hosi4char_kazu++;
@@ -179,6 +232,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		if (pauseStatus) {
 			gacha_hyouzi_hihyouzi (1f);
 			if (image_char_false () == true) {
+                createBug = true;
 				GCC.set_clearflg (true);
 			}
 			//Debug.Log("applicationWillResignActive or onPause");

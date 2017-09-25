@@ -718,6 +718,12 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 135787009}
+--- !u!114 &163316396 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114482208884529186, guid: e1f88db82f44ae04b9d6cb803ae98c68,
+    type: 2}
+  m_PrefabInternal: {fileID: 1247070667}
+  m_Script: {fileID: 11500000, guid: 3cd0489d5c635364c9e6e8cc805916cb, type: 3}
 --- !u!1 &167759063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4931,6 +4937,7 @@ MonoBehaviour:
   PanelHoukoku: {fileID: 614361248}
   FadeInOut: {fileID: 1770345091}
   hideObjs: []
+  activeObj: {fileID: 0}
 --- !u!114 &849489695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8500,6 +8507,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  _HintMar: {fileID: 163316396}
 --- !u!114 &1579111013
 MonoBehaviour:
   m_ObjectHideFlags: 0
