@@ -17,6 +17,7 @@ public class GameCtrl_PanelChange : MonoBehaviour {
 	public GameObject FadeInOut;
 
     public GameObject[] hideObjs;
+    public GameObject activeObj;
     bool isHideFlg = false;
 
 	//GameObject PanelOld = null;
@@ -50,6 +51,10 @@ public class GameCtrl_PanelChange : MonoBehaviour {
                         hideObjs[i].SetActive(true);
                     }
                 }
+                if(activeObj != null && isHideFlg == true)
+                {
+                    activeObj.SetActive(false);
+                }
             }
 			FadeInOut.GetComponent<Image> ().color = new Color (0, 0, 0, alpha);
 		} else if (PanelNew != null) {
@@ -62,6 +67,10 @@ public class GameCtrl_PanelChange : MonoBehaviour {
                     {
                         hideObjs[i].SetActive(false);
                     }
+                }
+                if (activeObj != null && isHideFlg == false)
+                {
+                    activeObj.SetActive(true);
                 }
                 PanelNew = null;
 //				Debug.Log ("moge");
