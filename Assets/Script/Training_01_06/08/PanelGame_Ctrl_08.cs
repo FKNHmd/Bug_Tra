@@ -57,16 +57,17 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
             hintTime += Time.deltaTime;
             if (hintTime > 15)
             {
+                // ヒントを見返せるように繰り返す処理
                 string naiyou = "";
-                if (hintCount != 0)
-                {
-                    naiyou = "画面上だけではなく、\n端末全体でいろいろな操作をしてみよう！";
-                    _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
-                }
-                else
-                {
-                    hintCount++;
-                }
+                //if (hintCount != 0)
+                //{
+                //    naiyou = "画面上だけではなく、\n端末全体でいろいろな操作をしてみよう！";
+                //    _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                //}
+                //else
+                //{
+                //    hintCount++;
+                //}
             
                 naiyou = "バグはもう発生しているよ！\nどこか変なところないかな？";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
