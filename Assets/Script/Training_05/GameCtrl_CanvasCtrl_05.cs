@@ -19,7 +19,8 @@ public class GameCtrl_CanvasCtrl_05 : MonoBehaviour {
 
     public void Start_Button()
     {
-        gameMar.GameInitilize();
+        gamePanel.SetActive(true);
+                gameMar.GameInitilize();
         GP.change_panel(GameCtrl_PanelChange.panel.Game);
     }
 }
