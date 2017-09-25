@@ -171,8 +171,6 @@ public class HintManager : MonoBehaviour
         {
             createCount = 0;
         }
-        Debug.Log(createHint.transform.localPosition.y);
-
     }
     public void Hint(string hintNaiyou, float hintTime,FaceState crossFace)
     {
