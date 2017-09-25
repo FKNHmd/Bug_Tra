@@ -7,6 +7,7 @@ public class GameManager_05 : MonoBehaviour
 {
 
     public bool isBugCheck = false;
+    bool isCreateBug = false;
   public  bool isRota = false;
 
     public GameObject bugImage;
@@ -14,23 +15,60 @@ public class GameManager_05 : MonoBehaviour
     public GameObject gameClaer, hiseikai;
     public PanelCrossChan_Ctrl PCC;
     public GameCtrl_PanelChange GP;
+    public HintManager _HintMar;
 
-
+    float hintTime = 0;
+    float hint_DeltaTime = 0;
+    bool hintFlg = false;
+    float lasthint_byou;
     // Use this for initialization
     void Start()
     {
-       
+        string naiyou = "画面をスクロールして\n私の顔を動かしてみて！";
+        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+        hintTime = 10;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!hintFlg)
+        {
+            hint_DeltaTime += Time.deltaTime;
+            if (hint_DeltaTime > hintTime)
+            {
+                if (hintTime == 10)
+                {
+                    string naiyou = "いろんな操作をしてバグを見つけよう！";
+                    _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                    hintTime = 30;
+                }
+                else
+                {
+                    string naiyou = "画面上だけではなく端末全体で\nいろんな操作をしてみよう！";
+                    _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                    hintFlg = true;
+                }
+            }
+        }
+        if(isCreateBug)
+        {
+            hintFlg = true;
+            lasthint_byou += Time.deltaTime;
+            if(lasthint_byou > 15)
+            {
+                string naiyou = "画面右上の「バグ報告」ボタンを押して、\n変な表示になっているところを教えよう！";
+                _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+                lasthint_byou = 0;
+            }
+        }
         //BugCheck();
         if(Screen.width > Screen.height)
         {
             Vector3 pos = bugImage.transform.position;
             pos.x = Screen.width + (bugImage .GetComponent<RectTransform>().sizeDelta.x / 2);
             bugImage.transform.position = pos;
+            isCreateBug = true;
         }
         else
         {
