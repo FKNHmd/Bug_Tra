@@ -16,12 +16,18 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 	float oldtime, newtime, deltatime;
 	bool clear_flg;
 
+    float hintTime = 0;
+
+    public HintManager _HintMar;
+
 	// Use this for initialization
 	void Start () {
-		
-	}
+        string naiyou = "頑張ってボタン連打してね！";
+        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
 
-	void OnEnable () {
+    }
+
+    void OnEnable () {
 		count = 0;
 		nokori = 11;
 		TextCount.text = "" + count;
@@ -46,7 +52,22 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
 
 		}
-	}
+
+        // ヒントの生成
+        hintTime += Time.deltaTime;
+        if(hintTime > 7)
+        {
+            string[] naiyou ={
+                "もっと早く連打してみて！",
+                "ふぁいとー！",
+                "連打！連打！連打！",
+                "GO!GO!GO!",
+                "がんばれー！",
+            };
+            _HintMar.HintParent(naiyou[Random.Range(0,naiyou.Length)], 5, HintManager.FaceState.ManmenEgao);
+            hintTime = 0;
+        }
+    }
 
 	public void countup()
 	{

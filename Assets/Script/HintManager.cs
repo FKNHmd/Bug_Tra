@@ -24,6 +24,8 @@ public class HintManager : MonoBehaviour
     public bool isActiveHint = false;
     // 要素数が多くなった場合の処理
     bool isListOver = false;
+    // Activeじゃなくなったオブジェクト
+    public GameObject hideObject;
 
     // テスト作成用
     public bool isCreate = false;
@@ -73,7 +75,14 @@ public class HintManager : MonoBehaviour
                 }
             case State.Child:
                 {
-
+                    if(hideObject != null)
+                    {
+                        if (!hideObject.activeSelf)
+                        {
+                            ObjectDes();
+                            return;
+                        }
+                    }
                     if (isHideFlg)
                     {
                         GetComponent<Animator>().SetBool("HintFlg", true);
