@@ -5695,7 +5695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 340.3125, y: -550}
+  m_AnchoredPosition: {x: 340.3125, y: -550.0001}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &829363055
@@ -6273,6 +6273,11 @@ Prefab:
 --- !u!224 &892841930 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224418689778419506, guid: e1f88db82f44ae04b9d6cb803ae98c68,
+    type: 2}
+  m_PrefabInternal: {fileID: 892841929}
+--- !u!1 &892841931 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1697893317196018, guid: e1f88db82f44ae04b9d6cb803ae98c68,
     type: 2}
   m_PrefabInternal: {fileID: 892841929}
 --- !u!1 &952761951
@@ -9771,6 +9776,7 @@ MonoBehaviour:
   PCC: {fileID: 1447322028}
   GP: {fileID: 877998760}
   _HintMar: {fileID: 582655277}
+  hideObj: {fileID: 892841931}
 --- !u!1 &1688337818
 GameObject:
   m_ObjectHideFlags: 0
@@ -9971,7 +9977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 340.3125, y: -650.00006}
+  m_AnchoredPosition: {x: 340.3125, y: -650}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1708574672
@@ -10130,7 +10136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 340.3125, y: -450}
+  m_AnchoredPosition: {x: 340.3125, y: -450.00003}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1720628598

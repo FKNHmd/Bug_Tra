@@ -16,6 +16,7 @@ public class GameManager_05 : MonoBehaviour
     public PanelCrossChan_Ctrl PCC;
     public GameCtrl_PanelChange GP;
     public HintManager _HintMar;
+    public GameObject hideObj;
 
     float hintTime = 0;
     float hint_DeltaTime = 0;
@@ -80,6 +81,19 @@ public class GameManager_05 : MonoBehaviour
         {
             MenuRota();
         }
+        // デバッグ用------------------------------------------------------+++++++++++++++++++++
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Seikai();
+        }
+        if (Input.GetKeyDown(KeyCode.S)) 
+        {
+            Huseikai();
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            isCreateBug = true;
+        }
     }
 
     // バグを見つけた際の処理
@@ -115,7 +129,7 @@ public class GameManager_05 : MonoBehaviour
                     else
                     {
                         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
-                        // ゲームクリアー
+                        // ゲームオーバーー
                         isRota = false;
                         gameClaer.SetActive(true);
                         Screen.orientation = ScreenOrientation.Portrait;
@@ -136,6 +150,8 @@ public class GameManager_05 : MonoBehaviour
 
     public void Seikai()
     {
+        hideObj.SetActive(false);
+           isCreateBug = false;
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
         // ゲームクリアー
         isRota = false;
@@ -153,6 +169,9 @@ public class GameManager_05 : MonoBehaviour
 
     public void Huseikai()
     {
+        hideObj.SetActive(false);
+
+        isCreateBug = false;
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
         // ゲームクリアー
         isRota = false;
