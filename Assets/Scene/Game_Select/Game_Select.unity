@@ -342,9 +342,6 @@ GameObject:
   m_Component:
   - component: {fileID: 45270965}
   - component: {fileID: 45270969}
-  - component: {fileID: 45270968}
-  - component: {fileID: 45270967}
-  - component: {fileID: 45270966}
   m_Layer: 5
   m_Name: Button3
   m_TagString: Untagged
@@ -371,50 +368,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!111 &45270966
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 45270964}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a19829dd5f677464294edda36ce928c6, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &45270967
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 45270964}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6b0c929bd352d7e4c80a04429de497e9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &45270968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 45270964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbddc8222deb866458b3bebd326ce787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObjs: []
-  STATE: 1
 --- !u!222 &45270969
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2345,7 +2298,6 @@ GameObject:
   - component: {fileID: 367499287}
   - component: {fileID: 367499286}
   - component: {fileID: 367499285}
-  - component: {fileID: 367499284}
   m_Layer: 5
   m_Name: Button9
   m_TagString: Untagged
@@ -2373,20 +2325,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!111 &367499284
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 367499282}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 211d44f967d233442b2df02c2a7626a6, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &367499285
 Animator:
   serializedVersion: 3
@@ -3168,7 +3106,6 @@ GameObject:
   - component: {fileID: 473300474}
   - component: {fileID: 473300480}
   - component: {fileID: 473300478}
-  - component: {fileID: 473300479}
   m_Layer: 5
   m_Name: Button7
   m_TagString: Untagged
@@ -3334,20 +3271,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &473300479
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 473300472}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ec23c223f64f59146825701971335ae8, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &473300480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4854,7 +4777,6 @@ GameObject:
   - component: {fileID: 673728282}
   - component: {fileID: 673728288}
   - component: {fileID: 673728286}
-  - component: {fileID: 673728287}
   m_Layer: 5
   m_Name: Button1
   m_TagString: Untagged
@@ -5020,20 +4942,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &673728287
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 673728280}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: edbd75ce3ba1e4b4a953623531598c4c, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &673728288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7808,7 +7716,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1091593054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0873019870e99747a748361f2b02ee9, type: 3}
   m_Name: 
@@ -8088,7 +7996,6 @@ GameObject:
   - component: {fileID: 1130130925}
   - component: {fileID: 1130130931}
   - component: {fileID: 1130130929}
-  - component: {fileID: 1130130930}
   m_Layer: 5
   m_Name: Button3
   m_TagString: Untagged
@@ -8254,20 +8161,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &1130130930
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1130130923}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a19829dd5f677464294edda36ce928c6, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &1130130931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8698,9 +8591,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1156059128}
   - component: {fileID: 1156059132}
-  - component: {fileID: 1156059131}
-  - component: {fileID: 1156059130}
-  - component: {fileID: 1156059129}
   m_Layer: 5
   m_Name: Button5
   m_TagString: Untagged
@@ -8727,50 +8617,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!111 &1156059129
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1156059127}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a8a3bcb909b15824282b5960abfbb2fc, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &1156059130
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1156059127}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e6df058788e1c1141addbb8c5d530acb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1156059131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1156059127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbddc8222deb866458b3bebd326ce787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObjs: []
-  STATE: 1
 --- !u!222 &1156059132
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9019,9 +8865,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1184461912}
   - component: {fileID: 1184461916}
-  - component: {fileID: 1184461915}
-  - component: {fileID: 1184461914}
-  - component: {fileID: 1184461913}
   m_Layer: 5
   m_Name: Button1
   m_TagString: Untagged
@@ -9048,50 +8891,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!111 &1184461913
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1184461911}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: edbd75ce3ba1e4b4a953623531598c4c, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &1184461914
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1184461911}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dc980ee30c06a234b93ce9de6e084831, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1184461915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1184461911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbddc8222deb866458b3bebd326ce787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObjs: []
-  STATE: 1
 --- !u!222 &1184461916
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12142,9 +11941,6 @@ GameObject:
   - component: {fileID: 1602270100}
   - component: {fileID: 1602270099}
   - component: {fileID: 1602270098}
-  - component: {fileID: 1602270104}
-  - component: {fileID: 1602270102}
-  - component: {fileID: 1602270103}
   m_Layer: 5
   m_Name: Button9
   m_TagString: Untagged
@@ -12294,50 +12090,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1602270096}
---- !u!95 &1602270102
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1602270096}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a4b4263293a789d438973513e050dc13, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &1602270103
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1602270096}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 211d44f967d233442b2df02c2a7626a6, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &1602270104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1602270096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbddc8222deb866458b3bebd326ce787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObjs: []
-  STATE: 1
 --- !u!1 &1610790477
 GameObject:
   m_ObjectHideFlags: 0
@@ -12347,9 +12099,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1610790478}
   - component: {fileID: 1610790482}
-  - component: {fileID: 1610790481}
-  - component: {fileID: 1610790480}
-  - component: {fileID: 1610790479}
   m_Layer: 5
   m_Name: Button7
   m_TagString: Untagged
@@ -12376,50 +12125,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!111 &1610790479
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1610790477}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ec23c223f64f59146825701971335ae8, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &1610790480
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1610790477}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 648fb4a86c5726d488296232270f917b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1610790481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1610790477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbddc8222deb866458b3bebd326ce787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animObjs: []
-  STATE: 1
 --- !u!222 &1610790482
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15413,7 +15118,6 @@ GameObject:
   - component: {fileID: 2119454270}
   - component: {fileID: 2119454276}
   - component: {fileID: 2119454274}
-  - component: {fileID: 2119454275}
   m_Layer: 5
   m_Name: Button5
   m_TagString: Untagged
@@ -15579,20 +15283,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &2119454275
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2119454268}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a8a3bcb909b15824282b5960abfbb2fc, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &2119454276
 MonoBehaviour:
   m_ObjectHideFlags: 0
