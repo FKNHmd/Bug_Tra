@@ -16,6 +16,7 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
 
     public bool lasthint_flg = false;
     float lasthint_byou;
+    int count = 0;
 
     // Use this for initialization
     void Start()
@@ -54,10 +55,11 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
         {
             lasthint_flg = true;
         }
-        if (!lasthint_flg)
+        if (!lasthint_flg && count == 0)
         {
             string naiyou = "名前や自己紹介を変えたり、ボタンを連続タップしたり、\nいろんな操作をしてバグを見つけよう！";
             _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
+            count++;
         }
     }
 
