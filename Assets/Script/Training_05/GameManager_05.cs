@@ -150,21 +150,25 @@ public class GameManager_05 : MonoBehaviour
 
     public void Seikai()
     {
-        hideObj.SetActive(false);
-           isCreateBug = false;
-        GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
-        // ゲームクリアー
-        isRota = false;
-        gameClaer.SetActive(true);
-        Screen.orientation = ScreenOrientation.Portrait;
-        string daimei, section, syousai;
-        daimei = "クリアおめでとう～♪";
-        section = "　・今回の不具合は";
-        syousai = "端末を横向きにしたら黒い画像が現れる不具合だよ！\n消し忘れかな？\n本番のQAでもあれ？って思ったことは遠慮せずに何でも報告しようね！\n";
-        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
+        if (isCreateBug && isBugCheck)
+        {
+            hideObj.SetActive(false);
+            isCreateBug = false;
+            isBugCheck = false;
+                        GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
+            // ゲームクリアー
+            isRota = false;
+            gameClaer.SetActive(true);
+            Screen.orientation = ScreenOrientation.Portrait;
+            string daimei, section, syousai;
+            daimei = "クリアおめでとう～♪";
+            section = "　・今回の不具合は";
+            syousai = "端末を横向きにしたら黒い画像が現れる不具合だよ！\n消し忘れかな？\n本番のQAでもあれ？って思ったことは遠慮せずに何でも報告しようね！\n";
+            PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
-        /* セレクト画面でClear表示 */
-        PlayerPrefs.SetInt("ClearStat5", 1);
+            /* セレクト画面でClear表示 */
+            PlayerPrefs.SetInt("ClearStat5", 1);
+        }
     }
 
     public void Huseikai()
@@ -172,6 +176,7 @@ public class GameManager_05 : MonoBehaviour
         hideObj.SetActive(false);
 
         isCreateBug = false;
+        isBugCheck = false;
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
         // ゲームクリアー
         isRota = false;
