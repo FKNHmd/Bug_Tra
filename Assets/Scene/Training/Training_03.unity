@@ -7666,7 +7666,9 @@ MonoBehaviour:
   hideObjs:
   - {fileID: 1927942165}
   - {fileID: 213290495}
-  activeObj: {fileID: 146410138}
+  activeObj:
+  - {fileID: 146410138}
+  - {fileID: 920041868}
 --- !u!1 &744948861
 GameObject:
   m_ObjectHideFlags: 0
@@ -10309,6 +10311,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1f88db82f44ae04b9d6cb803ae98c68, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &920041868 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1697893317196018, guid: e1f88db82f44ae04b9d6cb803ae98c68,
+    type: 2}
+  m_PrefabInternal: {fileID: 920041867}
 --- !u!1 &925299353
 GameObject:
   m_ObjectHideFlags: 0

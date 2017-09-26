@@ -4937,7 +4937,8 @@ MonoBehaviour:
   PanelHoukoku: {fileID: 614361248}
   FadeInOut: {fileID: 1770345091}
   hideObjs: []
-  activeObj: {fileID: 0}
+  activeObj:
+  - {fileID: 1247070670}
 --- !u!114 &849489695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6974,6 +6975,11 @@ RectTransform:
 --- !u!224 &1247070669 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224418689778419506, guid: e1f88db82f44ae04b9d6cb803ae98c68,
+    type: 2}
+  m_PrefabInternal: {fileID: 1247070667}
+--- !u!1 &1247070670 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1697893317196018, guid: e1f88db82f44ae04b9d6cb803ae98c68,
     type: 2}
   m_PrefabInternal: {fileID: 1247070667}
 --- !u!1 &1254236037
