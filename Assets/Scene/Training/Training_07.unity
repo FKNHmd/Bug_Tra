@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PH: {fileID: 0}
+  hintFlg: 0
   _HintMar: {fileID: 0}
 --- !u!114 &7164720
 MonoBehaviour:
@@ -1783,6 +1784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PH: {fileID: 7164716}
+  hintFlg: 0
   _HintMar: {fileID: 1954660596}
 --- !u!114 &196749554
 MonoBehaviour:
@@ -15255,6 +15257,7 @@ MonoBehaviour:
   m3: {fileID: 1521747519}
   Image_Logo: {fileID: 142710645}
   d: {fileID: 157583905}
+  PGC: {fileID: 196749553}
 --- !u!1 &2082257566
 GameObject:
   m_ObjectHideFlags: 0

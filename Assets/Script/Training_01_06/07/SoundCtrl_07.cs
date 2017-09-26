@@ -14,10 +14,11 @@ public class SoundCtrl_07 : MonoBehaviour {
 
 	int s;
 	AudioSource m;
-	//bool saisei_flg;
+    //bool saisei_flg;
+    public PanelGame_Ctrl_07 PGC;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		m = m1;
 	}
 	
@@ -57,8 +58,9 @@ public class SoundCtrl_07 : MonoBehaviour {
 
 	public void teisi_button()
 	{
-		//m.Stop ();
-	}
+        PGC.hintFlg = true;
+        //m.Stop ();
+    }
 
 	public void itiziteisi_button()
 	{
