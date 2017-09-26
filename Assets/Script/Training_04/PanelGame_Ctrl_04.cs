@@ -19,7 +19,10 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
+    {      
+        string naiyou = "名前と自己紹介を書いて\n入力ボタンをタップしよう！";
+        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
+
     }
 
     // Update is called once per frame
@@ -30,7 +33,7 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
             lasthint_byou += Time.deltaTime;
             if (lasthint_byou > 15)
             {
-                string naiyou = "名前や自己紹介を変えたり、ボタンを連続タップしたり、\nいろんな操作をしてバグを見つけよう！";
+                string naiyou = "画面右上の「バグ報告」ボタンを押して、\n変な表示になっているところを教えよう！";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
                 lasthint_byou = 0;
             }
@@ -44,11 +47,17 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
     {
         hanei.text = namae.text + " " + namae2.text;
         hanei2.text = syoukai.text;
+        hanei2.GetComponent<RectTransform>().sizeDelta = new Vector2(
+            syoukai.preferredWidth,
+            165);
+        if(syoukai.preferredWidth > 690)
+        {
+            lasthint_flg = true;
+        }
         if (!lasthint_flg)
         {
             string naiyou = "名前や自己紹介を変えたり、ボタンを連続タップしたり、\nいろんな操作をしてバグを見つけよう！";
             _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
-            lasthint_flg = true;
         }
     }
 
