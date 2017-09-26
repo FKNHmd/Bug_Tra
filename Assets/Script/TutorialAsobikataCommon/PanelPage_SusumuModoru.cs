@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PanelPage_SusumuModoru : MonoBehaviour {
 
@@ -37,6 +38,7 @@ public class PanelPage_SusumuModoru : MonoBehaviour {
 
 	void page_activate (int n)
 	{
+		string strpage = "" + n + "/" + endpage;
 		for (int i = 0; i < endpage; i++) {
 			if (i == (n - 1)) {
 				gobj[i].SetActive (true);
@@ -44,6 +46,7 @@ public class PanelPage_SusumuModoru : MonoBehaviour {
 				gobj[i].SetActive (false);
 			}
 		}
+		GameObject.Find ("Text Page").GetComponent<Text> ().text = strpage;
 	}
 
 	public void susumu ()
