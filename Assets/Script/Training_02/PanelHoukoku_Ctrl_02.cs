@@ -33,7 +33,10 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
 			section = "　・今回の不具合は";
 			syousai = "ポップアップが重なって表示されるバグだよ！\n普段は重ならないように制御される部分だけど、たまに制御出来てなくて起きる事があるから注意してね！";
 			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
-		} else {
+
+            /* セレクト画面でClear表示 */
+            PlayerPrefs.SetInt("ClearStat2", 1);
+        } else {
 			daimei = "残念だったね。。";
 			section = "・次回からはこんな観点で挑戦してね！";
 			syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりして見てね！";
@@ -51,9 +54,6 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
 		section = "・次回からはこんな観点で挑戦してね！";
 		syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりしてみてね！\nゲーム中、右上に出てくるヒントが出てくるよ！\n";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
-
-		/* セレクト画面でClear表示 */
-		PlayerPrefs.SetInt ("ClearStat2", 1);
 	}
 
 	public void GameGamenhe_Button()
