@@ -6884,7 +6884,7 @@ MonoBehaviour:
   hideObjs:
   - {fileID: 713533040}
   - {fileID: 119587652}
-  activeObj: {fileID: 0}
+  activeObj: []
 --- !u!1 &882013801
 GameObject:
   m_ObjectHideFlags: 0
