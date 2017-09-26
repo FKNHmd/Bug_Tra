@@ -48,7 +48,6 @@ public class Popup : MonoBehaviour
 			open_flg = true;
 			open.Play ();
 			opennum++;
-			Debug.Log (opennum);
 		}
     }
 
@@ -57,7 +56,6 @@ public class Popup : MonoBehaviour
 		open_flg = false;
         close.Play ();
 		opennum--;
-		Debug.Log (opennum);
 
 		if (opennum <= 0) {
 			popup_haikei.SetActive (false);

@@ -9,10 +9,11 @@ public class GameManager_Tr02 : MonoBehaviour
 
     [SerializeField]
     public List<GameObject> popUp;
-    List<bool> isActivePopUp;
     bool isSetBug = false;
     bool lasthint_flg = false;
     float lasthint_byou;
+
+    bool isActivePopUp = false;
 
     // ポップアップをタップされた回数
     int tapCount = 0;
@@ -74,6 +75,9 @@ public class GameManager_Tr02 : MonoBehaviour
             section = "　・今回の不具合は";
             syousai = "バナーを同時押しするとダイアログが出てくる不具合だよ！\nどんな所に不具合があるかわからないから、見逃さない様に細かいところまで注意しなくちゃだね！";
             PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
+
+            /* セレクト画面でClear表示 */
+            PlayerPrefs.SetInt("ClearStat2", 1);
         }
         else if (!isSetBug)
         {
@@ -92,6 +96,18 @@ public class GameManager_Tr02 : MonoBehaviour
             PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
         }
     }
+    
+    void WPopUp()
+    {
+        for(int i = 0; i < popUp.Count; i++)
+        {
+            if(popUp[i].transform.localScale.x != 0)
+            {
+                lasthint_flg = true;
+            }
+        }
+        
+    }
 
     public void PopUpTapCount(string name)
     {
@@ -108,8 +124,11 @@ public class GameManager_Tr02 : MonoBehaviour
             {
                 string naiyou = "ロゴを「連続タップ」「フリック」「スワイプ」\nその他いろんな操作をしてみよう！";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
-                lasthint_flg = true;
             }
+        }
+        if (!lasthint_flg)
+        {
+            WPopUp();
         }
     }
 }
