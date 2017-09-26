@@ -2148,7 +2148,7 @@ MonoBehaviour:
   PanelHoukoku: {fileID: 1638925978}
   FadeInOut: {fileID: 1677874524}
   hideObjs: []
-  activeObj: {fileID: 0}
+  activeObj: []
 --- !u!114 &402038795
 MonoBehaviour:
   m_ObjectHideFlags: 0

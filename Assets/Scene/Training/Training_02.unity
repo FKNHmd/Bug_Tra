@@ -7817,7 +7817,7 @@ MonoBehaviour:
   PanelHoukoku: {fileID: 922634531}
   FadeInOut: {fileID: 201035591}
   hideObjs: []
-  activeObj: {fileID: 0}
+  activeObj: []
 --- !u!114 &1366706509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8341,7 +8341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1416035641
 MonoBehaviour:
   m_ObjectHideFlags: 0
