@@ -11015,6 +11015,11 @@ Prefab:
       propertyPath: textObject
       value: 
       objectReference: {fileID: 796241667}
+    - target: {fileID: 114446621617657246, guid: e1f88db82f44ae04b9d6cb803ae98c68,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1f88db82f44ae04b9d6cb803ae98c68, type: 2}
   m_IsPrefabParent: 0
