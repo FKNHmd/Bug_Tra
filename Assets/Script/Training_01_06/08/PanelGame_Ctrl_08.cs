@@ -41,6 +41,10 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            createBug = true;
+        }
         if (!hintFlg)
         {
             hintTime += Time.deltaTime;
@@ -54,6 +58,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
         }
         if (createBug)
         {
+            hintFlg = true;
             hintTime += Time.deltaTime;
             if (hintTime > 15)
             {
@@ -68,7 +73,6 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
                 //{
                 //    hintCount++;
                 //}
-            
                 naiyou = "バグはもう発生しているよ！\nどこか変なところないかな？";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                 hintTime = 0;
