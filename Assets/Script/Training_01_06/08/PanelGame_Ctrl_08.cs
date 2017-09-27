@@ -185,18 +185,23 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
             _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
         }
         count++;
-        if (hosi == 5) {
+		haisyutuchar_countup (hosi);
+		image_char_false ();
+		okane -= 100;
+		hyouzi ();
+
+		gacha_hyouzi_hihyouzi (1f);
+	}
+
+	void haisyutuchar_countup (int hosi)
+	{
+		if (hosi == 5) {
 			hosi5char_kazu++;
 		} else if (hosi == 4) {
 			hosi4char_kazu++;
 		} else if (hosi == 3) {
 			hosi3char_kazu++;
 		}
-		image_char_false ();
-		okane -= 100;
-		hyouzi ();
-
-		gacha_hyouzi_hihyouzi (1f);
 	}
 
 	void hyouzi ()
@@ -234,15 +239,29 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 
 	void OnApplicationPause (bool pauseStatus)
 	{
+		int hosi = -1;
+
 		if (pauseStatus) {
 			gacha_hyouzi_hihyouzi (1f);
+
+			/* クロスちゃん取得数カウントアップ */
+			if (ImageHosi3.activeSelf) {
+				hosi = 3;
+			} else if (ImageHosi4.activeSelf) {
+				hosi = 4;
+			} else if (ImageHosi5.activeSelf) {
+				hosi = 5;
+			}
+			haisyutuchar_countup (hosi);
+			hyouzi ();
+
 			if (image_char_false () == true) {
                 createBug = true;
 				GCC.set_clearflg (true);
 			}
-			//Debug.Log("applicationWillResignActive or onPause");
+			Debug.Log("applicationWillResignActive or onPause");
 		} else {
-			//Debug.Log("applicationDidBecomeActive or onResume");
+			Debug.Log("applicationDidBecomeActive or onResume");
 		}
 	}
 }
