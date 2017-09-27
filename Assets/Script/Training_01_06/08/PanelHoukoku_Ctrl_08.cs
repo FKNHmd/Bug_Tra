@@ -56,9 +56,9 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
         daimei = "クリアおめでとう～♪";
         section = "　・今回の不具合は";
-        syousai = "ガチャをひいて、結果がわかった後にサスペンド / レジューム(サスレジ)すると、コインが減ってない状態でまたガチャがひけてしまうバグだよ！\n"
+        syousai = "ガチャをひいて、結果画面でサスペンド/レジューム(サスレジ)すると、コインが減ってない状態でガチャがひけてしまうバグだよ！\n"
                     + "本番のQAではコインだけ減ってキャラを取得できないといったこともないか確認してね！\n"
-                    + "サスレジ以外にネットワーク切断やブラウザバック等で問題発生することもあるから注意だよ！";
+                    + "他にもネットワーク切断やブラウザバック等で問題発生することもあるから注意だよ！";
         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
 
         /* セレクト画面でClear表示 */
