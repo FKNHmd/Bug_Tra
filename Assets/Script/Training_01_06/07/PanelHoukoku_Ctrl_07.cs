@@ -36,7 +36,7 @@ public class PanelHoukoku_Ctrl_07 : MonoBehaviour {
 		daimei = "残念だったね。。";
 		section = "・次回からはこんな観点で挑戦してね！";
 		syousai = "音楽にノリノリになりすぎてバグを見つけれなかったのかな！？\n一般的な音楽プレイヤーだと、あのボタンを押すとあの動きをするはずなんだけどな～";
-		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game, "リトライ");
 	}
 
 	public void seikai()

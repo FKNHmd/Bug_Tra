@@ -42,6 +42,11 @@ public class PanelCrossChan_Ctrl : MonoBehaviour {
 
 	public void set_crosschan(string daimei, string section, string syousai, crosschan_gazou g, crosschan_button b)
 	{
+		set_crosschan(daimei, section, syousai, g, b, "");
+	}
+
+	public void set_crosschan(string daimei, string section, string syousai, crosschan_gazou g, crosschan_button b, string button_label)
+	{
 		Text_Daimei.text = daimei;
 		Text_Section.text = section;
 		Text_Syousai.text = syousai;
@@ -71,9 +76,15 @@ public class PanelCrossChan_Ctrl : MonoBehaviour {
 		switch (b) {
 		case crosschan_button.Game:
 			ButtonGame.SetActive (true);
+			if (button_label != "") {
+				ButtonGame.transform.Find ("Text").GetComponent<Text> ().text = button_label;
+			}
 			break;
 		case crosschan_button.Select:
 			ButtonSelect.SetActive (true);
+			if (button_label != "") {
+				ButtonSelect.transform.Find ("Text").GetComponent<Text> ().text = button_label;
+			}
 			break;
 		default:
 			Debug.Log("set_crosschan erroe");

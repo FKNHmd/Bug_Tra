@@ -137,7 +137,7 @@ public class GameManager_05 : MonoBehaviour
                         daimei = "残念だったね。。";
                         section = "・次回からはこんな観点で挑戦してね！";
                         syousai = "端末を横に回転してみると…?";
-                        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+                        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game, "リトライ");
                     }
                 }
             }
@@ -186,7 +186,7 @@ public class GameManager_05 : MonoBehaviour
         daimei = "残念だったね。。";
         section = "・次回からはこんな観点で挑戦してね！";
         syousai = "端末を横に回転してみると…?";
-        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game, "リトライ");
 
     }
 

@@ -39,10 +39,10 @@ public class PanelHoukoku_Ctrl_04 : MonoBehaviour {
         GameObject.Find("Audio Source").GetComponent<AudioSource>().Stop();
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
 
-        daimei = "バグを見つけられなくて残念ね･･･。";
+        daimei = "残念だったね。。";
         section = "・次回からはこんな観点で挑戦してね！";
 		syousai = "「入力欄」や「入力ボタン」を押した後に、注目してみてっ！文字列には様々な不具合が多いので注意して見てみてね！\nゲーム中、右上に出てくるヒントも要チェック！\n";
-        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+        PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game, "リトライ");
     }
 	public void GameGamenhe_Button()
 	{

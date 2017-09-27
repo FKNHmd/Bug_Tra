@@ -59,7 +59,7 @@ public class PanelHoukoku_Ctrl : MonoBehaviour {
 			daimei = "残念だったね。。";
 			section = "・次回からはこんな観点で挑戦してね！";
 			syousai = "キーボードをいろいろ変えて、細かいところもチェックしてみて！\nゲーム中、右上に出てくるヒントも参考にしてみてね！\n";
-			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game, "リトライ");
 		}
 
 		DummyInput.text = "";

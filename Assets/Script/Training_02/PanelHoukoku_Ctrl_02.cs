@@ -39,8 +39,8 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
         } else {
 			daimei = "残念だったね。。";
 			section = "・次回からはこんな観点で挑戦してね！";
-			syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりして見てね！";
-			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+			syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりして見てね！\nゲーム中、右上に出てくるヒントが出てくるよ！\n";
+			PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game, "リトライ");
 		}
 	}
 
@@ -53,7 +53,7 @@ public class PanelHoukoku_Ctrl_02 : MonoBehaviour {
 		daimei = "残念だったね。。";
 		section = "・次回からはこんな観点で挑戦してね！";
 		syousai = "ただボタンを押すだけでなく、同時にボタンを押したりタイミングをずらして押したりしてみてね！\nゲーム中、右上に出てくるヒントが出てくるよ！\n";
-		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game);
+		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game, "リトライ");
 	}
 
 	public void GameGamenhe_Button()
