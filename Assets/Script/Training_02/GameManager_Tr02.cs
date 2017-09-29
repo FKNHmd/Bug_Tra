@@ -32,7 +32,7 @@ public class GameManager_Tr02 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lasthint_flg)
+		if (isSetBug /* lasthint_flg */)
         {
             lasthint_byou += Time.deltaTime;
             if (lasthint_byou > 15f)
@@ -97,6 +97,7 @@ public class GameManager_Tr02 : MonoBehaviour
         }
     }
     
+	/*
     void WPopUp()
     {
         for(int i = 0; i < popUp.Count; i++)
@@ -108,6 +109,7 @@ public class GameManager_Tr02 : MonoBehaviour
         }
         
     }
+    */
 
     public void PopUpTapCount(string name)
     {
@@ -126,9 +128,11 @@ public class GameManager_Tr02 : MonoBehaviour
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
             }
         }
+		/*
         if (!lasthint_flg)
         {
             WPopUp();
         }
+        */
     }
 }
