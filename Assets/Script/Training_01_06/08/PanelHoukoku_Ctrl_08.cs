@@ -45,7 +45,7 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour
 
         daimei = "残念だったね。。";
         section = "・次回からはこんな観点で挑戦してね！";
-        syousai = "欲しいキャラが出なかった時に、「今のガチャの結果なかったことに出来ないかな？」と思わずしちゃいそうな操作を考えてみてね！";
+		syousai = "ガチャをまわした後、クロスちゃんのキャラが表示されている状態で、いろいろな操作をしてみてね！";
         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Syobon, PanelCrossChan_Ctrl.crosschan_button.Game, "リトライ");
     }
 
@@ -56,7 +56,7 @@ public class PanelHoukoku_Ctrl_08 : MonoBehaviour
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
         daimei = "クリアおめでとう～♪";
         section = "　・今回の不具合は";
-        syousai = "ガチャをひいて、結果画面でサスペンド/レジューム(サスレジ)すると、コインが減ってない状態でガチャがひけてしまうバグだよ！\n"
+        syousai = "ガチャをひいて、結果画面でサスペンド/レジューム(サスレジ)すると、コインが減ってない状態でキャラをゲットできてしまうバグだよ！\n"
                     + "本番のQAではコインだけ減ってキャラを取得できないといったこともないか確認してね！\n"
                     + "他にもネットワーク切断やブラウザバック等で問題発生することもあるから注意だよ！";
         PCC.set_crosschan(daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Niko, PanelCrossChan_Ctrl.crosschan_button.Select);
