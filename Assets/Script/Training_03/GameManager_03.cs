@@ -228,7 +228,7 @@ public class GameManager_03 : MonoBehaviour
                         lasthint_byou += Time.deltaTime;
                         if (lasthint_byou > 2f)
                         {
-                            string naiyou = "画面右上の「バグ報告」ボタンを押して\nどの文字で蛍が光らないか教えよう！";
+							string naiyou = "画面右上の「バグ報告」ボタンを押して、\n変な表示になっているところを教えよう！";
                             _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                             lasthint_byou = 0;
                             lasthint_flg = false;
