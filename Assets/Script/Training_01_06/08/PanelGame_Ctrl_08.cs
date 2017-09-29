@@ -76,6 +76,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
                 naiyou = "バグはもう発生しているよ！\nどこか変なところないかな？";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                 hintTime = 0;
+				createBug = false;
             }
         }
     }

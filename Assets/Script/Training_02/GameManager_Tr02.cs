@@ -39,7 +39,7 @@ public class GameManager_Tr02 : MonoBehaviour
             {
                 string naiyou = "画面右上の「バグ報告」ボタンを押して、\n変な表示になっているところを教えよう！";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
-                lasthint_byou = 0;
+                lasthint_byou = -99999f; //ヒント表示は1回のみ。
             }
         }
         popUp = new List<GameObject>(GameObject.FindGameObjectsWithTag("PopUp"));

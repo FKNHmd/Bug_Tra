@@ -43,6 +43,7 @@ public class PanelGame_Ctrl_07 : MonoBehaviour
                 string naiyou = "画面右上の「バグ報告」ボタンを押して、\n期待動作していないところを教えよう！";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                 hintTime = 0;
+				hintFlg = false;
             }
         }
 

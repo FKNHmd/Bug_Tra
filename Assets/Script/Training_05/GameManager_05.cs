@@ -61,6 +61,7 @@ public class GameManager_05 : MonoBehaviour
                 string naiyou = "画面右上の「バグ報告」ボタンを押して、\n変な表示になっているところを教えよう！";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                 lasthint_byou = 0;
+				isCreateBug = false;
             }
         }
         //BugCheck();

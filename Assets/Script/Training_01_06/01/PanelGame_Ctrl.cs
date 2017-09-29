@@ -51,6 +51,7 @@ public class PanelGame_Ctrl : MonoBehaviour {
                 string naiyou = "画面右上の「バグ報告」ボタンを押して\nどの文字で蛍が光らないか教えよう！";
                 _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
                 lasthint_byou = 0;
+				lasthint_flg = false;
             }
         }
     }
@@ -108,6 +109,7 @@ public class PanelGame_Ctrl : MonoBehaviour {
         else
         {
             nyuuryokusuu++;
+			on_byou = 0f;	//連続で文字入力した時の為
             image_on();
             on_flg = true;
 
