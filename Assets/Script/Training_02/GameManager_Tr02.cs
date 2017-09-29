@@ -25,9 +25,15 @@ public class GameManager_Tr02 : MonoBehaviour
     void Start()
     {
         //_HintMar = GameObject.Find("HintObject").GetComponent<HintManager>();
-        string naiyou = "ゲームのロゴをタップして\nポップアップを表示しよう！";
-        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
-          }
+              
+	}
+
+	void OnEnable () {
+		popUpName = new List<string>();
+		tapCount = 0;
+		string naiyou = "ゲームのロゴをタップして\nポップアップを表示しよう！";
+		_HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
+	}
 
     // Update is called once per frame
     void Update()

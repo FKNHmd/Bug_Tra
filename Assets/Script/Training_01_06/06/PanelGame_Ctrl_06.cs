@@ -22,8 +22,7 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        string naiyou = "頑張ってボタン連打してね！";
-        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+
 
     }
 
@@ -34,6 +33,11 @@ public class PanelGame_Ctrl_06 : MonoBehaviour {
 		TextNokoriByou.text = "" + (int)nokori;
 		oldtime = Time.time;
 		clear_flg = false;
+
+		hintTime = 0;
+
+		string naiyou = "頑張ってボタン連打してね！";
+		_HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
 	}
 	
 	// Update is called once per frame

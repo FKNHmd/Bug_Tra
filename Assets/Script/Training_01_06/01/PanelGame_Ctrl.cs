@@ -13,7 +13,7 @@ public class PanelGame_Ctrl : MonoBehaviour {
 
 	bool on_flg;
 	float on_byou;
-	float oldtime, newtime, deltatime;
+	//float oldtime, newtime, deltatime;
     int nyuuryokusuu;
     float lasthint_byou;
     bool lasthint_flg;
@@ -25,9 +25,7 @@ public class PanelGame_Ctrl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        _HintMar = GameObject.Find("HintObject").GetComponent<HintManager>();
-        string naiyou = "キーボードで文字を\n入力すると蛍が光るよ！";
-        _HintMar.HintParent(naiyou, 5,HintManager.FaceState.Egao);
+
     }
 	
 	// Update is called once per frame
@@ -63,7 +61,14 @@ public class PanelGame_Ctrl : MonoBehaviour {
 
 		on_flg = false;
 		on_byou = 0f;
+		nyuuryokusuu = 0;
+		nyuuryokusuu = 0;
+		lasthint_flg = false;
+		nyuuryoku_q = 0;
 
+		_HintMar = GameObject.Find("HintObject").GetComponent<HintManager>();
+		string naiyou = "キーボードで文字を\n入力すると蛍が光るよ！";
+		_HintMar.HintParent(naiyou, 5,HintManager.FaceState.Egao);
         //hm01 = GameObject.Find ("HintMgr").GetComponent<HintMgr_01> ();
 
     }

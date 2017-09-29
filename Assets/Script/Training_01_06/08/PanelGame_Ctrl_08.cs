@@ -34,8 +34,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        string naiyou = "ガチャをタップしてまわしてみよう！";
-        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+
     }
 
     // Update is called once per frame
@@ -102,6 +101,14 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 		TextHosi3.text = "×" + hosi3char;
 		*/
 		hyouzi ();
+
+		hintTime = 0;
+		hintCount = 0;
+		hintFlg = false;
+		createBug = false;
+		count = 0;
+		string naiyou = "ガチャをタップしてまわしてみよう！";
+		_HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
 	}
 
 	public void Gacha_hiku()

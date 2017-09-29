@@ -22,8 +22,7 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
     // Use this for initialization
     void Start()
     {      
-        string naiyou = "名前と自己紹介を書いて\n入力ボタンをタップしよう！";
-        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
+
 
     }
 
@@ -45,7 +44,13 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
 
     void OnEnable()
     {
+		lasthint_flg = false;
+		lasthint_byou = 0f;
+		count = 0;
+		string naiyou = "名前と自己紹介を書いて\n入力ボタンをタップしよう！";
+		_HintMar.HintParent(naiyou, 5, HintManager.FaceState.Egao);
     }
+
     public void nyuryoku_Button()
     {
 		/* 姓名自己紹介の入力チェック */

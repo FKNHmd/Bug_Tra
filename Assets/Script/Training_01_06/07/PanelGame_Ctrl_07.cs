@@ -16,8 +16,7 @@ public class PanelGame_Ctrl_07 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        string naiyou = "再生ボタンを押して\n音楽を再生してみよう！";
-        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+
     }
 
     // Update is called once per frame
@@ -51,6 +50,11 @@ public class PanelGame_Ctrl_07 : MonoBehaviour
 
     void OnEnable()
     {
+		hintTime = 0;
+		hintFlg = false;
+		count = 0;
+		string naiyou = "再生ボタンを押して\n音楽を再生してみよう！";
+		_HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
     }
 
     public void Houkoku_Button()

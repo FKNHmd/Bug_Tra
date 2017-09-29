@@ -25,10 +25,18 @@ public class GameManager_05 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        string naiyou = "画面をスクロールして\n私の顔を動かしてみて！";
-        _HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
-        hintTime = 10;
+        
     }
+
+	void OnEnable()
+	{
+		string naiyou = "画面をスクロールして\n私の顔を動かしてみて！";
+		_HintMar.HintParent(naiyou, 5, HintManager.FaceState.ManmenEgao);
+		hintTime = 10;
+		hint_DeltaTime = 0;
+		hintFlg = false;
+		lasthint_byou = 0f;
+	}
 
     // Update is called once per frame
     void Update()
