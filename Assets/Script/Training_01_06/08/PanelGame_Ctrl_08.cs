@@ -257,6 +257,7 @@ public class PanelGame_Ctrl_08 : MonoBehaviour {
 			hyouzi ();
 
 			if (image_char_false () == true) {
+				hintTime = 0;
                 createBug = true;
 				GCC.set_clearflg (true);
 			}
