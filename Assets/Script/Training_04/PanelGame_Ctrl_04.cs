@@ -13,6 +13,7 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
     public GameCtrl_PanelChange GP;
     public GameObject panelhoukoku;
     public HintManager _HintMar;
+	public GameObject Nyuuryokusitene;
 
     public bool lasthint_flg = false;
     float lasthint_byou;
@@ -46,12 +47,18 @@ public class PanelGame_Ctrl_04 : MonoBehaviour
     }
     public void nyuryoku_Button()
     {
+		/* 姓名自己紹介の入力チェック */
+		if ((namae.text == "") || (namae2.text == "") || (syoukai.text == "")) {
+			Nyuuryokusitene.SetActive (true);
+			return;
+		}
+
         hanei.text = namae.text + " " + namae2.text;
         hanei2.text = syoukai.text;
         hanei2.GetComponent<RectTransform>().sizeDelta = new Vector2(
             syoukai.preferredWidth,
             165);
-        if(syoukai.preferredWidth > 690)
+        if(syoukai.preferredWidth > 745)
         {
             lasthint_flg = true;
         }
