@@ -80,7 +80,7 @@ public class GameManager_03 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
+        //GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
 
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         _SceneMar = GameObject.Find("SceneManager").GetComponent<FadeManager>();
