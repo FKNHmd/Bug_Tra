@@ -19,7 +19,7 @@ public class GameCtrl_Start_02 : MonoBehaviour {
 		GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
 		daimei = "今回の仕様を説明するね♪";
-		section = "　・今回のゲームは";
+		section = "";
 		syousai = "ゲームのロゴをタップすると、ゲームの説明のポップアップが表示されるよ！\nでもあることをするとちゃんと表示されないバグがあるから見つけてみてね！";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);
 	}

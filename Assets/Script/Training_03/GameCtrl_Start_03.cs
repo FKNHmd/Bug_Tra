@@ -14,7 +14,7 @@ public class GameCtrl_Start_03 : MonoBehaviour {
 
 		//GP.change_panel (GameCtrl_PanelChange.panel.Crosschan);
 
-		daimei = "ゲームの仕様を説明するね♪";
+		daimei = "今回の仕様を説明するね♪";
 		section = "　今回はシューティングゲームだよ！";
 		syousai = "ゲームスタートしたら左右にスワイプして青い箱を見つけてね！\n画面タップで弾が出るよ！\nその弾で青い箱を壊すとスコアが増えるから何点取れるか挑戦してね！\n遊びこめばあるバグが発生するから発生したら教えてね♪\n";
 		PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);

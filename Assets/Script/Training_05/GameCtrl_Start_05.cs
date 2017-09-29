@@ -14,8 +14,8 @@ public class GameCtrl_Start_05 : MonoBehaviour {
 
         GP.change_panel(GameCtrl_PanelChange.panel.Crosschan);
 
-        daimei = "ゲームの仕様を説明するね♪";
-		section = "　・今回のゲームは";
+        daimei = "今回の仕様を説明するね♪";
+		section = "";
 		syousai = "私の顔が縦に並んでいて上下にスクロールできるよ！\nでもあることをすると表示が崩れるバグが発生するから見つけてバグ報告してね！\n";
 
         PCC.set_crosschan (daimei, section, syousai, PanelCrossChan_Ctrl.crosschan_gazou.Normal, PanelCrossChan_Ctrl.crosschan_button.Game);
